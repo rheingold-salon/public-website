@@ -4,7 +4,7 @@ import { FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 
 export function Contact({ headerText, personalText, dontClickText, whyDidIClickText }: { headerText: string, personalText: string, dontClickText: string, whyDidIClickText: string }) {
     return (
-        <div className="my-28 flex justify-around">
+        <div id="contact" className="my-28 flex justify-around">
             <div className="flex flex-col">
                 <Image
                     src="/Logo_Text_Black.png"
@@ -13,7 +13,7 @@ export function Contact({ headerText, personalText, dontClickText, whyDidIClickT
                     alt="Rheingold Salon Logo"
                     className="object-contain"
                 />
-                <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-32">
+                <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-8">
                     <div>
                         <h1 className="text-5xl font-bold">{headerText}</h1>
                         <p className="text-xl font-bold mt-10">{personalText}</p>
@@ -43,10 +43,10 @@ export function Contact({ headerText, personalText, dontClickText, whyDidIClickT
             </div>
 
             <Link href={"mailto:hello@rheingold-salon.de?subject=" + whyDidIClickText}
-                className="relative font-stretch-expanded font-bold [writing-mode:vertical-lr]"
+                className="relative text-5xl font-bold [writing-mode:vertical-lr]"
             >
                 <span className="relative [writing-mode:vertical-lr] h-full font-bold tex-xl">{dontClickText}
-                    <span className="absolute top-0 right-1/3 h-full z-[-1] bg-salongreen w-2"></span>
+                    <span className="absolute top-0 right-4 h-full z-[-1] bg-salongreen w-5"></span>
                 </span>
             </Link>
 
