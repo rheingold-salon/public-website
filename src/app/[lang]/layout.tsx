@@ -18,17 +18,20 @@ export const metadata: Metadata = {
     description: "Website Rheingold Salon",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
+    params,
 }: Readonly<{
-    children: React.ReactNode;
+    children: React.ReactNode
+    params: Promise<{ lang: 'en' | 'de' }>
 }>) {
+    const lang = (await params).lang;
     return (
-        <html lang="de">
+        <html lang={lang}>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                <Navbar />
+                <Navbar lang={lang} />
                 <main className="">
                     {children}
                 </main>

@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { usePathname } from "next/navigation";
 
-export const Navbar = () => {
+export const Navbar = ({ lang }: { lang: string }) => {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
 
@@ -49,7 +49,7 @@ export const Navbar = () => {
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.href}
-                                    href={link.href}
+                                    href={"/" + lang + link.href}
                                     className={`relative font-bold text-white group ${pathname === link.href ? "text-salongreen" : ""
                                         }`}
                                 >

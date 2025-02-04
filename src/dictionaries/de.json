@@ -1,0 +1,18 @@
+{
+    "navbar": {},
+    "footer": {},
+    "homePage": {
+        "landingImageText": "Wir entschlüsseln die geheime Logik des Marktes. Wir graben, wo andere gar nicht suchen!",
+        "whoweare": "WER WIR SIND",
+        "contact": {
+            "whyDidIClickText": "Ich will wissen warum ich geklickt habe",
+            "dontClickText": "Hier bitte nicht klicken!",
+            "headerText": "kontakt",
+            "personalText": "persönlich an"
+        }
+    },
+    "foundersTeamPage": {
+        "team": "TEAM",
+        "founders": "GRÜNDER"
+    }
+}
