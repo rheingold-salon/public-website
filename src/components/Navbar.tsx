@@ -2,9 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
-import { usePathname } from "next/navigation";
+
+import { logoImage } from "@/assets"
 
 export const Navbar = ({ lang }: { lang: string }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -33,11 +36,11 @@ export const Navbar = ({ lang }: { lang: string }) => {
                     <div className="flex-shrink-0">
                         <Link href="/">
                             <Image
-                                src="/logo.png"
+                                src={logoImage}
                                 alt="Rheingold Salon Logo"
-                                width={120}
-                                height={40}
-                                className="object-contain"
+                                style={{
+                                    objectFit: "contain"
+                                }}
                                 priority
                             />
                         </Link>

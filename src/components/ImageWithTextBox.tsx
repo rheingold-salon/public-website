@@ -1,20 +1,20 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
-export const ImageWithTextBox = ({ text, imagePath }: { text: string, imagePath: string }) => {
+export const ImageWithTextBox = ({ text, staticImage }: { text: string, staticImage: StaticImageData }) => {
     return (
         <div className="relative h-screen w-full overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
                 <Image
-                    src={imagePath}
+                    src={staticImage}
                     alt="Landing Page Background"
                     quality={100}
-                    fill
                     style={{
                         objectFit: 'cover',
                         objectPosition: 'center'
                     }}
                     priority
+                    className='h-screen w-screen'
                 />
             </div>
 

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { teamImage, comingSoonImage } from '@/assets'
 import { createClient } from '@/utils/supabase/server'
 
 type Person = {
@@ -31,10 +32,8 @@ export default async function GruenderTeamPage() {
             <div className="pt-20 relative h-screen w-full overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
-                        src="/Team_1.jpg"
+                        src={teamImage}
                         alt="Das rheingold salon team"
-                        quality={100}
-                        fill={true}
                         className='object-contain object-center'
                         priority
                     />
@@ -60,7 +59,7 @@ const PeopleGrid = ({ title, people }: { title: string, people: Person[] }) => {
                 {people?.map((person, index) => {
                     const [firstName, lastName] = person.name.split(" ");
                     const isFirstColumn = index % 2 === 0;
-                    const imageUrl = person.image_url ?? '/coming_soon.png';
+                    const imageUrl = person.image_url ?? comingSoonImage;
                     return (
                         <div key={person.id} className='flex flex-row items-start py-4'>
                             {isFirstColumn ? (
@@ -79,7 +78,9 @@ const PeopleGrid = ({ title, people }: { title: string, people: Person[] }) => {
                                             alt={person.name}
                                             fill={true}
                                             sizes="(max-width: 1200px) 100vw"
-                                            className='object-contain'
+                                            style={{
+                                                objectFit: 'contain'
+                                            }}
                                         />
                                     </div>
                                 </>
@@ -91,7 +92,9 @@ const PeopleGrid = ({ title, people }: { title: string, people: Person[] }) => {
                                             alt={person.name}
                                             fill={true}
                                             sizes="(max-width: 1200px) 100vw"
-                                            className='object-contain'
+                                            style={{
+                                                objectFit: 'contain'
+                                            }}
                                         />
                                     </div>
                                     <div className="flex flex-col max-w-52">

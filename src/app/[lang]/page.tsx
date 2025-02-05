@@ -1,6 +1,7 @@
 import { ImageWithTextBox } from '@/components';
 import { Contact, EmbeddedVideo } from '@/components';
 import { getDictionary } from '@/dictionaries';
+import { homeLandingImage } from '@/assets';
 
 export default async function HomePage({
     params,
@@ -12,7 +13,7 @@ export default async function HomePage({
 
     return (
         <>
-            <ImageWithTextBox text={dict.landingImageText} imagePath='/landingpage.jpg' />
+            <ImageWithTextBox text={dict.landingImageText} staticImage={homeLandingImage} />
             <EmbeddedVideo />
             <Contact
                 headerText={dict.contact.headerText}

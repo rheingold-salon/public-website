@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { logoBlackImage } from "@/assets/"
 import { FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 
 export function Contact({ headerText, personalText, dontClickText, whyDidIClickText }: { headerText: string, personalText: string, dontClickText: string, whyDidIClickText: string }) {
@@ -7,11 +8,11 @@ export function Contact({ headerText, personalText, dontClickText, whyDidIClickT
         <div id="contact" className="my-28 flex justify-around">
             <div className="flex flex-col">
                 <Image
-                    src="/Logo_Text_Black.png"
-                    width={360}
-                    height={180}
+                    src={logoBlackImage}
                     alt="Rheingold Salon Logo"
-                    className="object-contain"
+                    style={{
+                        objectFit: "contain"
+                    }}
                 />
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-8">
                     <div>

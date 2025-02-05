@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image';
+import { teamImage } from '@/assets';
 import { useState } from "react";
 import { FaPlay } from 'react-icons/fa';
 
@@ -24,11 +25,13 @@ export const EmbeddedVideo = () => {
                     onClick={() => setIsPlaying(true)}
                 >
                     <Image
-                        src="/Team_1.jpg"
+                        src={teamImage}
                         alt="Video thumbnail"
-                        objectFit='contain'
-                        fill={true}
-                        className=''//opacity-50'
+                        fill
+                        style={{
+                            objectFit: 'contain',
+                            objectPosition: 'center'
+                        }}
                     />
                     {/* Custom Play Button */}
                     <div className="bg-black bg-opacity-50 absolute inset-0 flex flex-col items-center justify-center">
