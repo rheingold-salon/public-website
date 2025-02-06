@@ -30,11 +30,14 @@ export default async function GruenderTeamPage() {
     return (
         <>
             <div className="pt-20 relative h-screen w-full overflow-hidden">
-                <div className="absolute inset-0">
+                <div className="absolute inset-20">
                     <Image
                         src={teamImage}
                         alt="Das rheingold salon team"
-                        className='object-contain object-center'
+                        style={{
+                            objectFit: 'contain',
+                            objectPosition: 'center'
+                        }}
                         priority
                     />
                 </div>

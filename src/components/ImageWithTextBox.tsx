@@ -9,6 +9,7 @@ export const ImageWithTextBox = ({ text, staticImage }: { text: string, staticIm
                     src={staticImage}
                     alt="Landing Page Background"
                     quality={100}
+                    fill
                     style={{
                         objectFit: 'cover',
                         objectPosition: 'center'
@@ -20,8 +21,8 @@ export const ImageWithTextBox = ({ text, staticImage }: { text: string, staticIm
 
             {/* Text Overlay Container */}
             <div className="relative z-10 flex items-end justify-end h-full">
-                <div className="ml-8 mb-40 mr-40 bg-white/90 p-8 rounded-tr-xl rounded-bl-xl max-w-xl text-center">
-                    <p className="text-4xl text-left font-bold text-black">
+                <div className="ml-8 mr-8 mb-40 md:mr-40 bg-white/90 p-8 rounded-tr-xl rounded-bl-xl max-w-xl text-center">
+                    <p className="text-xl md:text-4xl text-left font-bold text-black">
                         {text}
                     </p>
                 </div>

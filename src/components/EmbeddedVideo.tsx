@@ -9,7 +9,7 @@ export const EmbeddedVideo = () => {
     const videoId = "fGnFUdJ7yjs";
 
     return (
-        <div className="relative h-screen w-screen">
+        <div className="relative h-96 md:h-screen md:w-screen">
             {isPlaying ? (
                 <iframe
                     className="h-full w-full"

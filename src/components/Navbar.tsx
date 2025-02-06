@@ -53,13 +53,12 @@ export const Navbar = ({ lang }: { lang: string }) => {
                                 <Link
                                     key={link.href}
                                     href={"/" + lang + link.href}
-                                    className={`relative font-bold text-white group ${pathname === link.href ? "text-salongreen" : ""
-                                        }`}
+                                    className="relative font-bold text-white group"
                                 >
                                     <span className="relative">
                                         {link.label}
                                         <span className={`absolute left-0 top-1/3 w-0 h-2 z-[-1] bg-salongreen group-hover:w-full transition-all duration-300 ease-out
-                                            ${pathname === link.href ? "w-full" : ""}`}>
+                                            ${(pathname === ("/" + lang + link.href)) ? "w-full" : ""}`}>
                                         </span>
                                     </span>
                                 </Link>
@@ -101,7 +100,7 @@ export const Navbar = ({ lang }: { lang: string }) => {
                                 <span className="relative">
                                     {link.label}
                                     <span className={`absolute left-0 top-1/3 w-0 h-2 z-[-1] bg-salongreen group-hover:w-full transition-all duration-300 ease-out
-                                        ${pathname === link.href ? "w-full" : ""}`}>
+                                        ${(pathname === ("/" + lang + link.href)) ? "w-full" : ""}`}>
                                     </span>
                                 </span>
                             </Link>
