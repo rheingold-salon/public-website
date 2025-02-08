@@ -37,3 +37,5 @@ export const config = {
         // '/'
     ],
 }
+
+export { auth as middleware } from "@/auth"

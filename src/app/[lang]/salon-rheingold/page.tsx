@@ -1,11 +1,14 @@
 import { EmbeddedVideo, ImageWithTextBox } from "@/components";
 import { salonrheingoldLandingImage } from "@/assets";
+import { getDictionary } from "@/dictionaries";
 
-export default function SalonRheingoldPage() {
-    const mythosText = "Jedes Unternehmen braucht einen Gründungsmythos - hier ist unserer zur Marktforschung in Köln:";
+export default async function SalonRheingoldPage({ params }: { params: Promise<{ lang: 'de' | 'en' }> }) {
+    const lang = (await params).lang
+    const dict = (await getDictionary(lang))
+
     return (
         <>
-            <ImageWithTextBox text={mythosText} staticImage={salonrheingoldLandingImage} />
+            <ImageWithTextBox text={dict.salonRheingoldPage.foundingMythText} staticImage={salonrheingoldLandingImage} />
             <EmbeddedVideo />
         </>
     );

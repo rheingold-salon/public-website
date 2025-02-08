@@ -9,7 +9,21 @@ import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 
 import { logoImage } from "@/assets"
 
-export const Navbar = ({ lang }: { lang: string }) => {
+export const Navbar = (
+    { lang,
+        marketResearchHeader,
+        foundersTeamHeader,
+        publicationsHeader,
+        referencesHeader,
+        contactHeader }:
+        {
+            lang: string,
+            marketResearchHeader: string,
+            foundersTeamHeader: string,
+            publicationsHeader: string,
+            referencesHeader: string,
+            contactHeader: string,
+        }) => {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
 
@@ -19,13 +33,13 @@ export const Navbar = ({ lang }: { lang: string }) => {
     }, [pathname]);
 
     const navLinks = [
-        { href: "/marktforschung-services", label: "marktforschung & services" },
-        { href: "/salon-rheingold", label: "salon & rheingold" },
-        { href: "/gruender-team", label: "gründer & team" },
-        { href: "/dates-events", label: "dates & events" },
-        { href: "/news-publikationen", label: "news & publikationen" },
-        { href: "/referenzen-cases", label: "referenzen & cases" },
-        { href: "/#contact", label: "kontakt" },
+        { href: `/${lang}/marktforschung-services`, label: `${marketResearchHeader}` },
+        { href: `/${lang}/salon-rheingold`, label: "salon & rheingold" },
+        { href: `/${lang}/gruender-team`, label: `${foundersTeamHeader}` },
+        { href: `/${lang}/dates-events`, label: "dates & events" },
+        { href: `/${lang}/news-publikationen`, label: `${publicationsHeader}` },
+        { href: `/${lang}/referenzen-cases`, label: `${referencesHeader}` },
+        { href: `/${lang}/#contact`, label: `${contactHeader}` },
     ];
 
     return (
@@ -34,7 +48,7 @@ export const Navbar = ({ lang }: { lang: string }) => {
                 <div className="flex items-center justify-between h-24">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <Link href="/">
+                        <Link href={`/${lang}/`} >
                             <Image
                                 src={logoImage}
                                 alt="Rheingold Salon Logo"
@@ -42,6 +56,7 @@ export const Navbar = ({ lang }: { lang: string }) => {
                                     objectFit: "contain"
                                 }}
                                 priority
+                                className="w-32 h-16"
                             />
                         </Link>
                     </div>
@@ -49,20 +64,63 @@ export const Navbar = ({ lang }: { lang: string }) => {
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex flex-1 justify-end">
                         <div className="ml-8 flex items-center space-x-8">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.href}
-                                    href={"/" + lang + link.href}
-                                    className="relative font-bold text-white group"
-                                >
-                                    <span className="relative">
-                                        {link.label}
-                                        <span className={`absolute left-0 top-1/3 w-0 h-2 z-[-1] bg-salongreen group-hover:w-full transition-all duration-300 ease-out
-                                            ${(pathname === ("/" + lang + link.href)) ? "w-full" : ""}`}>
-                                        </span>
-                                    </span>
-                                </Link>
-                            ))}
+                            {navLinks.map((link) => {
+                                if (link.label === "kontakt") {
+                                    return (
+                                        <div key={link.href} className="grid grid-cols-2 gap-4">
+                                            <Link
+                                                href="/de"
+                                                className="relative font-bold text-white group"
+                                            >
+                                                <span className="relative">
+                                                    de
+                                                    <span className={`absolute left-0 top-1/3 w-0 h-2 z-[-1] bg-salongreen group-hover:w-full transition-all duration-300 ease-out
+                                            ${pathname.startsWith("/de") ? "w-full" : ""}`}>
+                                                    </span>
+                                                </span>
+                                            </Link>
+                                            <Link
+                                                href="/en"
+                                                className="relative font-bold text-white group"
+                                            >
+                                                <span className="relative">
+                                                    en
+                                                    <span className={`absolute left-0 top-1/3 w-0 h-2 z-[-1] bg-salongreen group-hover:w-full transition-all duration-300 ease-out
+                                            ${pathname.startsWith("/en") ? "w-full" : ""}`}>
+                                                    </span>
+                                                </span>
+                                            </Link>
+                                            <Link
+                                                href={link.href}
+                                                className="relative font-bold text-white group col-span-2"
+                                            >
+                                                <span className="relative">
+                                                    {link.label}
+                                                    <span className={`absolute left-0 top-1/3 w-0 h-2 z-[-1] bg-salongreen group-hover:w-full transition-all duration-300 ease-out
+                                            ${(pathname === link.href) ? "w-full" : ""}`}>
+                                                    </span>
+                                                </span>
+                                            </Link>
+                                        </div>
+                                    );
+                                }
+                                else {
+                                    return (
+                                        <Link
+                                            key={link.href}
+                                            href={link.href}
+                                            className="relative font-bold text-white group"
+                                        >
+                                            <span className="relative">
+                                                {link.label}
+                                                <span className={`absolute left-0 top-1/3 w-0 h-2 z-[-1] bg-salongreen group-hover:w-full transition-all duration-300 ease-out
+                                            ${(pathname === link.href) ? "w-full" : ""}`}>
+                                                </span>
+                                            </span>
+                                        </Link>
+                                    );
+                                }
+                            })}
                         </div>
                     </div>
 
@@ -93,14 +151,14 @@ export const Navbar = ({ lang }: { lang: string }) => {
                         {navLinks.map((link) => (
                             <Link
                                 key={link.href}
-                                href={link.href}
-                                className={`text-white font-bold px-4 py-2 relative group ${pathname === link.href ? "text-salongreen" : ""
+                                href={`/${lang}link.href`}
+                                className={`text-white font-bold px-4 py-2 relative group" 
                                     }`}
                             >
                                 <span className="relative">
                                     {link.label}
                                     <span className={`absolute left-0 top-1/3 w-0 h-2 z-[-1] bg-salongreen group-hover:w-full transition-all duration-300 ease-out
-                                        ${(pathname === ("/" + lang + link.href)) ? "w-full" : ""}`}>
+                                        ${pathname === link.href ? "w-full" : ""}`}>
                                     </span>
                                 </span>
                             </Link>
@@ -108,7 +166,7 @@ export const Navbar = ({ lang }: { lang: string }) => {
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav >
     );
 };
 

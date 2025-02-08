@@ -29,8 +29,8 @@ export default async function GruenderTeamPage() {
 
     return (
         <>
-            <div className="pt-20 relative h-screen w-full overflow-hidden">
-                <div className="absolute inset-20">
+            <div className="pt-20 relative h-[40vh] md:h-screen w-full overflow-hidden">
+                <div className="absolute">
                     <Image
                         src={teamImage}
                         alt="Das rheingold salon team"

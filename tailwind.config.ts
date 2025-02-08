@@ -13,6 +13,10 @@ export default {
                 foreground: "var(--foreground)",
                 salongreen: "#c0dc04",
             },
+            fontFamily: {
+                sans: ['var(--font-roboto)'],
+                serif: ['var(--font-roboto-slab)'],
+            },
         },
         screens: {
             'sm': '40rem',

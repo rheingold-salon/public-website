@@ -1,5 +1,11 @@
 {
-    "navbar": {},
+    "navbar": {
+        "marketResearchHeader": "marktforschung & services",
+        "foundersTeamHeader": "gründer & team",
+        "publicationsHeader": "news & news-publikationen",
+        "referencesHeader": "referenzen & cases",
+        "contactHeader": "kontakt"
+    },
     "footer": {},
     "homePage": {
         "landingImageText": "Wir entschlüsseln die geheime Logik des Marktes. Wir graben, wo andere gar nicht suchen!",
@@ -14,5 +20,8 @@
     "foundersTeamPage": {
         "team": "TEAM",
         "founders": "GRÜNDER"
+    },
+    "salonRheingoldPage": {
+        "foundingMythText": "Jedes Unternehmen braucht einen Gründungsmythos - hier ist unserer zur Marktforschung in Köln:"
     }
 }
