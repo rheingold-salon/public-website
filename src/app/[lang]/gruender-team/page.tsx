@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { teamImage, comingSoonImage } from '@/assets'
-import { createClient } from '@/utils/supabase/server'
+//import { createClient } from '@/utils/supabase/server'
 
 type Person = {
     id: string;
@@ -13,8 +13,8 @@ type Person = {
 }
 
 export default async function GruenderTeamPage() {
-    const supabase = await createClient();
-    const { data: people }: { data: Person[] | null } = await supabase.from("people").select().order('created_at', { ascending: true });
+    //const supabase = await createClient();
+    const { data: people }: { data: Person[] | null } = { data: null }; //= await supabase.from("people").select().order('created_at', { ascending: true });
 
     // Filter for founders (Inhaber)
     const founders = people?.filter((person) =>

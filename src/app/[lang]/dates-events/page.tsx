@@ -33,7 +33,7 @@ export default function DatesEventsPage() {
             </div>
             <div className="my-8 flex justify-around">
                 {months.map(month => (
-                    <p key={month} className="text-2xl font-semibold text-zinc-400 group hover:text-black transition-all ease-out">
+                    <p key={month} className="hover:cursor-pointer text-2xl font-semibold text-zinc-400 group hover:text-black transition-all ease-out">
                         <span className="relative">{month}
                             <span className={`absolute left-0 top-1/3 w-0 h-2 z-[-1] bg-salongreen group-hover:w-full transition-all duration-300 ease-out`}></span>
                         </span>
