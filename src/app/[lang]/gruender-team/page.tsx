@@ -1,29 +1,31 @@
 import Image from 'next/image';
 import { teamImage, comingSoonImage } from '@/assets'
-//import { createClient } from '@/utils/supabase/server'
+import { db } from '@/db'
+import { peopleTable } from '@/db/schema';
 
 type Person = {
-    id: string;
-    createdAt: Date;
+    id: number;
     name: string;
-    role: string | null;
-    quote: string | null;
-    about: string | null;
-    image_url: string | null;
+    role_de: string;
+    role_en: string;
+    quote_de: string;
+    quote_en: string;
+    about_de: string;
+    about_en: string;
+    image_path: string | null;
 }
 
 export default async function GruenderTeamPage() {
-    //const supabase = await createClient();
-    const { data: people }: { data: Person[] | null } = { data: null }; //= await supabase.from("people").select().order('created_at', { ascending: true });
+    const people: Person[] = await db.select().from(peopleTable);
 
     // Filter for founders (Inhaber)
     const founders = people?.filter((person) =>
-        person.role?.includes("Inhaber")
+        person.role_de?.includes("Inhaber")
     );
 
     // Filter for team (not Inhaber)
     const team = people?.filter((person) =>
-        !person.role?.includes("Inhaber")
+        !person.role_de?.includes("Inhaber")
     )
 
 
@@ -62,7 +64,7 @@ const PeopleGrid = ({ title, people }: { title: string, people: Person[] }) => {
                 {people?.map((person, index) => {
                     const [firstName, lastName] = person.name.split(" ");
                     const isFirstColumn = index % 2 === 0;
-                    const imageUrl = person.image_url ?? comingSoonImage;
+                    const imageUrl = person.image_path ?? comingSoonImage;
                     return (
                         <div key={person.id} className='flex flex-row items-start py-4'>
                             {isFirstColumn ? (
@@ -70,10 +72,10 @@ const PeopleGrid = ({ title, people }: { title: string, people: Person[] }) => {
                                     <div className="text-right flex flex-col max-w-52">
                                         <p className='text-salongreen font-bold text-4xl'>{firstName}</p>
                                         <p className='font-bold text-4xl'>{lastName}</p>
-                                        <p className='mt-10'>{person.role}</p>
-                                        <p className='mt-4'>{person.quote}</p>
+                                        <p className='mt-10'>{person.role_de}</p>
+                                        <p className='mt-4'>{person.quote_de}</p>
                                         <p className='mt-4 font-bold'>Das sagen die KollegInnen</p>
-                                        <p className=''>{person.about}</p>
+                                        <p className=''>{person.about_de}</p>
                                     </div>
                                     <div className="flex-shrink-0 w-48 h-[32rem] relative">
                                         <Image

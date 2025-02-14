@@ -1,17 +1,22 @@
-import { date, integer, pgEnum, pgTable, primaryKey, text, time } from "drizzle-orm/pg-core";
+import { boolean, date, integer, pgEnum, pgTable, primaryKey, text, time } from "drizzle-orm/pg-core";
 
 // dates & events
 
-const eventTypeEnum = pgEnum("event_type", ["event, vortrag, podcast, tv"])
+export const eventTypeEnum = pgEnum("event_type", ["event", "vortrag", "podcast", "tv"])
 
 export const eventsTable = pgTable("events", {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
-    title: text().notNull(),
-    content: text().notNull(),
+    titleDe: text().notNull(),
+    titleEn: text().notNull(),
+    contentDe: text().notNull(),
+    contentEn: text().notNull(),
     location: text().notNull(),
     date: date().notNull(),
-    time: time(),
+    time: time().notNull(),
     type: eventTypeEnum().notNull(),
+    imagePath: text().notNull(),
+    highlight: boolean().default(false),
+    externalLink: text().notNull(),
 });
 
 
@@ -20,26 +25,26 @@ export const eventsTable = pgTable("events", {
 export const peopleTable = pgTable("people", {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
     name: text().notNull(),
-    role_de: text().notNull(),
-    role_en: text().notNull(),
-    quote_de: text().notNull(),
-    quote_en: text().notNull(),
-    about_de: text().notNull(),
-    about_en: text().notNull(),
-    image_path: text()
+    roleDe: text().notNull(),
+    roleEn: text().notNull(),
+    quoteDe: text().notNull(),
+    quoteEn: text().notNull(),
+    aboutDe: text().notNull(),
+    aboutEn: text().notNull(),
+    imagePath: text()
 });
 
 
 // references and cases
 
-export const customerGroups = pgTable("customers_groups", {
+export const customergroupsTable = pgTable("customers_groups", {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
-    name_de: text().notNull(),
-    name_en: text().notNull(),
-    images_folder: text().notNull(),
+    nameDe: text().notNull(),
+    nameEn: text().notNull(),
+    imagesFolder: text().notNull(),
 });
 
-export const references = pgTable("references", {
+export const referencesTable = pgTable("references", {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
     name: text().notNull(),
     content: text().notNull(),
@@ -47,7 +52,7 @@ export const references = pgTable("references", {
     imagePath: text().notNull()
 })
 
-export const cases = pgTable("cases", {
+export const casesTable = pgTable("cases", {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
     title: text().notNull(),
     subtitle: text().notNull(),
@@ -58,7 +63,7 @@ export const cases = pgTable("cases", {
 
 // news & publications
 
-export const publications = pgTable("publications", {
+export const publicationsTable = pgTable("publications", {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
     title: text().notNull(),
     author: text().notNull(),
@@ -66,14 +71,14 @@ export const publications = pgTable("publications", {
     imagePath: text().notNull(),
 })
 
-export const tags = pgTable("tags", {
+export const tagsTable = pgTable("tags", {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
     name: text().notNull().unique()
 })
 
-export const publicationTags = pgTable("publication_tags", {
-    publicationId: integer().notNull().references(() => publications.id, { onDelete: "cascade" }),
-    tagId: integer().notNull().references(() => tags.id, { onDelete: "cascade" })
+export const publicationtagsTable = pgTable("publication_tags", {
+    publicationId: integer().notNull().references(() => publicationsTable.id, { onDelete: "cascade" }),
+    tagId: integer().notNull().references(() => tagsTable.id, { onDelete: "cascade" })
 }, (t) => [
     primaryKey({ columns: [t.publicationId, t.tagId] })
 ],

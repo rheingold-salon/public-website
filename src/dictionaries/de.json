@@ -23,5 +23,21 @@
     },
     "salonRheingoldPage": {
         "foundingMythText": "Jedes Unternehmen braucht einen Gründungsmythos - hier ist unserer zur Marktforschung in Köln:"
+    },
+    "datesEventsPage": {
+        "months": [
+            "JAN.",
+            "FEB.",
+            "MÄR.",
+            "APR.",
+            "MAI.",
+            "JUN.",
+            "JUL.",
+            "AUG.",
+            "SEP.",
+            "OKT.",
+            "NOV.",
+            "DEZ."
+        ]
     }
 }

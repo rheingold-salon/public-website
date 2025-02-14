@@ -5,3 +5,4 @@ export { ProgressPagination } from "./ProgressPagination";
 export { CustomerGroupCell } from "./CustomerGroupCell";
 export { EmbeddedVideo } from "./EmbeddedVideo";
 export { Contact } from "./Contact";
+export { EventCard } from "./EventCard";

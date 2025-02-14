@@ -1,45 +1,43 @@
-export default function DatesEventsPage() {
-    const months_de = ["JAN.", "FEB.", "MÄR.", "APR.", "MAI.", "JUN.", "JUL.", "AUG.", "SEP.", "OKT.", "NOV.", "DEZ."];
-    const months_en = ["JAN.", "FEB.", "MAR.", "APR.", "MAY.", "JUN.", "JUL.", "AUG.", "SEP.", "OCT.", "NOV.", "DEC."];
-    const months = months_de;
+import { db } from "@/db";
+import { eventsTable, eventTypeEnum } from "@/db/schema";
+import { eq } from "drizzle-orm";
+import { EventCard } from "@/components"
+import { getDictionary } from "@/dictionaries";
+
+export default async function EventsPage({ params }: { params: Promise<{ lang: 'de' | 'en' }> }) {
+    const lang = (await params).lang
+    const months = (await getDictionary(lang)).datesEventsPage.months
+
+    const events = await db.select({
+        id: eventsTable.id,
+        title: lang === 'de' ? eventsTable.titleDe : eventsTable.titleEn,
+        content: lang === 'de' ? eventsTable.contentDe : eventsTable.contentEn,
+        location: eventsTable.location,
+        date: eventsTable.date,
+        time: eventsTable.time,
+        imagePath: eventsTable.imagePath,
+        externalLink: eventsTable.externalLink,
+    }).from(eventsTable).where(eq(eventsTable.type, eventTypeEnum.enumValues[0]));
 
     return (
-        <>
-            <div className="pt-28 flex justify-around">
-                <button className="text-zinc-400 font-bold text-6xl group hover:text-black transition-all ease-out">
-                    <span className="relative">Events
-                        <span className={`absolute left-0 top-1/3 w-0 h-4 z-[-1] bg-salongreen group-hover:w-full transition-all duration-300 ease-out`}></span>
-                    </span>
-                </button>
-                <button className="text-zinc-400 font-bold text-6xl group hover:text-black transition-all ease-out">
-                    <span className="relative">Vorträge
-                        <span className={`absolute left-0 top-1/3 w-0 h-4 z-[-1] bg-salongreen group-hover:w-full transition-all duration-300 ease-out`}></span>
-                    </span>
-                </button>
-                <button className="text-zinc-400 font-bold text-6xl group hover:text-black transition-all ease-out">
-                    <span className="relative">Podcasts
-                        <span className={`absolute left-0 top-1/3 w-0 h-4 z-[-1] bg-salongreen group-hover:w-full transition-all duration-300 ease-out`}></span>
-                    </span>
-                </button>
-                <button className="text-zinc-400 font-bold text-6xl group hover:text-black transition-all ease-out">
-                    <span className="relative">TV
-                        <span className={`absolute left-0 top-1/3 w-0 h-4 z-[-1] bg-salongreen group-hover:w-full transition-all duration-300 ease-out`}></span>
-                    </span>
-                </button>
-            </div>
-            <div className="mt-8 bg-zinc-200 h-screen w-96 flex flex-col items-end">
-                <p className="font-serif text-5xl font-semibold mt-20 mr-8">high</p>
-                <p className="font-serif text-5xl font-semibold mt-2 mr-8">& light</p>
-            </div>
-            <div className="my-8 flex justify-around">
-                {months.map(month => (
-                    <p key={month} className="hover:cursor-pointer text-2xl font-semibold text-zinc-400 group hover:text-black transition-all ease-out">
-                        <span className="relative">{month}
-                            <span className={`absolute left-0 top-1/3 w-0 h-2 z-[-1] bg-salongreen group-hover:w-full transition-all duration-300 ease-out`}></span>
-                        </span>
-                    </p>
+        <div className="container mx-auto px-4">
+            <div className="grid gap-4">
+                {events.map((event) => (
+                    <EventCard
+                        key={event.id}
+                        event={{
+                            title: event.title,
+                            content: event.content,
+                            location: event.location,
+                            date: event.date,
+                            time: event.time,
+                            imagePath: event.imagePath,
+                            externalLink: event.externalLink
+                        }}
+                        months={months}
+                    />
                 ))}
             </div>
-        </>
+        </div>
     );
 }

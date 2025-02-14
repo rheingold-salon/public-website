@@ -23,7 +23,7 @@ export const ProgressPagination = ({ totalPages = 10 }) => {
     return (
         <div className="flex items-center justify-center gap-4">
             {/* Progress Bar Container */}
-            <PaginationButton text="prev" onClick={gotoPrev} />
+            <PaginationButton text="<" onClick={gotoPrev} />
             <div className="w-full max-w-md bg-salongreen h-0.5">
                 {/* Progress Bar Fill */}
                 <div
@@ -35,7 +35,7 @@ export const ProgressPagination = ({ totalPages = 10 }) => {
                 />
             </div>
 
-            <PaginationButton text="next" onClick={gotoNext} />
+            <PaginationButton text=">" onClick={gotoNext} />
         </div>
     );
 };

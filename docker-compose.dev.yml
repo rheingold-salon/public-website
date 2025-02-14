@@ -13,6 +13,11 @@ services:
       - db
     networks:
       - salon_dev_network
+    develop:
+      watch:
+        - action: sync
+          path: ./
+          target: /app/
 
   db:
     image: postgres:latest

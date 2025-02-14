@@ -1,7 +1,9 @@
 import { CustomerGroupCell, ProgressPagination } from "@/components";
+import { db } from "@/db";
+import { customergroupsTable } from "@/db/schema";
 
 export default async function ReferenzenCasesPage() {
-    const { data: customerGroups } = { data: null }
+    const customerGroups = await db.select().from(customergroupsTable);
 
     return (
         <div className="pt-28 flex justify-center">
