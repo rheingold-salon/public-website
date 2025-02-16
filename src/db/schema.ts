@@ -1,4 +1,4 @@
-import { boolean, date, integer, pgEnum, pgTable, primaryKey, text, time } from "drizzle-orm/pg-core";
+import { date, integer, pgEnum, pgTable, primaryKey, text, time } from "drizzle-orm/pg-core";
 
 // dates & events
 
@@ -15,7 +15,6 @@ export const eventsTable = pgTable("events", {
     time: time().notNull(),
     type: eventTypeEnum().notNull(),
     imagePath: text().notNull(),
-    highlight: boolean().default(false),
     externalLink: text().notNull(),
 });
 

@@ -1,52 +1,71 @@
-import Image from 'next/image'
-import { FaArrowRightLong } from 'react-icons/fa6';
+'use client'
+import { FaClock, FaLocationPin } from 'react-icons/fa6';
+import Link from 'next/link';
 
-type Event = {
-    title: string,
-    content: string,
-    date: string,
-    time: string,
-    location: string,
-    imagePath: string,
-    externalLink: string,
+type EventCardProps = {
+    event: {
+        title: string,
+        content: string,
+        date: string,
+        time: string,
+        location: string,
+        imagePath: string,
+        externalLink: string,
+    },
+    month: string
 }
 
-export const EventCard = ({ event, months }: { event: Event, months: string[] }) => {
-    const [year, month_idx, day] = event.date.split("-");
-    const month = months[parseInt(month_idx)];
+export const EventCard = ({ event, month }: EventCardProps) => {
+    // Parse date for display
+    const [year, , day] = event.date.split('-');
+
     return (
-        <div className='m-8 relative'>
-            <div className="flex rounded-tr-3xl rounded-bl-3xl overflow-hidden relative">
-                <div className="w-full md:w-1/2 relative">
-                    <Image
-                        src={`/static/images/events/${event.imagePath}`}
-                        alt={event.title}
-                        layout="fill"
-                        objectFit="cover"
-                        className="absolute inset-0"
-                    />
-                    <div className="absolute inset-y-0 left-0 w-1/2 font-bold bg-salongreen rounded-tr-3xl font-serif flex flex-col items-center justify-center text-white">
-                        <p className="text-7xl underline underline-offset-8 decoration-2">{day}.</p>
-                        <p className='text-lg'>{month} {year}</p>
+        <div className="relative w-full h-screen max-h-screen overflow-hidden rounded-tr-3xl rounded-bl-3xl mr-8">
+            {/* Background Image */}
+            <div
+                className="absolute inset-0 z-[-1] w-full h-full"
+                style={{
+                    backgroundImage: `url(/static/images/events/${event.imagePath})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                }}
+            />
+
+            {/* Date Overlay */}
+            <div className="absolute top-0 left-0 bg-salongreen text-white w-1/2 h-1/2 rounded-tr-3xl flex flex-col items-center justify-center">
+                <span className="text-7xl font-serif font-bold">{day}</span>
+                <span className="text-lg font-serif">{month} {year}</span>
+            </div>
+
+            {/* Content Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 h-1/2 w-full bg-zinc-200 p-8">
+                <h1 className="font-bold font-serif text-3xl mb-8">{event.title}</h1>
+                <div className="flex flex-col items-start gap-y-4">
+                    <div className="flex items-center space-x-4 font-bold">
+                        <FaClock className="text-2xl" />
+                        <p className="text-2xl">{event.time.slice(0, 5)} Uhr</p>
                     </div>
-                </div>
-                <div className='w-1/2 bg-zinc-200 p-8'>
-                    <h1 className='font-bold font-serif text-3xl'>{event.title}</h1>
-                    <div className='flex flex-col items-start md:flex-row md:items-end gap-x-32'>
-                        <div className='flex flex-col whitespace-nowrap'>
-                            <p className='text-3xl'>{event.time.slice(0, 5)} Uhr</p>
-                            <p className='text-lg'>{event.location}</p>
-                        </div>
-                        <p className='text-lg'>{event.content}</p>
+                    <div className="flex items-center space-x-4 font-bold">
+                        <FaLocationPin className="text-2xl" />
+                        <p className="text-lg">{event.location}</p>
                     </div>
+                    <p className="text-lg">{event.content}</p>
                 </div>
             </div>
-            <a href={event.externalLink} target="_blank" rel="noopener noreferrer" className="absolute -bottom-7 -right-8">
-                <button className='bg-salongreen w-16 h-14 flex items-center justify-center rounded-tr-3xl rounded-bl-3xl'>
-                    <FaArrowRightLong className='text-white' />
-                </button>
-            </a>
+
+            {/* Optional: Add hover effect for external link */}
+            {event.externalLink && (
+                <Link
+                    href={event.externalLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 z-10 bg-black/0 hover:bg-black/20 transition-all duration-300"
+                    aria-label="View event details"
+                />
+            )}
         </div>
-    )
-}
+    );
+};
+
+export default EventCard;
 

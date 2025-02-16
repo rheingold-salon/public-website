@@ -6,3 +6,6 @@ export { CustomerGroupCell } from "./CustomerGroupCell";
 export { EmbeddedVideo } from "./EmbeddedVideo";
 export { Contact } from "./Contact";
 export { EventCard } from "./EventCard";
+export { EventsNavigation } from "./EventsNavigation";
+export { EventsComposer } from "./EventsComposer";
+
