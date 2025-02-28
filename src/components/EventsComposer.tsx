@@ -14,7 +14,7 @@ type Event = {
     externalLink: string,
 }
 
-export const EventsComposer = ({ months, pastEvents, futureEvents }: { months: string[], pastEvents: Event[], futureEvents: Event[] }) => {
+export const EventsComposer = ({ alreadyOverText, months, pastEvents, futureEvents }: { alreadyOverText: string, months: string[], pastEvents: Event[], futureEvents: Event[] }) => {
     const today = new Date();
     today.setHours(0, 0, 0, 0)
     const currentMonth = months[today.getMonth()];
@@ -23,11 +23,21 @@ export const EventsComposer = ({ months, pastEvents, futureEvents }: { months: s
     // Get the next upcoming event (if any)
     const nextupEvent = futureEvents.length > 0 ? futureEvents[0] : null;
 
+    // Filter past events for the selected month
+    const filteredPastEvents = pastEvents.filter(
+        (event) => months[parseInt(event.date.split("-")[1]) - 1] === selectedMonth
+    );
+
+    // Filter future events for the selected month
+    const filteredFutureEvents = futureEvents.filter(
+        (event) => months[parseInt(event.date.split("-")[1]) - 1] === selectedMonth
+    );
+
     return (
         <>
             <div className="mt-8 className flex flex-col md:flex-row">
                 <div className="px-8 bg-zinc-200 h-52 w-screen md:h-screen md:w-96 flex flex-col items-end justify-center">
-                    <p className="font-serif text-5xl font-semibold md:mt-20 mr-8">next</p>
+                    <p className="font-serif text-5xl font-semibold mr-8">next</p>
                     <p className="font-serif text-5xl font-semibold mt-2 mr-8">& up</p>
                 </div>
                 {nextupEvent && <EventCard event={nextupEvent} month={months[parseInt(nextupEvent.date.split("-")[1]) - 1]} />}
@@ -45,7 +55,7 @@ export const EventsComposer = ({ months, pastEvents, futureEvents }: { months: s
             </div>
             <div className="container p-8">
                 <div className="grid gap-4">
-                    {futureEvents.length > 0 && futureEvents.filter((event) => months[parseInt(event.date.split("-")[1]) - 1] === selectedMonth).map((event) => (
+                    {filteredFutureEvents.length > 0 && filteredFutureEvents.map((event) => (
                         <EventCard
                             key={event.id}
                             event={event}
@@ -55,19 +65,17 @@ export const EventsComposer = ({ months, pastEvents, futureEvents }: { months: s
                 </div>
 
                 {/* Past Events Section */}
-                {pastEvents.length > 0 && (
+                {filteredPastEvents.length > 0 && (
                     <div className="mt-16">
-                        <h2 className="text-3xl font-serif font-semibold mb-8 text-zinc-300">LEIDER SCHON VORBEI</h2>
+                        <h2 className="text-lg md:text-3xl font-serif font-semibold mb-8 text-zinc-300">{alreadyOverText}</h2>
                         <div className="grid gap-4">
-                            {pastEvents
-                                .filter((event) => months[parseInt(event.date.split("-")[1]) - 1] === selectedMonth)
-                                .map((event) => (
-                                    <EventCard
-                                        key={event.id}
-                                        event={event}
-                                        month={selectedMonth}
-                                    />
-                                ))}
+                            {filteredPastEvents.map((event) => (
+                                <EventCard
+                                    key={event.id}
+                                    event={event}
+                                    month={selectedMonth}
+                                />
+                            ))}
                         </div>
                     </div>
                 )}

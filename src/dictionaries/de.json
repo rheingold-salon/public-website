@@ -25,6 +25,12 @@
         "foundingMythText": "Jedes Unternehmen braucht einen Gründungsmythos - hier ist unserer zur Marktforschung in Köln:"
     },
     "datesEventsPage": {
+        "eventsNavigation": [
+            "Events",
+            "Vorträge",
+            "Podcasts",
+            "TV"
+        ],
         "months": [
             "JAN.",
             "FEB.",
@@ -38,6 +44,7 @@
             "OKT.",
             "NOV.",
             "DEZ."
-        ]
+        ],
+        "alreadyOver": "LEIDER SCHON VORBEI"
     }
 }

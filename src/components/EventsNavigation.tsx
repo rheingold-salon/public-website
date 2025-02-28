@@ -3,14 +3,14 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export const EventsNavigation = ({ lang }: { lang: 'de' | 'en' }) => {
+export const EventsNavigation = ({ lang, eventsNavigation }: { lang: 'de' | 'en', eventsNavigation: string[] }) => {
     const pathname = usePathname();
 
     const routes = [
-        { path: `/${lang}/dates-events`, label: "Events" },
-        { path: `/${lang}/dates-events/vortraege`, label: "Vorträge" },
-        { path: `/${lang}/dates-events/podcasts`, label: "Podcasts" },
-        { path: `/${lang}/dates-events/tv`, label: "TV" },
+        { path: `/${lang}/dates-events`, label: eventsNavigation[0] },
+        { path: `/${lang}/dates-events/vortraege`, label: eventsNavigation[1] },
+        { path: `/${lang}/dates-events/podcasts`, label: eventsNavigation[2] },
+        { path: `/${lang}/dates-events/tv`, label: eventsNavigation[3] },
     ];
 
     return (

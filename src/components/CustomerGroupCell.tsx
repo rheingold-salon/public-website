@@ -5,10 +5,8 @@ import { useState } from 'react';
 
 // CustomerGroupType
 type CustomerGroup = {
-    id: number,
-    name_de: string,
-    name_en: string,
-    images_folder: string,
+    name: string,
+    imagesFolder: string,
 }
 
 export function CustomerGroupCell({ customerGroup }: { customerGroup: CustomerGroup }) {
@@ -21,15 +19,17 @@ export function CustomerGroupCell({ customerGroup }: { customerGroup: CustomerGr
                 onClick={() => setIsModalOpen(true)}
             >
                 <Image
-                    src={`/static/images/customers/${customerGroup.images_folder}/kategorien_${customerGroup.images_folder}.jpg`}
-                    alt={customerGroup.name_de}
-                    layout="fill"
-                    objectFit="cover"
+                    src={`/static/images/customers/${customerGroup.imagesFolder}/kategorien_${customerGroup.imagesFolder}.jpg`}
+                    alt={customerGroup.name}
+                    fill
+                    style={{
+                        objectFit: "cover"
+                    }}
                     className="z-[-1] transition-transform duration-500 saturate-150 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-30 flex justify-center items-center hover:bg-opacity-0 transition-all duration-500">
                     <span className="text-black font-bold text-xl">
-                        {customerGroup.name_de}
+                        {customerGroup.name}
                     </span>
                 </div>
             </div>
@@ -41,7 +41,7 @@ export function CustomerGroupCell({ customerGroup }: { customerGroup: CustomerGr
                         className="bg-white p-8 max-w-md w-full relative"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <h2 className='text-xl font-bold mb-4'>{customerGroup.name_de}</h2>
+                        <h2 className='text-xl font-bold mb-4'>{customerGroup.name}</h2>
                     </div>
                 </div>
             )}
