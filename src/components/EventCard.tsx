@@ -1,5 +1,5 @@
 'use client'
-import { FaClock, FaLocationPin } from 'react-icons/fa6';
+import { FaClock, FaLocationPin, FaLink } from 'react-icons/fa6';
 import Link from 'next/link';
 
 type EventCardProps = {
@@ -12,7 +12,7 @@ type EventCardProps = {
         imagePath: string,
         externalLink: string,
     },
-    month: string
+    month: string,
 }
 
 export const EventCard = ({ event, month }: EventCardProps) => {
@@ -20,10 +20,12 @@ export const EventCard = ({ event, month }: EventCardProps) => {
     const [year, , day] = event.date.split('-');
 
     return (
-        <div className="relative w-full h-screen max-h-screen overflow-hidden rounded-tr-3xl rounded-bl-3xl mr-8">
+        <div
+            className='relative mx-8 w-full overflow-hidden rounded-tr-3xl rounded-bl-3xl transition-all duration-500 transform h-[500px] md:h-[550px]'
+        >
             {/* Background Image */}
             <div
-                className="absolute inset-0 z-[-1] w-full h-full"
+                className='absolute inset-0 z-[-1] w-full h-full transition-transform duration-500'
                 style={{
                     backgroundImage: `url(/static/images/events/${event.imagePath})`,
                     backgroundSize: 'cover',
@@ -32,40 +34,47 @@ export const EventCard = ({ event, month }: EventCardProps) => {
             />
 
             {/* Date Overlay */}
-            <div className="absolute top-0 left-0 bg-salongreen text-white w-1/2 h-1/2 rounded-tr-3xl flex flex-col items-center justify-center">
-                <span className="text-7xl font-serif font-bold">{day}</span>
-                <span className="text-lg font-serif">{month} {year}</span>
+            <div className='absolute top-0 left-0 bg-salongreen text-white w-1/2 h-1/2 rounded-tr-3xl flex flex-col items-center justify-center transition-all duration-300'>
+                <span className="text-4xl md:text-7xl font-serif font-bold">{day}.</span>
+                <span className="text-sm md:text-lg font-serif">{month} {year}</span>
             </div>
 
             {/* Content Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 h-1/2 w-full bg-zinc-200 p-8">
-                <h1 className="font-bold font-serif text-3xl mb-8">{event.title}</h1>
-                <div className="flex flex-col items-start gap-y-4">
-                    <div className="flex items-center space-x-4 font-bold">
-                        <FaClock className="text-2xl" />
-                        <p className="text-2xl">{event.time.slice(0, 5)} Uhr</p>
+            <div
+                className='absolute bottom-0 left-0 right-0 h-1/2 min-h-1/2 w-full bg-zinc-200 p-4 md:p-8 transition-all duration-300 rounded-tr-3xl'
+            >
+                <h1 className="font-bold font-serif text-xl md:text-3xl mb-4 md:mb-8 line-clamp-2">{event.title}</h1>
+                <div className="flex flex-col items-start gap-y-2 md:gap-y-4">
+                    <div className="flex items-center space-x-2 md:space-x-4 font-bold">
+                        <FaClock className="text-lg md:text-2xl" />
+                        <p className="text-lg md:text-2xl">{event.time.slice(0, 5)} Uhr</p>
                     </div>
-                    <div className="flex items-center space-x-4 font-bold">
-                        <FaLocationPin className="text-2xl" />
-                        <p className="text-lg">{event.location}</p>
+                    <div className="flex items-center space-x-2 md:space-x-4 font-bold">
+                        <FaLocationPin className="text-lg md:text-2xl" />
+                        <p className="text-sm md:text-lg">{event.location}</p>
                     </div>
-                    <p className="text-lg">{event.content}</p>
+                    <div className="max-h-24 md:max-h-32 overflow-y-auto">
+                        <p className="text-sm md:text-lg">{event.content}</p>
+                    </div>
                 </div>
-            </div>
 
-            {/* Optional: Add hover effect for external link */}
-            {event.externalLink && (
-                <Link
-                    href={event.externalLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute inset-0 z-10 bg-black/0 hover:bg-black/20 transition-all duration-300"
-                    aria-label="View event details"
-                />
-            )}
+                {/* External link button */}
+                {event.externalLink && (
+                    <div className="flex justify-end">
+                        <Link
+                            href={event.externalLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className='inline-flex items-center gap-2 bg-salongreen text-white py-2 px-4 rounded-tr-lg rounded-bl-lg
+                                transition-all duration-300 hover:scale-105'
+                        >
+                            <FaLink />
+                        </Link>
+                    </div>
+                )}
+            </div>
         </div>
     );
 };
 
 export default EventCard;
-

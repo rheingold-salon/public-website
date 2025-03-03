@@ -35,17 +35,25 @@ export const EventsComposer = ({ alreadyOverText, months, pastEvents, futureEven
 
     return (
         <>
-            <div className="mt-8 className flex flex-col md:flex-row">
-                <div className="px-8 bg-zinc-200 h-52 w-screen md:h-screen md:w-96 flex flex-col items-end justify-center">
+            <div className="m-8 md:ml-0 className flex flex-col md:flex-row gap-4 items-center">
+                <div className="px-8 bg-zinc-200 h-[250px] md:h-[550px] w-screen md:w-96 flex flex-col items-end justify-center">
                     <p className="font-serif text-5xl font-semibold mr-8">next</p>
                     <p className="font-serif text-5xl font-semibold mt-2 mr-8">& up</p>
                 </div>
-                {nextupEvent && <EventCard event={nextupEvent} month={months[parseInt(nextupEvent.date.split("-")[1]) - 1]} />}
+                {nextupEvent && <EventCard event={nextupEvent}
+                    month={months[parseInt(nextupEvent.date.split("-")[1]) - 1]}
+                />}
             </div>
-            <div className="my-8 flex justify-around">
+            {/* Month selector */}
+            <div className="my-8 flex justify-center flex-wrap gap-4 md:gap-8">
                 {months.map(month => (
-                    <p onClick={() => setSelectedMonth(month)} key={month} className={`hover:cursor-pointer text-xs md:text-2xl font-semibold 
-                        ${selectedMonth === month ? "text-black" : "text-zinc-400 hover:text-black"} group hover:text-black transition-all ease-out`}>
+                    <p
+                        onClick={() => setSelectedMonth(month)}
+                        key={month}
+                        className={`hover:cursor-pointer text-xs md:text-2xl font-semibold 
+                        ${selectedMonth === month ? "text-black" : "text-zinc-400 hover:text-black"} 
+                        group transition-all ease-out px-2`}
+                    >
                         <span className="relative">{month}
                             <span className={`absolute left-0 top-1/3 h-2 z-[-1] bg-salongreen transition-all duration-300 ease-out
                             ${selectedMonth === month ? "w-full" : "w-0 group-hover:w-full"}`}></span>
@@ -53,8 +61,8 @@ export const EventsComposer = ({ alreadyOverText, months, pastEvents, futureEven
                     </p>
                 ))}
             </div>
-            <div className="container p-8">
-                <div className="grid gap-4">
+            <div className="container mx-auto px-4 py-4">
+                <div className="grid grid-cols-1 gap-4 justify-items-center">
                     {filteredFutureEvents.length > 0 && filteredFutureEvents.map((event) => (
                         <EventCard
                             key={event.id}
@@ -66,9 +74,9 @@ export const EventsComposer = ({ alreadyOverText, months, pastEvents, futureEven
 
                 {/* Past Events Section */}
                 {filteredPastEvents.length > 0 && (
-                    <div className="mt-16">
+                    <div className="mt-8">
                         <h2 className="text-lg md:text-3xl font-serif font-semibold mb-8 text-zinc-300">{alreadyOverText}</h2>
-                        <div className="grid gap-4">
+                        <div className="grid gap-4 justify-items-center">
                             {filteredPastEvents.map((event) => (
                                 <EventCard
                                     key={event.id}

@@ -13,7 +13,7 @@ const main = async () => {
             date: "2025-05-20",
             time: "15:00:00",
             type: eventTypeEnum.enumValues[0],
-            imagePath: "brand_future.webp",
+            imagePath: "brand_future.avif",
             externalLink: "https://example.com/brand-future-2026"
         },
         {

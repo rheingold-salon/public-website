@@ -2,9 +2,9 @@
 
 import { and, eq, sql, lt, gte, desc } from "drizzle-orm"
 import { db } from "@/db";
-import { eventsTable } from "./schema";
+import { eventsTable, eventTypeEnum } from "./schema";
 
-export const getPastEvents = async (lang: 'de' | 'en', eventType) => {
+export const getPastEvents = async (lang: 'de' | 'en', eventType: typeof eventTypeEnum.enumValues[number]) => {
     const currentYear = new Date().getFullYear();
     const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format = new Date().getFullYear();
 
@@ -26,7 +26,7 @@ export const getPastEvents = async (lang: 'de' | 'en', eventType) => {
     ).orderBy(desc(eventsTable.date), desc(eventsTable.time));
 }
 
-export const getFutureEvents = async (lang: 'de' | 'en', eventType) => {
+export const getFutureEvents = async (lang: 'de' | 'en', eventType: typeof eventTypeEnum.enumValues[number]) => {
     const currentYear = new Date().getFullYear();
     const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format = new Date().getFullYear();
 
