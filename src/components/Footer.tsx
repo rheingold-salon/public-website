@@ -5,7 +5,7 @@ export function Footer() {
     return (
         <div className='w-screen'>
             <div className='bg-zinc-700 py-28 text-white flex flex-col justify-center items-center gap-4'>
-                <p className='font-bold text-xl'>© RHEINGOLD SALON GMBH & CO. KG</p>
+                <p className='font-bold text-lg md:text-xl'>© RHEINGOLD SALON GMBH & CO. KG</p>
                 <div className='flex space-x-4'>
                     <Link href="https://www.instagram.com/rheingold_salon/" target='_blank'>
                         <FaInstagram className='size-8' />

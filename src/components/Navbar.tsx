@@ -152,7 +152,7 @@ export const Navbar = (
                         {navLinks.map((link) => (
                             <Link
                                 key={link.href}
-                                href={`/${lang}link.href`}
+                                href={link.href}
                                 className={`text-white font-bold px-4 py-2 relative group" 
                                     }`}
                             >
