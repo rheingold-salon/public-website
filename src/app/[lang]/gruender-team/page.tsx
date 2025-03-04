@@ -2,36 +2,45 @@ import Image from 'next/image';
 import { teamImage, comingSoonImage } from '@/assets'
 import { db } from '@/db'
 import { peopleTable } from '@/db/schema';
+import { getDictionary } from '@/dictionaries';
 
 type Person = {
     id: number;
     name: string;
-    role_de: string;
-    role_en: string;
-    quote_de: string;
-    quote_en: string;
-    about_de: string;
-    about_en: string;
-    image_path: string | null;
+    role: string;
+    quote: string;
+    about: string;
+    imagePath: string | null;
 }
 
-export default async function GruenderTeamPage() {
-    const people: Person[] = await db.select().from(peopleTable);
+export default async function GruenderTeamPage({ params }: { params: Promise<{ lang: "de" | "en" }> }) {
+    const lang = (await params).lang;
+    const dict = (await getDictionary(lang)).foundersTeamPage;
+
+    const people: Person[] = (await db.select().from(peopleTable)).map((person) => ({
+        id: person.id,
+        name: person.name,
+        role: lang === 'de' ? person.roleDe : person.roleEn,
+        quote: lang === 'de' ? person.quoteDe : person.quoteEn,
+        about: lang === 'de' ? person.aboutDe : person.aboutEn,
+        imagePath: person.imagePath
+
+    }));
 
     // Filter for founders (Inhaber)
     const founders = people?.filter((person) =>
-        person.role_de?.includes("Inhaber")
+        person.role.includes("Inhaber") || person.role.includes("Owner")
     );
 
     // Filter for team (not Inhaber)
     const team = people?.filter((person) =>
-        !person.role_de?.includes("Inhaber")
+        !person.role.includes("Inhaber") && !person.role.includes("Owner")
     )
 
 
     return (
         <>
-            <div className="pt-20 relative h-[40vh] md:h-screen w-full overflow-hidden">
+            <div className="pt-20 relative h-[75vh] md:h-screen w-full overflow-hidden">
                 <div className="absolute">
                     <Image
                         src={teamImage}
@@ -46,8 +55,8 @@ export default async function GruenderTeamPage() {
             </div>
             {team && founders &&
                 <div className='flex flex-col items-center justify-center'>
-                    <PeopleGrid title="GRÜNDER" people={founders} />
-                    <PeopleGrid title="TEAM" people={team} />
+                    <PeopleGrid title={dict.founders} people={founders} />
+                    <PeopleGrid title={dict.team} people={team} />
                     <div className='my-20'></div>
 
                 </div>
@@ -64,7 +73,7 @@ const PeopleGrid = ({ title, people }: { title: string, people: Person[] }) => {
                 {people?.map((person, index) => {
                     const [firstName, lastName] = person.name.split(" ");
                     const isFirstColumn = index % 2 === 0;
-                    const imageUrl = person.image_path ?? comingSoonImage;
+                    const imageUrl = person.imagePath ? "/static/images/people/" + person.imagePath : comingSoonImage;
                     return (
                         <div key={person.id} className='flex flex-row items-start py-4'>
                             {isFirstColumn ? (
@@ -72,17 +81,21 @@ const PeopleGrid = ({ title, people }: { title: string, people: Person[] }) => {
                                     <div className="text-right flex flex-col max-w-52">
                                         <p className='text-salongreen font-bold text-4xl'>{firstName}</p>
                                         <p className='font-bold text-4xl'>{lastName}</p>
-                                        <p className='mt-10'>{person.role_de}</p>
-                                        <p className='mt-4'>{person.quote_de}</p>
-                                        <p className='mt-4 font-bold'>Das sagen die KollegInnen</p>
-                                        <p className=''>{person.about_de}</p>
+                                        <p className='mt-10 mr-10'>{person.role}</p>
+                                        <p className='mt-4 mr-10'>{person.quote}</p>
+                                        {person.about &&
+                                            <>
+                                                <p className='mt-4 font-bold mr-10'>Das sagen die KollegInnen</p>
+                                                <p className='mr-10'>{person.about}</p>
+                                            </>
+                                        }
                                     </div>
-                                    <div className="flex-shrink-0 w-48 h-[32rem] relative">
+                                    <div className="w-56 h-[32rem] relative">
                                         <Image
                                             src={imageUrl}
                                             alt={person.name}
                                             fill={true}
-                                            sizes="(max-width: 1200px) 100vw"
+                                            sizes="100vw"
                                             style={{
                                                 objectFit: 'contain'
                                             }}
@@ -91,7 +104,7 @@ const PeopleGrid = ({ title, people }: { title: string, people: Person[] }) => {
                                 </>
                             ) : (
                                 <>
-                                    <div className="flex-shrink-0 w-48 h-[32rem] relative">
+                                    <div className="w-56 h-[32rem] relative">
                                         <Image
                                             src={imageUrl}
                                             alt={person.name}
@@ -105,12 +118,12 @@ const PeopleGrid = ({ title, people }: { title: string, people: Person[] }) => {
                                     <div className="flex flex-col max-w-52">
                                         <p className='text-salongreen font-bold text-3xl'>{firstName}</p>
                                         <p className='font-bold text-3xl'>{lastName}</p>
-                                        <p className='mt-10'>{person.role}</p>
-                                        <p className='mt-4 text-wrap'>{person.quote}</p>
-                                        {person.quote &&
+                                        <p className='mt-10 ml-10'>{person.role}</p>
+                                        <p className='mt-4 ml-10 text-wrap'>{person.quote}</p>
+                                        {person.about &&
                                             <>
-                                                <p className='mt-4 font-bold'>Das sagen die KollegInnen</p>
-                                                <p>{person.about}</p>
+                                                <p className='mt-4 ml-10 font-bold'>Das sagen die KollegInnen</p>
+                                                <p className='ml-10'>{person.about}</p>
                                             </>
                                         }
                                     </div>

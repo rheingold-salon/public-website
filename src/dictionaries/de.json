@@ -19,10 +19,55 @@
     },
     "foundersTeamPage": {
         "team": "TEAM",
-        "founders": "GRÜNDER"
+        "founders": "GRÜNDER",
+        "about": "Das sagen die KollegInnen"
     },
     "salonRheingoldPage": {
-        "foundingMythText": "Jedes Unternehmen braucht einen Gründungsmythos - hier ist unserer zur Marktforschung in Köln:"
+        "foundingMythText": "Jedes Unternehmen braucht einen Gründungsmythos - hier ist unserer zur Marktforschung in Köln:",
+        "togetherText": "„Seit wir uns kennen, möchten wir zusammen arbeiten. Seit 1994 tun wir das. Wir schätzen und nutzen den Austausch unserer Paarbeziehung, um unsere moderne Agentur für Marktforschung in Köln auf unkonventionelle, moderne und fruchtbare Art nach vorne zu bringen. Gemeinsam zu leben, Familie zu haben und – Vollzeit – zu arbeiten, ist nicht nur möglich, sondern für uns auch ein Modell der Zukunft.“",
+        "inesText": "Ines Imdahl geht als Gründerin & Inhaberin vom rheingold salon ihrer Lebensfrage nach. Der Frage nach dem Warum. Weil ihr die Philosophie nicht erklären konnte, warum Menschen rauchen, obwohl sie vollständig über die Folgen aufgeklärt sind, studierte sie Psychologie. Heute wollen ihre Kunden wissen, wie  menschliches Verhalten und Erleben zu erklären sind, um gemeinsam mit dem rheingold salon strategische Ausrichtungen für Marken, Märkte und Kommunikation zu entwickeln. Das Menschliche erörtert sie auch regelmäßig in ihrer eigenen WDR TV-Sendung „5 Fallen 2 Experten“. Neben Frauen- und Kulturforschung richtet sie ihren Fokus erfolgreich auf Werbewirkungsforschung: ca. 100 Kolumnen im Handelsblatt und ihr Buch „Werbung auf der Couch“ zeugen davon.",
+        "jensText": "Jens Lönneker, rheingold Gründer, wollte im Jahr 1986 beweisen, dass man mit psychologischer Marktforschung Geld verdienen kann – damals ein gewagtes Unterfangen. Das Unternehmen hatte anfangs nur ein einziges Telefon, bei dem sich eine befreundete Anwaltssekretärin mit dem Firmennamen meldete. Das erste Untersuchungsmaterial wurde gar mit dem Vermerk „Lieferung unzustellbar“ zurückgesandt. Die psychologische Marktforschung konnte dennoch schnell überzeugen. Die Konzepte der morphologischen Psychologie werden kontinuierlich weiter entwickelt und brauchen kreativen Raum; und der findet sich heute im rheingold salon Konzept direkt am Kölner Dom.",
+        "aboutList": [
+            {
+                "heading": "Gründungsjahr",
+                "text": "1986 | seit 2011 rheingold salon"
+            },
+            {
+                "heading": "Positionierung",
+                "text": "Qualitative, tiefenpsychologische, morphologische Marktforschung und Strategieberatung, basierend auf der wissenschaftlichen Theorie von Prof. Dr. Wilhelm Salber, Universität Köln."
+            },
+            {
+                "heading": "Standort",
+                "text": "Im Herzen von Köln – direkt am Dom. Köln ist als Standort für Marktforschung besonders geeignet, weil es in einer der bevölkerungsreichsten und dichtbesiedelten Regionen der Welt liegt: dem Rhein-Ruhr-Gebiet mit mehr als 20 Millionen Einwohnern."
+            },
+            {
+                "heading": "Erfahrung",
+                "text": "Mehr als 25 Jahre Erfahrung in allen Branchen für nationale und internationale Auftraggeber. (Uns fällt auf jeden Fall keine Branche ein, in der wir noch nicht geforscht haben)"
+            },
+            {
+                "heading": "Was wir können",
+                "text": "Wir können Sinn. Und wir schaffen Sinn für unsere Kunden. Kulturelle Sinnzusammenhänge beeinflussen Marken- und Werbewahrnehmung. Diese monitoren wir dauerhaft. Auf der anderen Seite entschlüsseln wir die unbewussten Motive, die das Verhalten und Erleben der Menschen steuern. Immer. Unser Ziel ist, die komplexen Strukturen des Menschlichen zu entschlüsseln und nutzbar zu machen für Unternehmen, Marken und Märkte. Sowohl via tiefenpsychologischer Marktforschung als auch mit der strategischen Prozess-Begleitung."
+            },
+            {
+                "heading": "Wie es bei uns ist",
+                "text": "Wir sind Vieles in einem: eine der ambitioniertesten deutschen Research-Agenturen, ein Think Tank, eine Begegnungsstätte. Im permanenten Bestreben dem Sinn menschlichen Erlebens und Verhaltens nachzugehen. Dazu greift der rheingold salon von Ines Imdahl und Jens Lönneker auf eine erfolgreiche avantgardistische Idee zurück. Spannende, kluge Menschen und deren Gedanken haben schon immer Räume für Austausch, Analyse und Vertiefung gebraucht und geliebt. Ob in Paris, in Weimar oder heute beim rheingold salon in Köln: Salons schaffen die Atmosphäre für produktive, innovative Weiterentwicklungen – zum Vorteil der Medien- und Marktforschung. Dazu gehören viele inspirierende Begegnungen: Unzählige Interviews, Analysesitzungen, Veranstaltungen, Seminare, Fernsehaufnahmen und ganz wichtig: gemeinsames Essen und Trinken. Sinn braucht Tiefe, Können, Austausch und einen Salon."
+            },
+            {
+                "heading": "Die hier entwickelten Konzepte werden vielfältig eingesetzt",
+                "text": "In der Kultur- und Grundlagenforschung, der Entwicklung von Narrativen, tiefenpsychologischen Wirkungsanalysen rund um Medien, Produkte, Marken, Werbung bis hin zu eigenen Podcasts."
+            },
+            {
+                "heading": "Hierzu zählen auch",
+                "text": "Die Morphologische Psychologie, Message Tuner, Verfassungs-Marketing, Narrative Psychologie."
+            }
+        ],
+        "jobs": [
+            "Einer allein kann nicht viel bewegen. Deshalb lieben wir den kreativen und analytischen Austausch im Team.",
+            "Wenn Sie sicher sind, dass wir uns kennenlernen sollten, dann senden Sie uns gerne eine Bewerbung für...",
+            "...einen festen Job an:",
+            "...ein Praktikum an:"
+        ],
+        "whyus": "WARUM WIR"
     },
     "datesEventsPage": {
         "eventsNavigation": [

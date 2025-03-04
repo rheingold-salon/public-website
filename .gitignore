@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# wordpress conversion stuff
+src/db/*.xml
+src/db/wordpress_media
+

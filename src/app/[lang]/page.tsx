@@ -14,7 +14,7 @@ export default async function HomePage({
     return (
         <>
             <ImageWithTextBox text={dict.landingImageText} staticImage={homeLandingImage} />
-            <EmbeddedVideo />
+            <EmbeddedVideo text={dict.whoweare} />
             <Contact
                 headerText={dict.contact.headerText}
                 personalText={dict.contact.personalText}

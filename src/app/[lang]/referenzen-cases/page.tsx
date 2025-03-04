@@ -1,15 +1,17 @@
 import { CustomerGroupCell, ProgressPagination } from "@/components";
 import { db } from "@/db";
-import { customergroupsTable } from "@/db/schema";
+import { customergroupsTable, referencesTable } from "@/db/schema";
 
 export default async function ReferenzenCasesPage({ params }: { params: Promise<{ lang: 'de' | 'en' }> }) {
-    const customerGroups = await db.select().from(customergroupsTable);
     const lang = (await params).lang
+
+    const customerGroups = await db.select().from(customergroupsTable);
+    const references = await db.select().from(referencesTable);
 
     return (
         <div className="pt-28 flex justify-center">
             <div className="w-full max-w-7xl px-4">
-                <h1 className="font-bold text-4xl text-center mb-8">Kunden</h1>
+                <h1 className="font-bold text-4xl text-center mb-8">kunden</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                     {customerGroups?.map((customerGroup) => (
                         <CustomerGroupCell
@@ -20,9 +22,13 @@ export default async function ReferenzenCasesPage({ params }: { params: Promise<
                             }} />
 
                     ))}
+                    <h1 className="font-bold text-4xl text-center mt-24 mb-8">referenzen</h1>
+                    <ProgressPagination />
+                    <h1 className="font-bold text-4xl text-center mt-24 mb-8">cases</h1>
+                    <ProgressPagination />
                 </div>
-                <ProgressPagination />
             </div>
         </div>
     );
 }
+

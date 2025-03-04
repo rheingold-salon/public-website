@@ -4,9 +4,12 @@ import { teamImage } from '@/assets';
 import { useState } from "react";
 import { FaPlay } from 'react-icons/fa';
 
-export const EmbeddedVideo = () => {
+export const EmbeddedVideo = ({ text }: { text: string }) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const videoId = "fGnFUdJ7yjs";
+
+    const [who, we, are] = text.split(" ")
+
 
     return (
         <div className="relative h-96 md:h-screen md:w-screen">
@@ -40,7 +43,7 @@ export const EmbeddedVideo = () => {
                         >
                             <FaPlay className='text-white' />
                         </div>
-                        <p className="mt-8 text-white font-bold font-serif text-3xl">WER <span className='text-salongreen'>WIR</span> SIND</p>
+                        <p className="mt-8 text-white font-bold font-serif text-3xl">{who} <span className='text-salongreen'>{we}</span> {are}</p>
                     </div>
                 </div>
             )}

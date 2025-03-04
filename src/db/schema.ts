@@ -1,7 +1,6 @@
 import { date, integer, pgEnum, pgTable, primaryKey, text, time } from "drizzle-orm/pg-core";
 
 // dates & events
-
 export const eventTypeEnum = pgEnum("event_type", ["event", "vortrag", "podcast", "tv"])
 
 export const eventsTable = pgTable("events", {
@@ -20,7 +19,6 @@ export const eventsTable = pgTable("events", {
 
 
 // founder & team
-
 export const peopleTable = pgTable("people", {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
     name: text().notNull(),
@@ -35,7 +33,6 @@ export const peopleTable = pgTable("people", {
 
 
 // references and cases
-
 export const customergroupsTable = pgTable("customers_groups", {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
     nameDe: text().notNull(),
@@ -61,10 +58,10 @@ export const casesTable = pgTable("cases", {
 
 
 // news & publications
-
 export const publicationsTable = pgTable("publications", {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
     title: text().notNull(),
+    date: date().notNull(),
     author: text().notNull(),
     content: text().notNull(),
     imagePath: text().notNull(),
