@@ -10,10 +10,11 @@ export default async function CoachingPage({
     return (
         <>
             <GrayBox heading1={dict.heading1} heading2={dict.heading2}>
-                <p>{dict.p1}</p>
-                <p className="mt-4">{dict.p2}</p>
-                <p className="mt-4">{dict.p3}</p>
-                <p className="mt-4">{dict.p4}</p>
+                {dict.paragraphs.map((text, index) => {
+                    return (
+                        <p key={index} className="mt-4">{text}</p>
+                    );
+                })}
             </GrayBox>
         </>
 

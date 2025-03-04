@@ -45,24 +45,48 @@
         "interviewsPage": {
             "heading1": "TIEFENPSYCHOLOGE &",
             "heading2": "INTERVIEWS",
-            "interviews1": "Das rheingold salon Interview® ist mehr als ein gewöhnliches Interview der Tiefenpsychologie. Es ist vielmehr eine Forschungsreise in die im Alltag unbewussten Sinn-Zusammenhänge. Durch die von uns über Jahre eingeübten speziellen Befragungstechniken brechen wir einfache rationale Begründungen auf. Abschlussbewertungen: wie „Das ist mir zu teuer“ oder „Das schmeckt mir nicht“ zerlegen wir  und rekonstruieren, wie sie entstanden sind. In dieser Rekonstruktion finden sich die Antworten auf die Fragen, „warum“ Menschen Dinge erleben, wie sie sie erleben und „warum“ sie sich verhalten, wie sie sich verhalten.",
-            "interviews2": "Die Tiefeninterviews funktionieren übrigens auch per Video-Call hervorragend.Dem rheingold salon Interview® folgt eine intensive, theoriegeleitetete Analyse. Unser Psychologenteam nutzt als Auswertungsgrundlage dazu grundsätzlich die Theorie der morphologischen Psychologie mit ihren an der Kölner Universität von Prof. Salber entwickelten Grundannahmen."
+            "paragraphs": [
+                "Das rheingold salon Interview® ist mehr als ein gewöhnliches Interview der Tiefenpsychologie. Es ist vielmehr eine Forschungsreise in die im Alltag unbewussten Sinn-Zusammenhänge. Durch die von uns über Jahre eingeübten speziellen Befragungstechniken brechen wir einfache rationale Begründungen auf. Abschlussbewertungen: wie „Das ist mir zu teuer“ oder „Das schmeckt mir nicht“ zerlegen wir  und rekonstruieren, wie sie entstanden sind. In dieser Rekonstruktion finden sich die Antworten auf die Fragen, „warum“ Menschen Dinge erleben, wie sie sie erleben und „warum“ sie sich verhalten, wie sie sich verhalten.",
+                "Die Tiefeninterviews funktionieren übrigens auch per Video-Call hervorragend.Dem rheingold salon Interview® folgt eine intensive, theoriegeleitetete Analyse. Unser Psychologenteam nutzt als Auswertungsgrundlage dazu grundsätzlich die Theorie der morphologischen Psychologie mit ihren an der Kölner Universität von Prof. Salber entwickelten Grundannahmen."
+            ]
         },
         "gdPage": {
             "heading1": "GRUPPENDISKUSSIONEN",
             "heading2": "",
-            "gd1": "rheingold salon Groups® eröffnen zeitgleich einen vielseitigen und kompakten Blick auf die grundsätzliche psychologische Dynamik eines Untersuchungsgegenstands. In der Tiefenpsychologie verstehen wird die Gruppen nicht als Jury: Likes und Dislikes, Rankings und Ratings nutzen wir als Eindrücke innerhalb eines größeren Zusammenhangs.",
-            "gd2": "Aktuelle Trends und kulturelle Strömungen werden so sichtbarer. Und die Dynamik und Atmosphäre der rheingold salon Groups® werden immer mit in die tiefenpsychologische Analyse und Auswertung einbezogen.",
-            "gd3": "Die strategische Einschätzung von Produkten, Medien, Marken oder Kommunikationsmitteln ist mit unseren rheingold salon Groups® optimal möglich. Länge und Größe der rheingold salon Groups® werden individuell auf Ihre Studie zugeschnitten.",
-            "gd4": "Sie könnten schon zweistündige Gruppen buchen. Wir lieben lange Befragungen von drei bis vier Stunden. Denn: Wir denken, dass diese „extended groups“ das Beste aus beiden Welten vereinen: die Tiefe der Einzel-Befragungen und die Ökonomie der Gruppe."
+            "paragraphs": [
+                "rheingold salon Groups® eröffnen zeitgleich einen vielseitigen und kompakten Blick auf die grundsätzliche psychologische Dynamik eines Untersuchungsgegenstands. In der Tiefenpsychologie verstehen wird die Gruppen nicht als Jury: Likes und Dislikes, Rankings und Ratings nutzen wir als Eindrücke innerhalb eines größeren Zusammenhangs.",
+                "Aktuelle Trends und kulturelle Strömungen werden so sichtbarer. Und die Dynamik und Atmosphäre der rheingold salon Groups® werden immer mit in die tiefenpsychologische Analyse und Auswertung einbezogen.",
+                "Die strategische Einschätzung von Produkten, Medien, Marken oder Kommunikationsmitteln ist mit unseren rheingold salon Groups® optimal möglich. Länge und Größe der rheingold salon Groups® werden individuell auf Ihre Studie zugeschnitten.",
+                "Sie könnten schon zweistündige Gruppen buchen. Wir lieben lange Befragungen von drei bis vier Stunden. Denn: Wir denken, dass diese „extended groups“ das Beste aus beiden Welten vereinen: die Tiefe der Einzel-Befragungen und die Ökonomie der Gruppe."
+            ]
         },
         "coachingPage": {
             "heading1": "TIEFENPSYCHOLOGIE IN",
             "heading2": "WORKSHOPS & COACHING",
-            "p1": "rheingold salon Workshops und Coachings können Sie als Kick-Off zu einer Studie, als Umsetzungs-Workshop nach einem Research – oder ganz unabhängig davon buchen. Integrativ oder um alle Beteiligten im Unternehmen an Board zu holen.",
-            "p2": "Zentraler Auftrag ist immer: Den für die Branche, das Unternehmen, die Marke relevanten psychologischen Zusammenhang herauszuarbeiten und einen konkreten Umsetzungs-Guide zu entwickeln.",
-            "p3": "Unsere Psychologen und Researcher moderieren, gestalten und evaluieren die intensiven Sessions.",
-            "p4": "Grundlage der Workshops ist immer der tiefenpsychologische Blick basierend auf der morphologischen Theorie. Das gilt ebenso für die  persönlichen Coachings"
+            "paragraphs": [
+                "rheingold salon Workshops und Coachings können Sie als Kick-Off zu einer Studie, als Umsetzungs-Workshop nach einem Research – oder ganz unabhängig davon buchen. Integrativ oder um alle Beteiligten im Unternehmen an Board zu holen.",
+                "Zentraler Auftrag ist immer: Den für die Branche, das Unternehmen, die Marke relevanten psychologischen Zusammenhang herauszuarbeiten und einen konkreten Umsetzungs-Guide zu entwickeln.",
+                "Unsere Psychologen und Researcher moderieren, gestalten und evaluieren die intensiven Sessions.",
+                "Grundlage der Workshops ist immer der tiefenpsychologische Blick basierend auf der morphologischen Theorie. Das gilt ebenso für die  persönlichen Coachings"
+            ]
+        },
+        "markenPage": {
+            "heading1": "MARKEN &",
+            "heading2": "STRATEGIEBERATUNG",
+            "paragraphs": [
+                "Strategie-Beratung macht inzwischen– fast – jeder. Bei uns basiert die Strategie- und Positionierungs-Beratung immer auf tiefenpsychologischen Untersuchungen und Erkenntnissen.",
+                "Empirisch-psychologisch fundierte Beratung, Entwicklung von Brand Key und Brand Vision, das Erstellen von Brand-Manifesten & Creative Briefs sind unsere Leidenschaft. Wie die gemeinsamen Optimierungen von Kundenansprache und Customer Journey.",
+                "Und sollten Sie dieses bewährte Vorgehen auch nutzen wollen für die strategisch-ganzheitliche Ausrichtung beim Employer Branding und der Mitarbeiter-Zufriedenheit, begleiten wir Sie gern."
+            ]
+        },
+        "speakerPage": {
+            "heading1": "SPEAKER &",
+            "heading2": "EVENTS",
+            "paragraphs": [
+                "Jens Lönneker & Ines Imdahl präsentieren relevante psychologische Themen auf Ihrem Kongress, Ihrem Event, Ihrer – auch digitalen – Veranstaltung.",
+                "Und Sie können wählen aus einer Vielzahl spannender Themen für Vorträge: Nachhaltigkeit, Diversity, Frauen & Männer, Purpose & CX, Narrative & Tiefen-Psychologie, Video-Forschung, (digitale) Werbewirkung, Storytelling, Zielgruppenforschung & Verfassungsmarketing, Jugendkultur u.v.m.",
+                "Sie haben eine Kombination im Visier? Lassen Sie sich einfach Ihren Vortrag individuell zusammenstellen. Wir freuen uns darauf!"
+            ]
         }
     },
     "foundersTeamPage": {
