@@ -20,6 +20,51 @@
             "personalText": "persönlich an"
         }
     },
+    "marketResearchPage": {
+        "strategyText": "Wir ergründen, was Menschen bewegt und motiviert. Wir graben - forschen - dort, wo andere gar nicht suchen. Und entschlüsseln so die geheime Logik des Marktes.",
+        "nextButtonText": "weiter",
+        "grundlagenPage": {
+            "heading1": "UNSERE",
+            "heading2": "GRUNDLAGEN",
+            "grundlagen1": "Wir halten uns für rationale und vernünftige Wesen: Doch das sind wir meist nicht! Denn: Unser Handeln, unsere Entscheidungen und unser Erleben sind oft von unbewussten und irrationalen Motiven beeinflusst. Dennoch lässt sich unser Verhalten und Erleben sinnhaft entschlüsseln und damit auch beeinflussen. Die Tiefenpsychologie hat sich genau darauf spezialisiert. Inzwischen gibt es Anbieter, die behaupten, sie arbeiteten mit Tiefenpsychologie oder gar mit der Morphologie. Nicht immer stimmt das!",
+            "grundlagen2": "Qualitative Ansätze unterscheiden sich.",
+            "list1Header": "Das offene Gespräch ist ihnen zwar gemein – die Auswertung jedoch erfolgt auf verschiedenen Grundlagen:",
+            "list1": [
+                "Kognitive Ansätze (wie z.B. Maslow-Bedürfnis-Pyramide) suchen nach bestimmten, meist festen und branchenübergreifenden Motiven und Bedürfnissen.",
+                "Linguistische Ansätze nutzen vorrangig die Sprachanalyse, hier auch Betonung, Pausen, ‚Ähs‘ und ‚Öhs‘.",
+                "Semiotische Ansätze interpretieren Zeichen, kulturell und personell übergreifend",
+                "Einige Anbieter qualitativer Ansätze kombinieren die Gespräche mit apparativen Verfahren (Hautwiderstandsmessungen, Blickaufzeichnungen) – doch ihre Auswertung ist nicht immer theoriegeleitet."
+            ],
+            "list2Header": "Die morphologische Tiefenpsychologie",
+            "list2": [
+                "… berücksichtigt immer die Sprachbeobachtungen und Sprachinterpretationen wie die Linguistiker,",
+                "… entschlüsselt die Codes und Zeichen wie die Semiotiker,",
+                "… und sucht die speziellen, unbewussten Motive, die für jede Branche andere sind – als Differenzierung zur Kognitiven Psychologie."
+            ]
+        },
+        "interviewsPage": {
+            "heading1": "TIEFENPSYCHOLOGE &",
+            "heading2": "INTERVIEWS",
+            "interviews1": "Das rheingold salon Interview® ist mehr als ein gewöhnliches Interview der Tiefenpsychologie. Es ist vielmehr eine Forschungsreise in die im Alltag unbewussten Sinn-Zusammenhänge. Durch die von uns über Jahre eingeübten speziellen Befragungstechniken brechen wir einfache rationale Begründungen auf. Abschlussbewertungen: wie „Das ist mir zu teuer“ oder „Das schmeckt mir nicht“ zerlegen wir  und rekonstruieren, wie sie entstanden sind. In dieser Rekonstruktion finden sich die Antworten auf die Fragen, „warum“ Menschen Dinge erleben, wie sie sie erleben und „warum“ sie sich verhalten, wie sie sich verhalten.",
+            "interviews2": "Die Tiefeninterviews funktionieren übrigens auch per Video-Call hervorragend.Dem rheingold salon Interview® folgt eine intensive, theoriegeleitetete Analyse. Unser Psychologenteam nutzt als Auswertungsgrundlage dazu grundsätzlich die Theorie der morphologischen Psychologie mit ihren an der Kölner Universität von Prof. Salber entwickelten Grundannahmen."
+        },
+        "gdPage": {
+            "heading1": "GRUPPENDISKUSSIONEN",
+            "heading2": "",
+            "gd1": "rheingold salon Groups® eröffnen zeitgleich einen vielseitigen und kompakten Blick auf die grundsätzliche psychologische Dynamik eines Untersuchungsgegenstands. In der Tiefenpsychologie verstehen wird die Gruppen nicht als Jury: Likes und Dislikes, Rankings und Ratings nutzen wir als Eindrücke innerhalb eines größeren Zusammenhangs.",
+            "gd2": "Aktuelle Trends und kulturelle Strömungen werden so sichtbarer. Und die Dynamik und Atmosphäre der rheingold salon Groups® werden immer mit in die tiefenpsychologische Analyse und Auswertung einbezogen.",
+            "gd3": "Die strategische Einschätzung von Produkten, Medien, Marken oder Kommunikationsmitteln ist mit unseren rheingold salon Groups® optimal möglich. Länge und Größe der rheingold salon Groups® werden individuell auf Ihre Studie zugeschnitten.",
+            "gd4": "Sie könnten schon zweistündige Gruppen buchen. Wir lieben lange Befragungen von drei bis vier Stunden. Denn: Wir denken, dass diese „extended groups“ das Beste aus beiden Welten vereinen: die Tiefe der Einzel-Befragungen und die Ökonomie der Gruppe."
+        },
+        "coachingPage": {
+            "heading1": "TIEFENPSYCHOLOGIE IN",
+            "heading2": "WORKSHOPS & COACHING",
+            "p1": "rheingold salon Workshops und Coachings können Sie als Kick-Off zu einer Studie, als Umsetzungs-Workshop nach einem Research – oder ganz unabhängig davon buchen. Integrativ oder um alle Beteiligten im Unternehmen an Board zu holen.",
+            "p2": "Zentraler Auftrag ist immer: Den für die Branche, das Unternehmen, die Marke relevanten psychologischen Zusammenhang herauszuarbeiten und einen konkreten Umsetzungs-Guide zu entwickeln.",
+            "p3": "Unsere Psychologen und Researcher moderieren, gestalten und evaluieren die intensiven Sessions.",
+            "p4": "Grundlage der Workshops ist immer der tiefenpsychologische Blick basierend auf der morphologischen Theorie. Das gilt ebenso für die  persönlichen Coachings"
+        }
+    },
     "foundersTeamPage": {
         "team": "TEAM",
         "founders": "GRÜNDER",
@@ -28,7 +73,7 @@
     "salonRheingoldPage": {
         "foundingMythText": "Jedes Unternehmen braucht einen Gründungsmythos - hier ist unserer zur Marktforschung in Köln:",
         "togetherText": "„Seit wir uns kennen, möchten wir zusammen arbeiten. Seit 1994 tun wir das. Wir schätzen und nutzen den Austausch unserer Paarbeziehung, um unsere moderne Agentur für Marktforschung in Köln auf unkonventionelle, moderne und fruchtbare Art nach vorne zu bringen. Gemeinsam zu leben, Familie zu haben und – Vollzeit – zu arbeiten, ist nicht nur möglich, sondern für uns auch ein Modell der Zukunft.“",
-        "heading1": "GEMEINSAM",
+        "heading1": "GEMEINSAM &",
         "heading2": "ARBEITEN",
         "inesText": "Ines Imdahl geht als Gründerin & Inhaberin vom rheingold salon ihrer Lebensfrage nach. Der Frage nach dem Warum. Weil ihr die Philosophie nicht erklären konnte, warum Menschen rauchen, obwohl sie vollständig über die Folgen aufgeklärt sind, studierte sie Psychologie. Heute wollen ihre Kunden wissen, wie  menschliches Verhalten und Erleben zu erklären sind, um gemeinsam mit dem rheingold salon strategische Ausrichtungen für Marken, Märkte und Kommunikation zu entwickeln. Das Menschliche erörtert sie auch regelmäßig in ihrer eigenen WDR TV-Sendung „5 Fallen 2 Experten“. Neben Frauen- und Kulturforschung richtet sie ihren Fokus erfolgreich auf Werbewirkungsforschung: ca. 100 Kolumnen im Handelsblatt und ihr Buch „Werbung auf der Couch“ zeugen davon.",
         "jensText": "Jens Lönneker, rheingold Gründer, wollte im Jahr 1986 beweisen, dass man mit psychologischer Marktforschung Geld verdienen kann – damals ein gewagtes Unterfangen. Das Unternehmen hatte anfangs nur ein einziges Telefon, bei dem sich eine befreundete Anwaltssekretärin mit dem Firmennamen meldete. Das erste Untersuchungsmaterial wurde gar mit dem Vermerk „Lieferung unzustellbar“ zurückgesandt. Die psychologische Marktforschung konnte dennoch schnell überzeugen. Die Konzepte der morphologischen Psychologie werden kontinuierlich weiter entwickelt und brauchen kreativen Raum; und der findet sich heute im rheingold salon Konzept direkt am Kölner Dom.",

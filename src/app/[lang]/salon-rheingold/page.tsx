@@ -14,7 +14,9 @@ export default async function SalonRheingoldPage({ params }: { params: Promise<{
     return (
         <>
             <ImageWithTextBox text={dict.salonRheingoldPage.foundingMythText} staticImage={salonrheingoldLandingImage} />
-            <GrayBox heading1={dict.salonRheingoldPage.heading1} heading2={dict.salonRheingoldPage.heading2} text={dict.salonRheingoldPage.togetherText} />
+            <GrayBox heading1={dict.salonRheingoldPage.heading1} heading2={dict.salonRheingoldPage.heading2} >
+                <p>{dict.salonRheingoldPage.togetherText}</p>
+            </GrayBox>
 
             <div className="grid grid-cols-1 m-10">
                 <div className="flex flex-col md:flex-row items-center md:items-start justify-center py-4">
