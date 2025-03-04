@@ -1,5 +1,4 @@
-import { ImageWithTextBox } from '@/components';
-import { Contact, EmbeddedVideo } from '@/components';
+import { Contact, EmbeddedVideo, ImageWithTextBox, GrayBox } from '@/components';
 import { getDictionary } from '@/dictionaries';
 import { homeLandingImage } from '@/assets';
 
@@ -14,6 +13,7 @@ export default async function HomePage({
     return (
         <>
             <ImageWithTextBox text={dict.landingImageText} staticImage={homeLandingImage} />
+            <GrayBox heading1={dict.heading1} heading2={dict.heading2} text={dict.text} />
             <EmbeddedVideo text={dict.whoweare} />
             <Contact
                 headerText={dict.contact.headerText}

@@ -8,4 +8,5 @@ export { Contact } from "./Contact";
 export { EventCard } from "./EventCard";
 export { EventsNavigation } from "./EventsNavigation";
 export { EventsComposer } from "./EventsComposer";
+export { GrayBox } from "./GrayBox";
 

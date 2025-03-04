@@ -124,6 +124,7 @@ export const Navbar = (
                         </div>
                     </div>
 
+
                     {/* Mobile Menu Button */}
                     <div className="md:hidden">
                         <button

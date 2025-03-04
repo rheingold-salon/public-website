@@ -1,4 +1,4 @@
-import { EmbeddedVideo, ImageWithTextBox } from "@/components";
+import { EmbeddedVideo, ImageWithTextBox, GrayBox } from "@/components";
 import { salonrheingoldLandingImage } from "@/assets";
 import { getDictionary } from "@/dictionaries";
 import Image from "next/image";
@@ -11,27 +11,10 @@ export default async function SalonRheingoldPage({ params }: { params: Promise<{
     const [who, we, are] = dict.homePage.whoweare.split(" ");
     const [why, us] = dict.salonRheingoldPage.whyus.split(" ")
 
-
     return (
         <>
             <ImageWithTextBox text={dict.salonRheingoldPage.foundingMythText} staticImage={salonrheingoldLandingImage} />
-
-            <section className="flex items-center bg-white py-12 px-6 md:px-16">
-                <div className="w-1/4 bg-gray-200 h-full hidden md:block"></div>
-                <div className="md:w-3/4 w-full px-6">
-                    <h2 className="text-3xl font-bold">
-                        <span className="text-black">GEMEINSAM &amp; </span>
-                        <span className="text-salongreen">ARBEITEN</span>
-                    </h2>
-                    <p className="mt-4 text-gray-700">
-                        „Seit wir uns kennen, möchten wir zusammen arbeiten. Seit 1994 tun wir das. Wir schätzen und nutzen den Austausch
-                        unserer Paarbeziehung, um unsere moderne Agentur für Marktforschung in Köln auf unkonventionelle, moderne und fruchtbare
-                        Art nach vorne zu bringen. Gemeinsam zu leben, Familie zu haben und – Vollzeit – zu arbeiten, ist nicht nur möglich,
-                        sondern für uns auch ein Modell der Zukunft.“
-                    </p>
-                </div>
-            </section>
-            );
+            <GrayBox heading1={dict.salonRheingoldPage.heading1} heading2={dict.salonRheingoldPage.heading2} text={dict.salonRheingoldPage.togetherText} />
 
             <div className="grid grid-cols-1 m-10">
                 <div className="flex flex-col md:flex-row items-center md:items-start justify-center py-4">
