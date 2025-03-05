@@ -1,5 +1,7 @@
 import { GrayBox } from "@/components";
 import { getDictionary } from "@/dictionaries";
+import { speakerImage } from "@/assets";
+import Image from "next/image";
 
 export default async function SpeakerPage({
     params,
@@ -15,6 +17,14 @@ export default async function SpeakerPage({
                         <p key={index} className="mt-4">{text}</p>
                     );
                 })}
+                <Image
+                    src={speakerImage}
+                    alt="Bild Interview"
+                    className="w-full h-72 rounded-tl-[100px] mt-6"
+                    style={{
+                        objectFit: "cover"
+                    }}
+                />
             </GrayBox>
         </>
 

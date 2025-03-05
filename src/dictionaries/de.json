@@ -23,6 +23,48 @@
     "marketResearchPage": {
         "strategyText": "Wir ergründen, was Menschen bewegt und motiviert. Wir graben - forschen - dort, wo andere gar nicht suchen. Und entschlüsseln so die geheime Logik des Marktes.",
         "nextButtonText": "weiter",
+        "navigation": [
+            {
+                "text": "UNSERE GRUNDLAGEN",
+                "link": "/[lang]/marktforschung-services"
+            },
+            {
+                "text": "TIEFENPSYCHOLOGE & INTERVIEWS",
+                "link": "/[lang]/marktforschung-services/tiefenpsychologe-interviews"
+            },
+            {
+                "text": "GRUPPENDISKUSSIONEN",
+                "link": "/[lang]/marktforschung-services/gruppendiskussionen"
+            },
+            {
+                "text": "TIEFENPSYCHOLOGIE IN WORKSHOPS & COACHING",
+                "link": "/[lang]/marktforschung-services/tiefenpsychologie-in-workshops-coaching"
+            },
+            {
+                "text": "GRUNDLAGEN- & OPERATIVE FORSCHUNG",
+                "link": "/[lang]/marktforschung-services/grundlagen-operative-forschung"
+            },
+            {
+                "text": "DIGITALE & QUANTITATIVE FORSCHUNG",
+                "link": "/[lang]/marktforschung-services/digitale-quantitative-forschung"
+            },
+            {
+                "text": "MARKEN- & STRATEGIEBERATUNG",
+                "link": "/[lang]/marktforschung-services/marken-strategieberatung"
+            },
+            {
+                "text": "EMPLOYER BRANDING & PURPOSE",
+                "link": "/[lang]/marktforschung-services/employer-branding-purpose"
+            },
+            {
+                "text": "PR-STUDIEN & KOMMUNIKATIONSBERATUNG",
+                "link": "/[lang]/marktforschung-services/pr-studien-kommunikationsberatung"
+            },
+            {
+                "text": "SPEAKER & EVENTS",
+                "link": "/[lang]/marktforschung-services/speaker-events"
+            }
+        ],
         "grundlagenPage": {
             "heading1": "UNSERE",
             "heading2": "GRUNDLAGEN",
@@ -40,6 +82,13 @@
                 "… berücksichtigt immer die Sprachbeobachtungen und Sprachinterpretationen wie die Linguistiker,",
                 "… entschlüsselt die Codes und Zeichen wie die Semiotiker,",
                 "… und sucht die speziellen, unbewussten Motive, die für jede Branche andere sind – als Differenzierung zur Kognitiven Psychologie."
+            ],
+            "subheader": "Was meint rheingold salon eigentlich, wenn sie von diesem Unbewussten sprechen? Gibt es das überhaupt?",
+            "paragraphs": [
+                "Das Unbewusste ist nicht etwa ein verschüttetes Kindheitstrauma. Unbewusst sind uns vielmehr die Sinn- und Strukturzusammenhänge, die Überdeterminationen durch Kultur und persönlicher Sozialisation sowie die in uns ruhenden immer vorhandenen Spannungsfelder. Als Menschen können wir gleichzeitig etwas wollen und nicht wollen – wie das Rauchen zum Beispiel. Das Klima schützen wollen und trotzdem in den Urlaub fliegen…",
+                "Der morphologische Ansatz rekonstruiert diesen spannungsreichen Sinnzusammenhang zwischen solch messbaren Phänomenen und Aussagen! So entschlüsseln wir das Unbewusste, Motivationale und Irrationale.",
+                "Die morphologische Psychologie wurde an der Kölner Universität von Prof. Salber entwickelt.",
+                "Sie wollen mehr darüber wissen? Wir erläutern diese gern, ggf. auch in einem kleinen Theorie und Methodenworkshop. Egal mit wem Sie arbeiten, fragen Sie immer nach der zugrundeliegenden Theorie. Bauchgefühl und Erfahrung sind jedenfalls keine Theorien. Und ohne Theorie gibt es keine sinnvolle und qualitativ hochwertige Forschung."
             ]
         },
         "interviewsPage": {
@@ -87,6 +136,46 @@
                 "Und Sie können wählen aus einer Vielzahl spannender Themen für Vorträge: Nachhaltigkeit, Diversity, Frauen & Männer, Purpose & CX, Narrative & Tiefen-Psychologie, Video-Forschung, (digitale) Werbewirkung, Storytelling, Zielgruppenforschung & Verfassungsmarketing, Jugendkultur u.v.m.",
                 "Sie haben eine Kombination im Visier? Lassen Sie sich einfach Ihren Vortrag individuell zusammenstellen. Wir freuen uns darauf!"
             ]
+        },
+        "purposePage": {
+            "heading1": "EMPLOYER BRANDING &",
+            "heading2": "PURPOSE",
+            "subheading": "employer branding",
+            "paragraphs": [
+                "Wir verstehen Arbeitgeber-Marken auch als Marken-Persönlichkeiten. Persönlichkeiten, die ihre einzigartige, herausragende Position im War of Talents finden und präsentieren müssen.",
+                "Wir analysieren Ihr Image bei potentiellen Bewerbern, geben strategische Empfehlungen und erforschen, wie es um die Mitarbeiterbindung in Ihrem Unternehmen steht.",
+                "Wir forschen international für Arbeitgeber und unterstützen mit unserer Kombination aus tiefenpsychologischer Analyse und strategischer Beratung die Neu-Positionierung, um gezielt bei den begehrten zukünftigen Arbeitnehmer:innen zu punkten."
+            ],
+            "subheading2": "purpose",
+            "paragraphs2": [
+                "Purpose und CX in einem Atemzug? Mit der Digitalisierung erleben CXM einen neuen Hype. Mit Corona Purpose noch einen weiteren Schub. Ja, einen neuen und weiteren, denn beides ist nicht wirklich neu.",
+                "Oder brauchten die Unternehmen früher keinen Sinn? War Marken- oder Unternehmensführung jemals ohne positive Customer Experience möglich? Mussten die Kunden früher weniger zufrieden gestellt werden? Oder vielleicht nur ab und an, möglicherweise an ausgesuchten Touchpoints? Oder ist es gar umgekehrt, dass die Menschen heute viel schwerer zufrieden zu stellen sind?",
+                "Als Psychologen und Marktforscher stellen wir nicht nur diese Fragen, sondern wollen auch verstehen, warum genau zu diesem Zeitpunkt Gesellschaft und Kultur sich intensiv mit einem bestimmten Thema beschäftigen. Welchen Sinn macht es, dass sich einem CXM und dem Purpose gerade jetzt verstärkt zugewandt wird? Welchen Sinn macht der neue Hype um den Sinn?"
+            ]
+        },
+        "prPage": {
+            "heading1": "PR-STUDIEN &",
+            "heading2": "KOMMUNIKATIONSBERATUNG",
+            "p1": "Um Ihr Anliegen an die Öffentlichkeit zu bringen, bieten sich tiefenpsychologisch-repräsentative Studien an. Dieses einzigartige Vorgehen wurde in unseren ",
+            "a1": "Jugendstudien für den IKW",
+            "p2": " oder unserer ",
+            "a2": "Podcast-Studie",
+            "p3": "gemeinsam mit Hubert Burda Media umgesetzt. Basierend auf diesen spannenden Insights entwickeln wir eine Story. Eine Geschichte, die sich für die Öffentlichkeit und die Medien eignet.",
+            "p4": "Ihr Unternehmen kann sich mit solchen von Ihnen ausgesuchten Themenschwerpunkten in der Öffentlichkeit präsentieren."
+        },
+        "digitalPage": {
+            "modal1": "Das Surfverhalten ist unbewusst. Von Menge und Vielfalt des Gesehenen bleiben Bruchstücke hängen – 19 Seiten Schokolade werden komplett verdrängt. Mit dem rheingold salon IP-Tracking verfolgen wir über einen festgelegten Zeitraum das Surf-, Such und Verweil-Verhalten von Nutzer: innen. Das „Seelische im Netz“ wird so sichtbar, bisher unerreichte Dimensionen zugänglich. Eine eigens hierfür entwickelte Software dokumentiert und reproduziert themenrelevante Daten von Computer & Smartphone. Das rheingold salon IP-Tracking ist Grundlage für Tiefeninterviews, die ordnend das Aufgezeichnete in einen Sinnzusammenhang bringen.Smartphone. Das rheingold salon IP-Tracking ist Grundlage für Tiefeninterviews, die das Aufgezeichnete in einen Sinnzusammenhang ordnen.",
+            "modal2": "rheingold salon Diarys sind Online-Tagebücher, die sich besonders für einen ersten Einblick ins Thema und den Alltag der Teilnehmer*innen eignen. Als Pre-Task liefern die Online Diarys erste Erkenntnisse, die in darauffolgenden rheingold salon Interviews und rheingold salon Groups vertiefend exploriert werden können. Die digitalen Journals sind individuell, auch spielerisch programmierbar und lassen sich an jede Fragestellung anpassen.",
+            "modal3": "Bilder/Werbung oder Sounds werden per Mobile Devices gecheckt und psychologisch überprüft: Kreativ-Tool zur Entwicklung von Werbung und der richtigen Ansprache von Kunden.",
+            "modal4": "DeepQuant ist die intelligente Kombination aus rheingold salon Tiefenpsychologie und Statistik. Unbewusstes lässt sich nur dann in Zahlen erfassen, wenn die dafür notwendigen und folglich richtigen Fragen gestellt werden. Welche das sind, finden wir gern für Sie heraus – am liebsten mit Quali-First-Studien, deren Erkenntnisse zu punktgenauen Items und anschaulichen Tabellen werden. Aber wir können auch anders! Sollten sich Ihre Statistiken und Ihre momentane Marktrealität nicht decken, finden wir gerne für Sie heraus, was tatsächlich wirkt."
+        },
+        "operativePage": {
+            "hex1": "Marken-Image & Positionierung",
+            "hex2": "Verfassungsmarketing",
+            "hex3": "Trend- & Kulturforschung",
+            "hex4": "Shopper- & Handelsforschung",
+            "hex5": "Zielgruppenforschung & Personas",
+            "hex6": "Motivforschung"
         }
     },
     "foundersTeamPage": {

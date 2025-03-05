@@ -9,4 +9,6 @@ export { EventCard } from "./EventCard";
 export { EventsNavigation } from "./EventsNavigation";
 export { EventsComposer } from "./EventsComposer";
 export { GrayBox } from "./GrayBox";
+export { QuantBox } from "./QuantBox";
+export { Modal } from "./Modal";
 

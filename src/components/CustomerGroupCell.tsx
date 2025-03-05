@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import { Modal } from "@/components";
 
 // CustomerGroupType
 type CustomerGroup = {
@@ -34,16 +35,9 @@ export function CustomerGroupCell({ customerGroup }: { customerGroup: CustomerGr
                 </div>
             </div>
             {isModalOpen && (
-                <div className='fixed inset-0 z-10 flex justify-center items-center backdrop-blur-sm bg-black bg-opacity-50'
-                    onClick={() => setIsModalOpen(false)}
-                >
-                    <div
-                        className="bg-white p-8 max-w-md w-full relative"
-                        onClick={(e) => e.stopPropagation()}
-                    >
-                        <h2 className='text-xl font-bold mb-4'>{customerGroup.name}</h2>
-                    </div>
-                </div>
+                <Modal closeModal={() => setIsModalOpen(false)}>
+                    <h2 className='text-xl font-bold mb-4'>{customerGroup.name}</h2>
+                </Modal>
             )}
         </>
     );
