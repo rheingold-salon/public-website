@@ -1,8 +1,9 @@
-import { EmbeddedVideo, ImageWithTextBox, GrayBox } from "@/components";
+import { EmbeddedVideo, ImageWithTextBox, GrayBox, PaginatedCards } from "@/components";
 import { salonrheingoldLandingImage } from "@/assets";
 import { getDictionary } from "@/dictionaries";
 import Image from "next/image";
 import Link from "next/link";
+import { waterImage, jumpImage, salberImage, hammerImage, inhaberImage } from "@/assets";
 
 export default async function SalonRheingoldPage({ params }: { params: Promise<{ lang: 'de' | 'en' }> }) {
     const lang = (await params).lang
@@ -10,6 +11,21 @@ export default async function SalonRheingoldPage({ params }: { params: Promise<{
 
     const [who, we, are] = dict.homePage.whoweare.split(" ");
     const [why, us] = dict.salonRheingoldPage.whyus.split(" ")
+
+    const cardImages = [waterImage, jumpImage, salberImage, hammerImage, inhaberImage];
+
+    const whyusCards = dict.salonRheingoldPage.cards.map((card, index) => ({
+        id: index,
+        imageSrc: cardImages[index],
+        imageAlt: `Bild zu ${card.header}`,
+        content: (
+            <>
+                <h3 className="text-xl font-semibold mb-2 font-serif">{card.header}</h3>
+                <p className="text-lg">{card.text}</p>
+            </>
+        )
+
+    }))
 
     return (
         <>
@@ -69,7 +85,8 @@ export default async function SalonRheingoldPage({ params }: { params: Promise<{
             </div>
             <EmbeddedVideo text={dict.homePage.whoweare} />
             <div className="m-10">
-                <h1 className="text-center font-bold font-serif text-5xl"><span className='text-salongreen'>{why}</span> {us}?</h1>
+                <h1 className="text-center font-bold font-serif text-5xl mb-8"><span className='text-salongreen'>{why}</span> {us}?</h1>
+                <PaginatedCards cards={whyusCards} />
             </div>
             <div className="text-end m-10">
                 <h1 className="text-salongreen text-5xl font-bold font-serif">JOBS</h1>

@@ -14,6 +14,13 @@ export { default as purpose2Image } from "./purpose-2.jpg"
 export { default as speakerImage } from "./speaker.jpg";
 export { default as markenImage } from "./marken.jpg";
 export { default as prImage } from "./pr.jpg";
-export { default as hexagonImage } from "./hexagon.svg";
+export { default as waterImage } from "./water.jpg";
+export { default as jumpImage } from "./jump.jpeg";
+export { default as hammerImage } from "./hammer.jpg";
+export { default as inhaberImage } from "./inhaber.jpg";
+export { default as robotImage } from "./robot.jpg";
+export { default as handImage } from "./hand.jpg";
+export { default as ropeImage } from "./rope.png";
+export { default as busImage } from "./bus.png";
 
 

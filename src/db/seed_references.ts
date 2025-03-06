@@ -36,7 +36,7 @@ const main = async () => {
         name: "Dr. Monika Schmidhofer",
         content: "rheingold salon bleibt nicht bei den analytischen Ergebnissen stehen, sondern geht einen Schritt weiter und liefert exekutionelle Handlungsanweisungen zur Optimierung sowie strategische Denkanstöße. Hinzu kommt ein hoher Grad an Flexibilität und eine gute Portion Charme.",
         position: "Marketing Director Dairy Loose",
-        imagePath: "MonikaScmidhofer.png",
+        imagePath: "MonikaSchmidhofer.png",
     },
     {
         name: "Lisa Ortgies",
@@ -54,7 +54,7 @@ const main = async () => {
         name: "Christof Rauch",
         content: "Die Zusammenarbeit macht Spaß und führt zu verwertbaren Ergebnissen. Was will man mehr?",
         position: "Leiter Markenmanagement und Marktkommunikation, Versicherungskammer Bayern",
-        imagePath: "CrhistofRauch.png",
+        imagePath: "ChristofRauch.png",
     },
     {
         name: "Cornelia Ristau",

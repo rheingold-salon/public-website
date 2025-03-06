@@ -167,12 +167,24 @@
                     "content": "Warum trinken Menschen Wein? Oder lieber Bier? Warum passt Schokolade manchmal besser als Chips? Welche psychologischen Motive stecken dahinter? Angst, Machtstreben oder Selbstverwirklichung sind in der morphologischen Psychologie keine hinreichenden Erklärungen. Rauchen zum Beispiel wird von widerstreitenden Motiven bestimmt. Oraler Lustgewinn durch einen „erwachsenen Schnuller“ bei gleichzeitigem Wunsch, sich von der Kippe abzunabeln. Ob klassisch oder digital – wir entschlüsseln die geheimen, spannungsreichen Motive des Marktes, um Produkte, Marken und Unternehmen optimal zu positionieren"
                 }
             ],
-            "hex1": "Marken-Image & Positionierung",
-            "hex2": "Verfassungsmarketing",
-            "hex3": "Trend- & Kulturforschung",
-            "hex4": "Shopper- & Handelsforschung",
-            "hex5": "Zielgruppenforschung & Personas",
-            "hex6": "Motivforschung"
+            "cards": [
+                {
+                    "header": "rheingold salon Pre-Find",
+                    "text": "Pre-Find statt Re-Search. Re-Search untersucht das Gestern – und im besten Fall das ‚gerade Jetzt‘. Pre-Find hingegen ist in die Zukunft gerichtet und entwickelt auf Basis tiefenpsychologischer Forschung Purpose und Zukunftsstrategien!"
+                },
+                {
+                    "header": "rheingold salon Skilling",
+                    "text": "Innovation braucht Entschiedenheit und Umsetzungs-Know-How! Statt zu handeln, wird aber Bewährtes oft zu lange bewahrt! Stillstand scheint verlockender als Innovation – denn Innovation (zer-)stört das Bestehende. Wir brauchen mehr Research zu (Zer)-Störungs-Skills gegen die Trägheits-Widerstände – mit rheingold salon Skilling."
+                },
+                {
+                    "header": "rheingold salon Irrational Indx®",
+                    "text": "Widersprüche zwischen Wollen und Tun gibt es sicher auch in Ihrem Business. Ja, der Mind-Behavior-Gap ist ein vertrautes Phänomen! Mit rheingold salon Irrational IndX® kann es Ihnen gelingen, die Widersprüche Ihrer Branche zu erkennen, zu verstehen und aufzulösen. Was ist der Irrational IndX Ihres Unternehmens? Wie lösen Sie ihn auf? Dank Tiefenpsychologie und punktgenauen Quantifizierungen finden Sie die passende Strategie."
+                },
+                {
+                    "header": "rheingold salon QualBus®",
+                    "text": "Schnelle und tiefe Ergebnisse – mit dem rheingold salon QualBus®. Am Anfang jeden Monats steigen fünf Männer und fünf Frauen ein und beantworten Ihre Fragen. Ob Sie sich kurzfristig, regelmäßig oder einmalig einbuchen: wir generieren 'Deep & Dirty' die Insights für Sie. EIne Übersetzung der Ergebnisse in Quant-Items ist zusätzlich buchbar."
+                }
+            ]
         }
     },
     "foundersTeamPage": {
@@ -227,7 +239,29 @@
             "...einen festen Job an:",
             "...ein Praktikum an:"
         ],
-        "whyus": "WARUM WIR"
+        "whyus": "WARUM WIR",
+        "cards": [
+            {
+                "header": "tiefen-psychologisch",
+                "text": "Wir forschen, auch wenn wir schnell forschen, immer in der Tiefe. Das zeigt sich in Länge der Befragung. Und in der Befragungstechnik. Diplomierte Psychologen & speziell nach der morphologischen Theorie ausgebildete Moderatoren sind für uns im Einsatz – weltweit."
+            },
+            {
+                "header": "unabhängig & neutral",
+                "text": "Wir gehören keinem der großen Agentur-Netzwerke an. Wir sind genau deswegen immer neutral & unabhängig. Und unsere Ergebnisse sind „schonungslos kreativ“."
+            },
+            {
+                "header": "theorie-geleitet",
+                "text": "Nichts ist besser als eine gute Theorie. Auswertungen nach „Bauchgefühl“ oder lediglich auf Basis von „Erfahrungen“ finden sie bei uns nicht.  Erforschung und Analyse basieren bei uns auf den wissenschaftlichen Theorien der Morphologischen Psychologie, entwickelt von Prof. Wilhelm Salber an der Universität zu Köln."
+            },
+            {
+                "header": "konkret & detailgenau",
+                "text": "Unsere Ergebnisse sind konkret, detailgenau und direkt für die Umsetzung geeignet. rheingold salon unterstützt auch hausinterne Umsetzungs- und Konkretisierungsprozesse auf Basis der tiefenpsychologischen Forschung."
+            },
+            {
+                "header": "inhaber-geführt",
+                "text": "Bei uns operiert der Chefarzt. Und der hat jede Menge Übung. Jedes Projekt wird von den Geschäftsführern & Inhabern mitbetreut."
+            }
+        ]
     },
     "datesEventsPage": {
         "eventsNavigation": [

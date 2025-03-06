@@ -1,5 +1,6 @@
 import { getDictionary } from "@/dictionaries";
-import { Hexagon } from "@/components";
+import { Hexagon, PaginatedCards } from "@/components";
+import { robotImage, handImage, ropeImage, busImage } from "@/assets";
 
 export default async function OperativePage({
     params,
@@ -15,9 +16,29 @@ export default async function OperativePage({
         position: { x: 0, y: 0 }
     }));
 
+    const images = [robotImage, handImage, ropeImage, busImage];
+
+    const cards = dict.cards.map((card, index) => ({
+        id: index,
+        imageSrc: images[index],
+        imageAlt: `Bild von ${card.header}`,
+        content: (
+            <>
+                <h1 className="font-serif font-bold text-2xl">{card.header}</h1>
+                <p>{card.text}</p>
+            </>
+        )
+
+    }));
+
     return (
-        <div className="flex justify-center my-24">
-            <Hexagon points={hexagonPoints} />
-        </div>
+        <>
+            <div className="flex justify-center my-24">
+                <Hexagon points={hexagonPoints} />
+            </div>
+            <div className="m-24">
+                <PaginatedCards cards={cards} />
+            </div>
+        </>
     );
 }
