@@ -141,6 +141,32 @@
             "modal4": "DeepQuant ist die intelligente Kombination aus rheingold salon Tiefenpsychologie und Statistik. Unbewusstes lässt sich nur dann in Zahlen erfassen, wenn die dafür notwendigen und folglich richtigen Fragen gestellt werden. Welche das sind, finden wir gern für Sie heraus – am liebsten mit Quali-First-Studien, deren Erkenntnisse zu punktgenauen Items und anschaulichen Tabellen werden. Aber wir können auch anders! Sollten sich Ihre Statistiken und Ihre momentane Marktrealität nicht decken, finden wir gerne für Sie heraus, was tatsächlich wirkt."
         },
         "operativePage": {
+            "hexagonPoints": [
+                {
+                    "label": "Marken-Image & Positionierung",
+                    "content": "Ist Ihre Marke auch traditionell, innovativ, sympathisch, modern und qualitätsorientiert? Willkommen im Club! Dies sind die am häufigsten verwendeten Begriffe für Markenpositionierungen. Marken sind jedoch wie Persönlichkeiten. Und diese lassen sich meist unique beschreiben. Sie haben Ecken und Kanten. Oder Rundungen. Sie haben auch „dunkle“ Seiten, zumindest Seiten, die nicht jedem sympathisch sind. Müssen sie auch nicht sein. Wer jedem gefällt, setzt keine Markierung. Auch Mainstream-Marken und Marktführer brauchen differenzierende, psychologisch präzise Positionierungen. Image-Erhebungen mit Hilfe der Tiefenpsychologie sind eine hervorragende Grundlage für die Ausrichtung, den Relaunch und den Stretch von Marken."
+                },
+                {
+                    "label": "Verfassungmarketing",
+                    "content": "Gab es früher Raucher & Nicht-Raucher, ist man heute „Party-Raucher“. Oder Flexitarier. Auch komplexe Segmentierungen stoßen somit an Grenzen. Menschen verhalten sich nicht immer gleich, auch nicht innerhalb einer „Zielgruppe“. Schokoladen-Esser zum Beispiel. Die meisten lieben es sie zu lutschen. Vor dem Fernseher. Fast alle lieben es Schokolade zu beißen. Unterwegs. Für den Energiekick. Unterteilt man in Beißer und Lutscher,  springt man zu kurz. Denn Lutschen & Beißen ist je nach Verfassung gleich attraktiv. Verfassungsmarketing ermittelt optimale Produkt- und Kommunikationsangebote – für den jeweiligen seelischen Zustand. Marken, Produkte & Medien sind Verfassungsmagneten, wenn sie die Stimmungen/Moods optimal ansprechen & idealerweise noch attraktiver machen"
+                },
+                {
+                    "label": "Trend- & Kulturforschung",
+                    "content": "Unser Handeln wird von unbewussten, mitunter auch irrationalen Motiven bestimmt. Und von kulturellen, gesellschaftlichen Veränderungen überdeterminiert. Als rheingold salon untersuchen wir, wie große Ereignisse und Krisen (9/11, Finanz- und Flüchtlingskrise, Corona) unsere Werte, unser Verhalten und unser Erleben verändern. So schaffen wir eine Grundlage, anhand derer Unternehmen & Marken angemessen mit ihrem Angebot reagieren können. Sie wollen wissen, wie Sie als Unternehmen Nachhaltigkeit und Diversity – zwei Megatrends der 2020er Jahre – sinnvoll und schlüssig integrieren können? Antworten dazu finden Sie gemeinsam mit rheingold salon"
+                },
+                {
+                    "label": "Shopper- & Handelsforschung",
+                    "content": "Wie verhalten sich Shopper im LEH, im stationären Handel, am Regal? Wie sehen Entscheidungsprozesse konkret aus? Was genau passiert bei der Customer Journey? Wie beeinflusst die Digitalisierung das Shopper-Verhalten? Welchen Stellenwert nimmt E-Commerce in den unterschiedlichen Branchen ein? Wie unterscheidet sich die Online- und Offlineshopping-Situation? Wie sieht eine UX, die CX und die Brand Experience aus? rheingold salon untersucht die komplette Reise eines Kaufes, des Produkterlebnisses, der Customer Experience online wie offline. Und das alles via unserer tiefenpsychologischen Befragungen."
+                },
+                {
+                    "label": "Zielgruppenforschung",
+                    "content": "Was trennt die Gen Z von den Boomern? Was lässt sich Generelles über Genderunterschiede sagen? Sind Frauen wirklich anders? Und was sind die zentralen Unterschiede? Unsere Jugend-, Frauen- und Männer-Studien zeigen auf, was sich von Generation zu Generation verändert. Auch entwickeln wir Psychogramme und Personas für die für Sie relevanten Alters- oder Subgruppen. Für die konkrete Kommunikation geben wir so Ihren Kundinnen ein Gesicht. Und schaffen gegenseitiges Verständnis- alters-, zielgruppen- und genderübergreifend."
+                },
+                {
+                    "label": "Motivforschung",
+                    "content": "Warum trinken Menschen Wein? Oder lieber Bier? Warum passt Schokolade manchmal besser als Chips? Welche psychologischen Motive stecken dahinter? Angst, Machtstreben oder Selbstverwirklichung sind in der morphologischen Psychologie keine hinreichenden Erklärungen. Rauchen zum Beispiel wird von widerstreitenden Motiven bestimmt. Oraler Lustgewinn durch einen „erwachsenen Schnuller“ bei gleichzeitigem Wunsch, sich von der Kippe abzunabeln. Ob klassisch oder digital – wir entschlüsseln die geheimen, spannungsreichen Motive des Marktes, um Produkte, Marken und Unternehmen optimal zu positionieren"
+                }
+            ],
             "hex1": "Marken-Image & Positionierung",
             "hex2": "Verfassungsmarketing",
             "hex3": "Trend- & Kulturforschung",

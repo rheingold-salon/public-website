@@ -1,6 +1,5 @@
 import { getDictionary } from "@/dictionaries";
-import { hexagonImage } from "@/assets";
-import Image from "next/image";
+import { Hexagon } from "@/components";
 
 export default async function OperativePage({
     params,
@@ -8,21 +7,17 @@ export default async function OperativePage({
 ) {
     const lang = (await params).lang
     const dict = (await getDictionary(lang)).marketResearchPage.operativePage;
+
+    const hexagonPoints = dict.hexagonPoints.map((point) =>
+    ({
+        label: point.label,
+        content: <p>{point.content}</p>,
+        position: { x: 0, y: 0 }
+    }));
+
     return (
-        <div className="my-24">
-            <div className="flex justify-center">
-                <p>{dict.hex1}</p>
-                <p>{dict.hex2}</p>
-            </div>
-            <div className="flex justify-around items-center">
-                <p>{dict.hex3}</p>
-                <Image src={hexagonImage} alt="Hexagon" width={60} height={60} />
-                <p>{dict.hex4}</p>
-            </div>
-            <div className="flex justify-around">
-                <p>{dict.hex5}</p>
-                <p>{dict.hex6}</p>
-            </div>
+        <div className="flex justify-center my-24">
+            <Hexagon points={hexagonPoints} />
         </div>
     );
 }

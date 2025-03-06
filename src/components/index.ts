@@ -13,4 +13,5 @@ export { QuantBox } from "./QuantBox";
 export { Modal } from "./Modal";
 export { ServicesNavigation } from "./ServicesNavigation";
 export { ServiceFooter } from "./ServiceFooter";
+export { Hexagon } from "./Hexagon"
 

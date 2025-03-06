@@ -1,6 +1,6 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-export function GrayBox({ heading1, heading2, image, children }: { heading1: string, heading2: string, image?: any, children: React.ReactNode }) {
+export function GrayBox({ heading1, heading2, image, children }: { heading1: string, heading2: string, image?: StaticImageData, children: React.ReactNode }) {
     return (
         <div className="relative my-24">
             {/* Gray background box */}
