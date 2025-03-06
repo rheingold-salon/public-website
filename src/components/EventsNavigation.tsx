@@ -24,7 +24,7 @@ export const EventsNavigation = ({ lang, eventsNavigation }: { lang: 'de' | 'en'
                 >
                     <span className="relative">
                         {route.label}
-                        <span className={`absolute left-0 top-1/3 h-4 z-[-1] bg-salongreen transition-all duration-300 ease-out
+                        <span className={`absolute left-0 top-[40%] h-4 z-[-1] bg-salongreen transition-all duration-300 ease-out
                             ${pathname === route.path ? 'w-full' : 'w-0 group-hover:w-full'}`}
                         />
                     </span>

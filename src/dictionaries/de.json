@@ -22,48 +22,19 @@
     },
     "marketResearchPage": {
         "strategyText": "Wir ergründen, was Menschen bewegt und motiviert. Wir graben - forschen - dort, wo andere gar nicht suchen. Und entschlüsseln so die geheime Logik des Marktes.",
+        "backButtonText": "zurück",
         "nextButtonText": "weiter",
         "navigation": [
-            {
-                "text": "UNSERE GRUNDLAGEN",
-                "link": "/[lang]/marktforschung-services"
-            },
-            {
-                "text": "TIEFENPSYCHOLOGE & INTERVIEWS",
-                "link": "/[lang]/marktforschung-services/tiefenpsychologe-interviews"
-            },
-            {
-                "text": "GRUPPENDISKUSSIONEN",
-                "link": "/[lang]/marktforschung-services/gruppendiskussionen"
-            },
-            {
-                "text": "TIEFENPSYCHOLOGIE IN WORKSHOPS & COACHING",
-                "link": "/[lang]/marktforschung-services/tiefenpsychologie-in-workshops-coaching"
-            },
-            {
-                "text": "GRUNDLAGEN- & OPERATIVE FORSCHUNG",
-                "link": "/[lang]/marktforschung-services/grundlagen-operative-forschung"
-            },
-            {
-                "text": "DIGITALE & QUANTITATIVE FORSCHUNG",
-                "link": "/[lang]/marktforschung-services/digitale-quantitative-forschung"
-            },
-            {
-                "text": "MARKEN- & STRATEGIEBERATUNG",
-                "link": "/[lang]/marktforschung-services/marken-strategieberatung"
-            },
-            {
-                "text": "EMPLOYER BRANDING & PURPOSE",
-                "link": "/[lang]/marktforschung-services/employer-branding-purpose"
-            },
-            {
-                "text": "PR-STUDIEN & KOMMUNIKATIONSBERATUNG",
-                "link": "/[lang]/marktforschung-services/pr-studien-kommunikationsberatung"
-            },
-            {
-                "text": "SPEAKER & EVENTS",
-                "link": "/[lang]/marktforschung-services/speaker-events"
-            }
+            "UNSERE GRUNDLAGEN",
+            "TIEFENPSYCHOLOGE & INTERVIEWS",
+            "GRUPPENDISKUSSIONEN",
+            "TIEFENPSYCHOLOGIE IN WORKSHOPS & COACHING",
+            "GRUNDLAGEN- & OPERATIVE FORSCHUNG",
+            "DIGITALE & QUANTITATIVE FORSCHUNG",
+            "MARKEN- & STRATEGIEBERATUNG",
+            "EMPLOYER BRANDING & PURPOSE",
+            "PR-STUDIEN & KOMMUNIKATIONSBERATUNG",
+            "SPEAKER & EVENTS"
         ],
         "grundlagenPage": {
             "heading1": "UNSERE",

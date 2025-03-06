@@ -11,4 +11,6 @@ export { EventsComposer } from "./EventsComposer";
 export { GrayBox } from "./GrayBox";
 export { QuantBox } from "./QuantBox";
 export { Modal } from "./Modal";
+export { ServicesNavigation } from "./ServicesNavigation";
+export { ServiceFooter } from "./ServiceFooter";
 
