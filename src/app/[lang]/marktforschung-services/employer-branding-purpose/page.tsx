@@ -12,6 +12,7 @@ export default async function PurposePage({
     return (
         <>
             <GrayBox heading1={dict.heading1} heading2={dict.heading2} image={purpose1Image}>
+                <p className="font-bold">{dict.subheading}</p>
                 {dict.paragraphs.map((text, index) => {
                     return (
                         <p key={index} className="mt-4">{text}</p>
@@ -20,7 +21,7 @@ export default async function PurposePage({
             </GrayBox>
             <div className="flex items-stretch mb-16">
                 <div className="w-2/3 mx-16">
-                    <p className="font-bold">{dict.subheading}</p>
+                    <p className="font-bold">{dict.subheading2}</p>
                     {dict.paragraphs2.map((text, index) => {
                         return (
                             <p key={index} className="mt-4">{text}</p>
