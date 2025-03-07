@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///app/apps/company-site/apps/company-site/src/app/%5Blang%5D/dates-events/layout.tsx"],"sourcesContent":["import React from \"react\";\n\nimport { EventsNavigation } from \"@/components\"\nimport { getDictionary } from \"@/dictionaries\";\n\nexport default async function DatesEventsLayout({\n    children,\n    params,\n}: {\n    children: React.ReactNode;\n    params: Promise<{ lang: 'en' | 'de' }>\n}) {\n    const lang = (await params).lang;\n    const eventsNavigation = (await getDictionary(lang)).datesEventsPage.eventsNavigation;\n\n    return (\n        <>\n            <EventsNavigation lang={lang} eventsNavigation={eventsNavigation} />\n            {children}\n        </>\n    );\n}\n"],"names":[],"mappings":";;;;AAEA;AACA;AADA;;;;AAGe,eAAe,kBAAkB,EAC5C,QAAQ,EACR,MAAM,EAIT;IACG,MAAM,OAAO,CAAC,MAAM,MAAM,EAAE,IAAI;IAChC,MAAM,mBAAmB,CAAC,MAAM,CAAA,GAAA,8IAAA,CAAA,gBAAa,AAAD,EAAE,KAAK,EAAE,eAAe,CAAC,gBAAgB;IAErF,qBACI;;0BACI,6WAAC,iKAAA,CAAA,mBAAgB;gBAAC,MAAM;gBAAM,kBAAkB;;;;;;YAC/C;;;AAGb"}},
+    {"offset": {"line": 34, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

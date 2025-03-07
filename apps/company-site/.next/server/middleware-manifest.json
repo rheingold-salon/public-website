@@ -1,0 +1,73 @@
+{
+  "version": 3,
+  "middleware": {
+    "/": {
+      "files": [
+        "server/edge/chunks/[project]__ba203e._.js",
+        "server/edge/chunks/[root of the server]__7580e2._.js",
+        "server/edge/chunks/edge-wrapper_683b1b.js"
+      ],
+      "name": "middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(\\/?index|\\/?index\\\\.json))?[\\/#\\?]?$",
+          "originalSource": "/"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/marktforschung-services(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/marktforschung-services"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/salon-rheingold(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/salon-rheingold"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/gruender-team(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/gruender-team"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/dates-events(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/dates-events"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/dates-events\\/podcasts(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/dates-events/podcasts"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/dates-events\\/tv(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/dates-events/tv"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/dates-events\\/vortraege(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/dates-events/vortraege"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/news-publikationen(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/news-publikationen"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/referenzen-cases(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/referenzen-cases"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/kontakt(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/kontakt"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "R3Bam8R/1WhJ15gb8nCkNB6d1sVQzo0kDcq+EJWb94M=",
+        "__NEXT_PREVIEW_MODE_ID": "7980202fea8036d3042ace133afaad2a",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "417b4e7c066b57d5cd1ed0e7ee254913d0f85c2fef0a68736b0ce80ec1175a76",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "0fb2e9b771dd443cb1e7178ae3669184f18d82a5c9d22a1cdfd07fb83a43b72a"
+      }
+    }
+  },
+  "sortedMiddleware": [
+    "/"
+  ],
+  "functions": {}
+}

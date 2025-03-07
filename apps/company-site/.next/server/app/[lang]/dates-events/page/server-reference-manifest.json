@@ -1,0 +1,27 @@
+{
+  "node": {
+    "7fb41f2a911150043ec6337cc9374c5e4c1f09bdaf": {
+      "workers": {
+        "app/[lang]/dates-events/page": {
+          "moduleId": "[project]/apps/company-site/.next-internal/server/app/[lang]/dates-events/page/actions.js { ACTIONS_MODULE0 => \"[project]/packages/db/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/[lang]/dates-events/page": "rsc"
+      }
+    },
+    "7ffdc1101b5a8f9a2b48ba57adb1480ff82c0cbd83": {
+      "workers": {
+        "app/[lang]/dates-events/page": {
+          "moduleId": "[project]/apps/company-site/.next-internal/server/app/[lang]/dates-events/page/actions.js { ACTIONS_MODULE0 => \"[project]/packages/db/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/[lang]/dates-events/page": "rsc"
+      }
+    }
+  },
+  "edge": {}
+}
