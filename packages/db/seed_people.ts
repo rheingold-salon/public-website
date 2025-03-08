@@ -1,4 +1,4 @@
-import { db } from "@/db";
+import { db } from ".";
 import { peopleTable } from "./schema";
 
 const main = async () => {

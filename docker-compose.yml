@@ -9,13 +9,18 @@ services:
     environment:
       NODE_ENV: development
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
-    volumes:
-      - .:/app
-      - /app/node_modules
     depends_on:
       - db
     networks:
       - salon_dev_network
+    develop:
+      watch:
+        - action: sync
+          path: ./apps/company-site/
+          target: /app/apps/company-site/
+        - action: sync
+          path: ./packages/db/
+          target: /app/packages/db/
 
   cms:
     build:
@@ -27,13 +32,18 @@ services:
     environment:
       NODE_ENV: development
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
-    volumes:
-      - .:/app
-      - /app/node_modules
     depends_on:
       - db
     networks:
       - salon_dev_network
+    develop:
+      watch:
+        - action: sync
+          path: ./apps/cms/
+          target: /app/apps/cms/
+        - action: sync
+          path: ./packages/db/
+          target: /app/packages/db/
 
   db:
     image: postgres:latest

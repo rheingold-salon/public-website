@@ -1,48 +1,28 @@
 {
   "node": {
-    "7fb41f2a911150043ec6337cc9374c5e4c1f09bdaf": {
+    "7ffdc1101b5a8f9a2b48ba57adb1480ff82c0cbd83": {
       "workers": {
-        "app/[lang]/referenzen-cases/page": {
-          "moduleId": "[project]/apps/company-site/.next-internal/server/app/[lang]/referenzen-cases/page/actions.js { ACTIONS_MODULE0 => \"[project]/packages/db/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/[lang]/dates-events/page": {
-          "moduleId": "[project]/apps/company-site/.next-internal/server/app/[lang]/dates-events/page/actions.js { ACTIONS_MODULE0 => \"[project]/packages/db/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
         "app/[lang]/gruender-team/page": {
           "moduleId": "[project]/apps/company-site/.next-internal/server/app/[lang]/gruender-team/page/actions.js { ACTIONS_MODULE0 => \"[project]/packages/db/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         }
       },
       "layer": {
-        "app/[lang]/referenzen-cases/page": "rsc",
-        "app/[lang]/dates-events/page": "rsc",
         "app/[lang]/gruender-team/page": "rsc"
       }
     },
-    "7ffdc1101b5a8f9a2b48ba57adb1480ff82c0cbd83": {
+    "7fb41f2a911150043ec6337cc9374c5e4c1f09bdaf": {
       "workers": {
-        "app/[lang]/referenzen-cases/page": {
-          "moduleId": "[project]/apps/company-site/.next-internal/server/app/[lang]/referenzen-cases/page/actions.js { ACTIONS_MODULE0 => \"[project]/packages/db/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/[lang]/dates-events/page": {
-          "moduleId": "[project]/apps/company-site/.next-internal/server/app/[lang]/dates-events/page/actions.js { ACTIONS_MODULE0 => \"[project]/packages/db/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
         "app/[lang]/gruender-team/page": {
           "moduleId": "[project]/apps/company-site/.next-internal/server/app/[lang]/gruender-team/page/actions.js { ACTIONS_MODULE0 => \"[project]/packages/db/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         }
       },
       "layer": {
-        "app/[lang]/referenzen-cases/page": "rsc",
-        "app/[lang]/dates-events/page": "rsc",
         "app/[lang]/gruender-team/page": "rsc"
       }
     }
   },
   "edge": {},
-  "encryptionKey": "R3Bam8R/1WhJ15gb8nCkNB6d1sVQzo0kDcq+EJWb94M="
+  "encryptionKey": "bpoDz8Z65wnaoX/NYpZW/E5JZC/UX28P/F1xs04yBIU="
 }

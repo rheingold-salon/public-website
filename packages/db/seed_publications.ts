@@ -1,6 +1,6 @@
 import { XMLParser } from "fast-xml-parser";
 import fs from "fs";
-import { db } from '@/db';
+import { db } from './index.js';
 import { publicationsTable, tagsTable, publicationtagsTable } from './schema.js';
 
 function getThumbnailId(item) {

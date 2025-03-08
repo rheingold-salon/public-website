@@ -1,4 +1,4 @@
-import { db } from "@/db";
+import { db } from ".";
 import { casesTable } from "./schema";
 
 const main = async () => {

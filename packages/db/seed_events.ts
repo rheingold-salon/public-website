@@ -1,4 +1,4 @@
-import { db } from "@/db";
+import { db } from ".";
 import { eventsTable, eventTypeEnum } from "./schema";
 
 const main = async () => {

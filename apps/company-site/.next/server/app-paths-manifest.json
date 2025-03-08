@@ -1,9 +1,4 @@
 {
   "/[lang]/page": "app/[lang]/page.js",
-  "/[lang]/referenzen-cases/page": "app/[lang]/referenzen-cases/page.js",
-  "/[lang]/news-publikationen/page": "app/[lang]/news-publikationen/page.js",
-  "/[lang]/dates-events/page": "app/[lang]/dates-events/page.js",
-  "/[lang]/gruender-team/page": "app/[lang]/gruender-team/page.js",
-  "/[lang]/salon-rheingold/page": "app/[lang]/salon-rheingold/page.js",
-  "/[lang]/marktforschung-services/page": "app/[lang]/marktforschung-services/page.js"
+  "/[lang]/gruender-team/page": "app/[lang]/gruender-team/page.js"
 }

@@ -5,7 +5,13 @@ export default async function ReferenzenCasesPage({ params }: { params: Promise<
     const lang = (await params).lang
 
     const customerGroups = await db.select().from(customergroupsTable);
-    const references = await db.select().from(referencesTable);
+    const references = (await db.select().from(referencesTable)).map((reference) => ({
+        id: reference.id,
+        name: reference.name,
+        content: lang === "de" ? reference.contentDe : reference.contentEn,
+        position: lang === "de" ? reference.positionDe : reference.positionEn,
+        imagePath: reference.imagePath,
+    }));
     const cases = await db.select().from(casesTable);
 
     const referencesCards = references.map((reference) => ({

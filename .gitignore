@@ -14,7 +14,7 @@
 /coverage
 
 # next.js
-/.next/
+**/.next
 /out/
 
 # production
@@ -43,4 +43,6 @@ next-env.d.ts
 # wordpress conversion stuff
 packages/db/*.xml
 packages/db/wordpress_media
+
+.pnpm-store
 
