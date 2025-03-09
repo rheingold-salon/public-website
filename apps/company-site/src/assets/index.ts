@@ -22,5 +22,6 @@ export { default as robotImage } from "./robot.jpg";
 export { default as handImage } from "./hand.jpg";
 export { default as ropeImage } from "./rope.png";
 export { default as busImage } from "./bus.png";
+export { default as couchImage } from "./couch.png";
 
 

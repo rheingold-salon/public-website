@@ -10,14 +10,15 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@rgs/db": "workspace:*",
         "@formatjs/intl-localematcher": "^0.5.10",
+        "@rgs/db": "workspace:*",
         "html-react-parser": "^5.2.2",
         "negotiator": "^1.0.0",
         "next": "15.1.6",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
         "react-icons": "^5.4.0",
+        "react-markdown": "^10.1.0",
         "react-swipeable": "^7.0.2"
     },
     "devDependencies": {

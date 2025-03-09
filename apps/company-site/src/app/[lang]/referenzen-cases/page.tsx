@@ -1,10 +1,12 @@
 import { CustomerGroupCell, PaginatedCards } from "@/components";
 import { db, customergroupsTable, referencesTable, casesTable } from "@rgs/db";
+import ReactMarkdown from "react-markdown";
 
 export default async function ReferenzenCasesPage({ params }: { params: Promise<{ lang: 'de' | 'en' }> }) {
     const lang = (await params).lang
 
     const customerGroups = await db.select().from(customergroupsTable);
+
     const references = (await db.select().from(referencesTable)).map((reference) => ({
         id: reference.id,
         name: reference.name,
@@ -12,7 +14,6 @@ export default async function ReferenzenCasesPage({ params }: { params: Promise<
         position: lang === "de" ? reference.positionDe : reference.positionEn,
         imagePath: reference.imagePath,
     }));
-    const cases = await db.select().from(casesTable);
 
     const referencesCards = references.map((reference) => ({
         id: reference.id,
@@ -27,7 +28,28 @@ export default async function ReferenzenCasesPage({ params }: { params: Promise<
         )
     }))
 
-    const casesCards = [];
+    const cases = (await db.select().from(casesTable)).map((c) => ({
+        id: c.id,
+        title: lang === "de" ? c.titleDe : c.titleEn,
+        subtitle: lang === "de" ? c.subtitleDe : c.subtitleEn,
+        content: lang === "de" ? c.contentDe : c.contentEn,
+        imagePath: c.imagePath,
+    }));
+
+
+    const casesCards = cases.map((c) => ({
+        id: c.id,
+        imageSrc: `/static/images/cases/${c.imagePath}`,
+        imageAlt: `Bild von ${c.title}`,
+        content: (
+            <>
+                <h3 className="text-xl font-semibold mb-2 font-serif">{c.title}</h3>
+                <h3 className="text-lg font-semibold mb-2 font-serif text-salongreen">{c.subtitle}</h3>
+                <ReactMarkdown>{c.content}</ReactMarkdown>
+            </>
+        )
+
+    }));
 
     return (
         <div className="pt-28 flex justify-center">

@@ -54,9 +54,12 @@ export const referencesTable = pgTable("references", {
 
 export const casesTable = pgTable("cases", {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
-    title: text().notNull(),
-    subtitle: text().notNull(),
-    content: text().notNull(),
+    titleDe: text().notNull(),
+    titleEn: text().notNull(),
+    subtitleDe: text().notNull(),
+    subtitleEn: text().notNull(),
+    contentDe: text().notNull(),
+    contentEn: text().notNull(),
     imagePath: text().notNull()
 })
 
