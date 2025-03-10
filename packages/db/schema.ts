@@ -1,5 +1,4 @@
-import { sql } from 'drizzle-orm'
-import { date, integer, pgEnum, pgTable, primaryKey, text, time, pgPolicy } from "drizzle-orm/pg-core";
+import { timestamp, date, integer, pgEnum, pgTable, primaryKey, text, time, boolean } from "drizzle-orm/pg-core";
 
 // dates & events
 export const eventTypeEnum = pgEnum("event_type", ["event", "vortrag", "podcast", "tv"])
@@ -60,7 +59,7 @@ export const casesTable = pgTable("cases", {
     subtitleEn: text().notNull(),
     contentDe: text().notNull(),
     contentEn: text().notNull(),
-    imagePath: text().notNull()
+    imagePath: text().notNull(),
 })
 
 
@@ -68,10 +67,11 @@ export const casesTable = pgTable("cases", {
 export const publicationsTable = pgTable("publications", {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
     title: text().notNull(),
-    date: date().notNull(),
+    publishedAt: timestamp().notNull(),
     author: text().notNull(),
     content: text().notNull(),
     imagePath: text().notNull(),
+    homePageSlider: boolean().default(false)
 })
 
 export const tagsTable = pgTable("tags", {

@@ -1,5 +1,15 @@
-export default function NewsPublikationenPage() {
+import { db, publicationsTable } from "@rgs/db";
+import { PublicationCard } from "@/components";
+
+export default async function NewsPublikationenPage({ params }: { params: Promise<{ lang: 'de' | 'en' }> }) {
+    const publications = await db.select().from(publicationsTable)
+    const lang = (await params).lang
+
     return (
-        <div className="pt-28 font-bold text-center text-3xl">news & publikationen</div>
+        <div className="grid grid-cols-2">
+            {publications.map((publication) => (
+                <PublicationCard key={publication.id} publication={publication} lang={lang} />
+            ))}
+        </div>
     );
 }

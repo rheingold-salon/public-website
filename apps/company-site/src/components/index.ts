@@ -16,4 +16,6 @@ export { ServiceFooter } from "./ServiceFooter";
 export { Hexagon } from "./Hexagon";
 export { Card } from "./Card";
 export { PaginatedCards } from "./PaginatedCards";
+export { PublicationCard } from "./PublicationCard";
+export { PaginatedPublications } from "./PaginatedPublications";
 
