@@ -1,9 +1,11 @@
 import { CustomerGroupCell, PaginatedCards } from "@/components";
+import { getDictionary } from "@/dictionaries";
 import { db, customergroupsTable, referencesTable, casesTable } from "@rgs/db";
-import ReactMarkdown from "react-markdown";
+import Markdown from "react-markdown";
 
 export default async function ReferenzenCasesPage({ params }: { params: Promise<{ lang: 'de' | 'en' }> }) {
     const lang = (await params).lang
+    const dict = (await getDictionary(lang)).referencesCasesPage;
 
     const customerGroups = await db.select().from(customergroupsTable);
 
@@ -45,7 +47,14 @@ export default async function ReferenzenCasesPage({ params }: { params: Promise<
             <>
                 <h3 className="text-xl font-semibold mb-2 font-serif">{c.title}</h3>
                 <h3 className="text-lg font-semibold mb-2 font-serif text-salongreen">{c.subtitle}</h3>
-                <ReactMarkdown>{c.content}</ReactMarkdown>
+                <Markdown
+                    components={{
+                        p(props) {
+                            const { node, ...rest } = props
+                            return <p style={{ marginBottom: '16px' }} {...rest} ></p>
+                        }
+                    }}
+                >{c.content}</Markdown>
             </>
         )
 
@@ -54,7 +63,7 @@ export default async function ReferenzenCasesPage({ params }: { params: Promise<
     return (
         <div className="pt-28 flex justify-center">
             <div className="w-full max-w-7xl px-4">
-                <h1 className="font-serif font-bold text-4xl text-center mb-8">kunden</h1>
+                <h1 className="font-serif font-bold text-4xl text-center mb-8">{dict.customers}</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                     {customerGroups?.map((customerGroup) => (
                         <CustomerGroupCell
@@ -67,7 +76,7 @@ export default async function ReferenzenCasesPage({ params }: { params: Promise<
                     ))}
                 </div>
                 <div className="my-24">
-                    <h1 className="font-serif font-bold text-4xl text-center mb-8">referenzen</h1>
+                    <h1 className="font-serif font-bold text-4xl text-center mb-8">{dict.references}</h1>
                     <PaginatedCards cards={referencesCards} />
                 </div>
                 <div className="my-24">

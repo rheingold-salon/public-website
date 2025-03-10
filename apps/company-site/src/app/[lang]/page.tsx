@@ -62,6 +62,11 @@ export default async function HomePage({
                 whyDidIClickText={dict.contact.whyDidIClickText}
                 dontClickText={dict.contact.dontClickText}
             />
+            <div className="flex">
+                <div className="bg-zinc-200 w-1/3 h-96">
+                    <h2 className=''>{dict.aktText}</h2>
+                </div>
+            </div>
         </>
 
     );

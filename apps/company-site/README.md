@@ -5,4 +5,7 @@ Link zur Website: [rheingold-salon.de](https://rheingold-salon.de)
 ### TODOS
 
 * make markforschung-service responsive
-* render markdown paragraphs with margin
+* favicon
+* intl news & publikationen
+* homePage slider and aktuelles
+* en dict

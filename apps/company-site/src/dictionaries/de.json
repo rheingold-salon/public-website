@@ -20,7 +20,8 @@
             "dontClickText": "Hier bitte nicht klicken!",
             "headerText": "kontakt",
             "personalText": "persönlich an"
-        }
+        },
+        "aktText": "aktuelles"
     },
     "marketResearchPage": {
         "strategyText": "Wir ergründen, was Menschen bewegt und motiviert. Wir graben - forschen - dort, wo andere gar nicht suchen. Und entschlüsseln so die geheime Logik des Marktes.",
@@ -287,5 +288,12 @@
             "DEZ."
         ],
         "alreadyOver": "LEIDER SCHON VORBEI"
+    },
+    "newsPublicationsPage": {
+        "relatedText": "passend dazu"
+    },
+    "referencesCasesPage": {
+        "customers": "kunden",
+        "references": "referenzen"
     }
 }

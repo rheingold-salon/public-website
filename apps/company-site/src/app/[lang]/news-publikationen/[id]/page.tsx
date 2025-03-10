@@ -2,10 +2,12 @@ import { getPublicationById, getTagsByPublicationId, getPublicationsByTags } fro
 import Image from "next/image";
 import Markdown from "react-markdown";
 import { PaginatedPublications } from "@/components";
+import { getDictionary } from "@/dictionaries";
 
 export default async function NewsPublikationenPage({ params }: { params: Promise<{ lang: 'de' | 'en', id: number }> }) {
     const pubId = (await params).id;
     const lang = (await params).lang;
+    const dict = (await getDictionary(lang)).newsPublicationsPage;
     const [publication] = await getPublicationById(pubId);
     const tags = await getTagsByPublicationId(pubId);
     const tagNames = tags.map((tag) => tag.name).join(", ");
@@ -40,12 +42,19 @@ export default async function NewsPublikationenPage({ params }: { params: Promis
                     </h1>
                     <p className="text-lg mb-6 text-zinc-500">{publication.author}</p>
                     <div className="prose max-w-none">
-                        <Markdown >{publication.content}</Markdown>
+                        <Markdown
+                            components={{
+                                p(props) {
+                                    const { node, ...rest } = props
+                                    return <p style={{ marginBottom: '16px' }} {...rest} ></p>
+                                }
+                            }}
+                        >{publication.content}</Markdown>
                     </div>
                 </div>
             </div>
             <div>
-                <h1 className="mb-4 text-center font-bold text-4xl font-serif">passend dazu</h1>
+                <h1 className="mb-4 text-center font-bold text-4xl font-serif">{dict.relatedText}</h1>
                 <PaginatedPublications lang={lang} cards={relatedPublications}></PaginatedPublications>
             </div>
         </div>
