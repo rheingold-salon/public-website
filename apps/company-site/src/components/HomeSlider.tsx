@@ -14,6 +14,7 @@ type Publication = {
 
 export function HomeSlider({ landingText, landingImage, sliderPublications, lang }: { lang: "de" | "en", landingText: string, landingImage: StaticImageData, sliderPublications: Publication[] }) {
     const [sliderIdx, setSliderIdx] = useState(1)
+
     return (
         <div className="relative">
             {sliderIdx === 1 ?
