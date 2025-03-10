@@ -1,10 +1,10 @@
-import { Contact, EmbeddedVideo, ImageWithTextBox, GrayBox, StackedPublications } from '@/components';
+import { Contact, EmbeddedVideo, HomeSlider, GrayBox, StackedPublications } from '@/components';
 import { getDictionary } from '@/dictionaries';
 import { homeLandingImage, couchImage } from '@/assets';
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-import { getPublications } from '@rgs/db';
+import { getPublications, getSliderPublications } from '@rgs/db';
 
 export default async function HomePage({
     params,
@@ -18,12 +18,13 @@ export default async function HomePage({
     const blackHeader = dict.couchHeader.substring(0, lastSpace);
     const greenHeader = dict.couchHeader.substring(lastSpace);
 
+    const sliderPublications = await getSliderPublications()
     const recentPublications = (await getPublications()).splice(0, 5)
 
 
     return (
         <>
-            <ImageWithTextBox text={dict.landingImageText} staticImage={homeLandingImage} />
+            <HomeSlider landingImage={homeLandingImage} landingText={dict.landingImageText} sliderPublications={sliderPublications} lang={lang} />
             <div className="relative w-screen h-screen mt-24">
                 {/* Background Image */}
                 <Image

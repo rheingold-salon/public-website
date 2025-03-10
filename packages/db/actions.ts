@@ -86,3 +86,7 @@ export const getPublications = async () => {
     return await db.select().from(publicationsTable).orderBy(desc(publicationsTable.publishedAt))
 }
 
+export const getSliderPublications = async () => {
+    return await db.select().from(publicationsTable).where(eq(publicationsTable.homePageSlider, true))
+}
+

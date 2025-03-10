@@ -20,4 +20,5 @@ export { PublicationCard } from "./PublicationCard";
 export { PaginatedPublications } from "./PaginatedPublications";
 export { PublicationsComposer } from "./PublicationsComposer"
 export { StackedPublications } from "./StackedPublications"
+export { HomeSlider } from "./HomeSlider"
 
