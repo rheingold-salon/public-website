@@ -1,4 +1,4 @@
-import { getPublicationById, getTagsByPublicationId, getPublicationsByTags } from "@rgs/db";
+import { getPublicationById, getTagsByPublicationId, getSimilarPublications } from "@rgs/db";
 import Image from "next/image";
 import Markdown from "react-markdown";
 import { PaginatedPublications } from "@/components";
@@ -12,7 +12,7 @@ export default async function NewsPublikationenPage({ params }: { params: Promis
     const tags = await getTagsByPublicationId(pubId);
     const tagNames = tags.map((tag) => tag.name).join(", ");
     const tagIds = tags.map((tag) => tag.id);
-    const relatedPublications = await getPublicationsByTags(tagIds);
+    const relatedPublications = await getSimilarPublications(tagIds, pubId);
 
     return (
         <div className="container mx-auto px-4 py-8">

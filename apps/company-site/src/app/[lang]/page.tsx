@@ -1,9 +1,10 @@
-import { Contact, EmbeddedVideo, ImageWithTextBox, GrayBox } from '@/components';
+import { Contact, EmbeddedVideo, ImageWithTextBox, GrayBox, StackedPublications } from '@/components';
 import { getDictionary } from '@/dictionaries';
 import { homeLandingImage, couchImage } from '@/assets';
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+import { getPublications } from '@rgs/db';
 
 export default async function HomePage({
     params,
@@ -16,6 +17,8 @@ export default async function HomePage({
     const lastSpace = dict.couchHeader.lastIndexOf(" ")
     const blackHeader = dict.couchHeader.substring(0, lastSpace);
     const greenHeader = dict.couchHeader.substring(lastSpace);
+
+    const recentPublications = (await getPublications()).splice(0, 5)
 
 
     return (
@@ -62,11 +65,7 @@ export default async function HomePage({
                 whyDidIClickText={dict.contact.whyDidIClickText}
                 dontClickText={dict.contact.dontClickText}
             />
-            <div className="flex">
-                <div className="bg-zinc-200 w-1/3 h-96">
-                    <h2 className=''>{dict.aktText}</h2>
-                </div>
-            </div>
+            <StackedPublications publications={recentPublications} lang={lang} aktText={dict.aktText} />
         </>
 
     );

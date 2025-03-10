@@ -2,9 +2,10 @@
 
 Link zur Website: [rheingold-salon.de](https://rheingold-salon.de)
 
-### TODOS
+## TODOS
 
+* mobile navbar (nudge)
 * make markforschung-services responsive
 * intl news & publikationen
-* homePage slider and aktuelles
+* homePage slider
 * en dict

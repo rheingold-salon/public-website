@@ -30,7 +30,7 @@ export default async function ReferenzenCasesPage({ params }: { params: Promise<
         )
     }))
 
-    const cases = (await db.select().from(casesTable)).map((c) => ({
+    const cases = (await db.select().from(casesTable).orderBy(casesTable.id)).map((c) => ({
         id: c.id,
         title: lang === "de" ? c.titleDe : c.titleEn,
         subtitle: lang === "de" ? c.subtitleDe : c.subtitleEn,

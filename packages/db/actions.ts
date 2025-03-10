@@ -1,6 +1,6 @@
 'use server'
 
-import { and, eq, sql, lt, gte, desc, inArray } from "drizzle-orm"
+import { and, ne, eq, sql, lt, gte, desc, inArray } from "drizzle-orm"
 import { db } from ".";
 import { publicationsTable, eventsTable, eventTypeEnum, tagsTable, publicationtagsTable } from "./schema";
 
@@ -62,7 +62,7 @@ export const getTagsByPublicationId = async (pubId: number) => {
         .where(eq(publicationtagsTable.publicationId, pubId))
 }
 
-export const getPublicationsByTags = async (tagIds: number[]) => {
+export const getSimilarPublications = async (tagIds: number[], pubId: number) => {
     return await db.select({
         id: publicationsTable.id,
         title: publicationsTable.title,
@@ -72,12 +72,17 @@ export const getPublicationsByTags = async (tagIds: number[]) => {
         .from(publicationsTable)
         .innerJoin(
             publicationtagsTable,
-            eq(publicationsTable.id, publicationtagsTable.publicationId)
+            and(eq(publicationsTable.id, publicationtagsTable.publicationId))
         )
         .where(
-            inArray(publicationtagsTable.tagId, tagIds)
+            and(inArray(publicationtagsTable.tagId, tagIds),
+                ne(publicationtagsTable.publicationId, pubId))
         )
         .groupBy(publicationsTable.id) // To avoid duplicates if a publication has multiple matching tags
         .orderBy(desc(publicationsTable.publishedAt));
+}
+
+export const getPublications = async () => {
+    return await db.select().from(publicationsTable).orderBy(desc(publicationsTable.publishedAt))
 }
 
