@@ -40,7 +40,7 @@ export default async function NewsPublikationenPage({ params }: { params: Promis
                     </h1>
                     <p className="text-lg mb-6 text-zinc-500">{publication.author}</p>
                     <div className="prose max-w-none">
-                        <Markdown>{publication.content}</Markdown>
+                        <Markdown >{publication.content}</Markdown>
                     </div>
                 </div>
             </div>

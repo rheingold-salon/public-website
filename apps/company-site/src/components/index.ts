@@ -18,4 +18,5 @@ export { Card } from "./Card";
 export { PaginatedCards } from "./PaginatedCards";
 export { PublicationCard } from "./PublicationCard";
 export { PaginatedPublications } from "./PaginatedPublications";
+export { PublicationsComposer } from "./PublicationsComposer"
 
