@@ -31,6 +31,9 @@ export default async function RootLayout({
     const dict = (await getDictionary(lang));
     return (
         <html lang={lang}>
+            <head>
+                <link rel="icon" href="/favicon.ico" sizes="any" />
+            </head>
             <body
                 className={`${roboto.variable} ${robotoSlab.variable} antialiased`}
             >
