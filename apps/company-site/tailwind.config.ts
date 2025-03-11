@@ -20,8 +20,8 @@ export default {
         },
         screens: {
             'sm': '40rem',
-            'md': '60rem',
-            'lg': '64rem',
+            'md': '48rem',
+            'lg': '1145px',
             'xl': '80rem',
             '2xl': '96rem',
         }

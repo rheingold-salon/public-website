@@ -62,10 +62,10 @@ export const Navbar = (
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex flex-1 justify-end">
-                        <div className="ml-8 flex items-center space-x-8">
+                    <div className="hidden lg:flex flex-1 justify-end">
+                        <div className="ml-8 flex items-center space-x-4 text-sm xl:text-base">
                             {navLinks.map((link) => {
-                                if (link.label === "kontakt") {
+                                if (link.label === "kontakt" || link.label === "contact") {
                                     return (
                                         <div key={link.href} className="grid grid-cols-2 gap-4">
                                             <Link
@@ -126,7 +126,7 @@ export const Navbar = (
 
 
                     {/* Mobile Menu Button */}
-                    <div className="md:hidden">
+                    <div className="lg:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="text-white p-2"

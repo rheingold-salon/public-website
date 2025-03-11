@@ -4,10 +4,9 @@ Link zur Website: [rheingold-salon.de](https://rheingold-salon.de)
 
 ## TODOS
 
-* mobile navbar (nudge) and fix responsive
 * make marktforschung-services responsive
 * intl news & publikationen
-* datenschutz, cookies, google-analytics
+* cookies & google analytics
 * sliderText sliderImage in db and HomeSlider
 
 ### Bonus TODOS
@@ -16,3 +15,4 @@ Link zur Website: [rheingold-salon.de](https://rheingold-salon.de)
 * search publications
 * better recommendations publications
 * publications card with rounded corners
+* slider transition
