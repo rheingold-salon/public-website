@@ -42,5 +42,7 @@ export const config = {
         '/news-publikationen',
         '/referenzen-cases',
         '/kontakt',
+        '/impressum',
+        '/datenschutz'
     ],
 }

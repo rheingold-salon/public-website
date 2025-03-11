@@ -1,6 +1,6 @@
 const ImpressumPage = () => {
     return (
-        <div className="p-6 max-w-2xl mx-8 text-gray-800">
+        <div className="p-6 max-w-2xl mx-8 text-gray-800 pt-28">
             <h2 className="text-xl font-bold">Impressum</h2>
 
             <p className="font-bold mt-4">
