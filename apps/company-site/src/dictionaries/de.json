@@ -6,7 +6,11 @@
         "referencesHeader": "referenzen & cases",
         "contactHeader": "kontakt"
     },
-    "footer": {},
+    "footer": {
+        "impressum": "Impressum",
+        "data": "Datenschutz",
+        "contact": "Kontakt"
+    },
     "homePage": {
         "landingImageText": "Wir entschlüsseln die geheime Logik des Marktes. Wir graben, wo andere gar nicht suchen!",
         "couchHeader": "WENN SIE WIRKLICH WISSEN WOLLEN WARUM",

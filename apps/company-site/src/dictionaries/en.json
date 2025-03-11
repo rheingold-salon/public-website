@@ -1,12 +1,303 @@
 {
-    "navbar": {},
-    "footer": {},
+    "navbar": {
+        "marketResearchHeader": "market research & services",
+        "foundersTeamHeader": "founders & team",
+        "publicationsHeader": "news & publications",
+        "referencesHeader": "references & cases",
+        "contactHeader": "contact"
+    },
+    "footer": {
+        "impressum": "Imprint",
+        "data": "Data Protection",
+        "contact": "Contact"
+    },
     "homePage": {
-        "landingImageText": "We decode the secret logic of the market. We dig where others don't even look!",
-        "whoweare": "WHO WE ARE"
+        "landingImageText": "We decipher the secret logic of the market. We dig where others don't even look!",
+        "couchHeader": "IF YOU REALLY WANT TO KNOW WHY",
+        "couchText": "[And why Google doesn't know it all!] ...then explore the secret logic of the market with us – with lönneker & imdahl rheingold salon, one of the most renowned qualitative agencies for market research in Germany, based in Cologne. Based on in-depth psychological insights, we develop strategic implementations and operational solutions with you – nationally and internationally.",
+        "heading1": "WHAT WE",
+        "heading2": "CAN DO",
+        "text": "We can make sense. And we create meaning for our customers. Cultural contexts influence brand and advertising perception. We continuously monitor these. On the other hand, we decode the unconscious motives that control people's behavior and experience. Always. Our goal is to decipher the complex structures of the human psyche and make them usable for companies, brands, and markets. Both via in-depth psychological market research and with strategic process support.",
+        "whoweare": "WHO WE ARE",
+        "contact": {
+            "whyDidIClickText": "I want to know why I clicked",
+            "dontClickText": "Please don't click here!",
+            "headerText": "Contact",
+            "personalText": "personally to"
+        },
+        "aktText": "current"
+    },
+    "marketResearchPage": {
+        "strategyText": "We explore what moves and motivates people. We dig - research - where others don't even look. And thus decipher the secret logic of the market.",
+        "backButtonText": "back",
+        "nextButtonText": "next",
+        "navigation": [
+            "OUR FUNDAMENTALS",
+            "DEPTH PSYCHOLOGY & INTERVIEWS",
+            "GROUP DISCUSSIONS",
+            "DEPTH PSYCHOLOGY IN WORKSHOPS & COACHING",
+            "FUNDAMENTAL & OPERATIVE RESEARCH",
+            "DIGITAL & QUANTITATIVE RESEARCH",
+            "BRAND & STRATEGY CONSULTING",
+            "EMPLOYER BRANDING & PURPOSE",
+            "PR STUDIES & COMMUNICATION CONSULTING",
+            "SPEAKER & EVENTS"
+        ],
+        "grundlagenPage": {
+            "heading1": "OUR",
+            "heading2": "FUNDAMENTALS",
+            "grundlagen1": "We consider ourselves to be rational and reasonable beings: But we usually are not! Because: Our actions, our decisions, and our experiences are often influenced by unconscious and irrational motives. Nevertheless, our behavior and experience can be meaningfully deciphered and thus also influenced. Depth psychology specializes in exactly this. In the meantime, there are providers who claim to work with depth psychology or even with morphology. This is not always true!",
+            "grundlagen2": "Qualitative approaches differ.",
+            "list1Header": "The open conversation is common to them – but the evaluation is carried out on different foundations:",
+            "list1": [
+                "Cognitive approaches (such as Maslow's hierarchy of needs) look for specific, mostly fixed, and cross-industry motives and needs.",
+                "Linguistic approaches primarily use language analysis, including emphasis, pauses, 'uhs' and 'ums'.",
+                "Semiotic approaches interpret signs, culturally and personally across the board",
+                "Some providers of qualitative approaches combine the conversations with apparatus-based methods (skin resistance measurements, eye tracking) – but their evaluation is not always theory-guided."
+            ],
+            "list2Header": "Morphological depth psychology",
+            "list2": [
+                "... always takes into account language observations and language interpretations like the linguists,",
+                "... decodes the codes and signs like the semioticians,",
+                "... and looks for the special, unconscious motives, which are different for each industry – as a differentiation from cognitive psychology."
+            ],
+            "subheader": "What does rheingold salon actually mean when they talk about this unconscious? Does it even exist?",
+            "paragraphs": [
+                "The unconscious is not some buried childhood trauma. Rather, we are unaware of the contexts of meaning and structure, the overdetermination by culture and personal socialization, and the ever-present tensions within us. As humans, we can simultaneously want and not want something – like smoking, for example. Wanting to protect the climate and still flying on vacation…",
+                "The morphological approach reconstructs this tense context of meaning between such measurable phenomena and statements! This is how we decipher the unconscious, motivational, and irrational.",
+                "Morphological psychology was developed at the University of Cologne by Prof. Salber.",
+                "Do you want to know more about it? We are happy to explain this, if necessary, also in a small theory and methods workshop. No matter who you work with, always ask about the underlying theory. Gut feeling and experience are in any case not theories. And without theory, there is no meaningful and high-quality research."
+            ]
+        },
+        "interviewsPage": {
+            "heading1": "DEPTH PSYCHOLOGY &",
+            "heading2": "INTERVIEWS",
+            "paragraphs": [
+                "The rheingold salon Interview® is more than an ordinary interview of depth psychology. It is rather a research journey into the everyday unconscious contexts of meaning. Through the special questioning techniques that we have practiced over the years, we break down simple rational justifications.  We break down final assessments such as 'That's too expensive for me' or 'I don't like that' and reconstruct how they came about. In this reconstruction, you will find the answers to the questions of 'why' people experience things as they experience them and 'why' they behave as they behave.",
+                "By the way, the in-depth interviews also work excellently via video call. The rheingold salon Interview® is followed by an intensive, theory-guided analysis. Our team of psychologists always uses the theory of morphological psychology with its basic assumptions developed by Prof. Salber at the University of Cologne as the basis for evaluation."
+            ]
+        },
+        "gdPage": {
+            "heading1": "GROUP",
+            "heading2": "DISCUSSIONS",
+            "paragraphs": [
+                "rheingold salon Groups® simultaneously open up a versatile and compact view of the fundamental psychological dynamics of a subject of investigation. In depth psychology, we do not understand the groups as a jury: We use likes and dislikes, rankings and ratings as impressions within a larger context.",
+                "Current trends and cultural currents become more visible. And the dynamics and atmosphere of the rheingold salon Groups® are always included in the in-depth psychological analysis and evaluation.",
+                "The strategic assessment of products, media, brands, or communication tools is optimally possible with our rheingold salon Groups®. The length and size of the rheingold salon Groups® are tailored to your study.",
+                "You could already book two-hour groups. We love long surveys of three to four hours. Because: We think that these “extended groups” combine the best of both worlds: the depth of individual surveys and the economy of the group."
+            ]
+        },
+        "coachingPage": {
+            "heading1": "DEPTH PSYCHOLOGY IN",
+            "heading2": "WORKSHOPS & COACHING",
+            "paragraphs": [
+                "You can book rheingold salon workshops and coaching sessions as a kick-off to a study, as an implementation workshop after a research – or completely independently. Integratively or to get everyone involved in the company on board.",
+                "The central task is always: To work out the psychological context relevant to the industry, the company, the brand and to develop a concrete implementation guide.",
+                "Our psychologists and researchers moderate, design, and evaluate the intensive sessions.",
+                "The basis of the workshops is always the in-depth psychological view based on morphological theory. This also applies to personal coaching."
+            ]
+        },
+        "markenPage": {
+            "heading1": "BRAND &",
+            "heading2": "STRATEGY CONSULTING",
+            "paragraphs": [
+                "Strategy consulting is now done by – almost – everyone.  With us, strategy and positioning consulting is always based on in-depth psychological studies and findings.",
+                "Empirically and psychologically sound consulting, development of Brand Key and Brand Vision, the creation of Brand Manifestos & Creative Briefs are our passion.  As are the joint optimizations of customer approach and customer journey.",
+                "And if you want to use this proven approach for the strategic-holistic orientation in employer branding and employee satisfaction, we are happy to accompany you."
+            ]
+        },
+        "speakerPage": {
+            "heading1": "SPEAKER &",
+            "heading2": "EVENTS",
+            "paragraphs": [
+                "Jens Lönneker & Ines Imdahl present relevant psychological topics at your congress, your event, your – also digital – event.",
+                "And you can choose from a variety of exciting topics for lectures: Sustainability, Diversity, Women & Men, Purpose & CX, Narrative & Depth Psychology, Video Research, (digital) Advertising Impact, Storytelling, Target Group Research & Constitutional Marketing, Youth Culture and much more.",
+                "Do you have a combination in mind? Simply have your lecture put together individually. We look forward to it!"
+            ]
+        },
+        "purposePage": {
+            "heading1": "EMPLOYER BRANDING &",
+            "heading2": "PURPOSE",
+            "subheading": "employer branding",
+            "paragraphs": [
+                "We also understand employer brands as brand personalities.  Personalities who have to find and present their unique, outstanding position in the War of Talents.",
+                "We analyze your image with potential applicants, give strategic recommendations, and research the state of employee loyalty in your company.",
+                "We conduct international research for employers and support with our combination of in-depth psychological analysis and strategic consulting the re-positioning in order to score points with the sought-after future employees."
+            ],
+            "subheading2": "purpose",
+            "paragraphs2": [
+                "Purpose and CX in one breath? With digitalization, CXM is experiencing a new hype. With Corona, Purpose is getting another boost. Yes, a new and further one, because both are not really new.",
+                "Or did companies not need a purpose in the past? Was brand or corporate management ever possible without a positive customer experience? Did customers have to be less satisfied in the past? Or maybe only now and then, possibly at selected touchpoints? Or is it the other way around, that people are much harder to satisfy today?",
+                "As psychologists and market researchers, we not only ask these questions, but also want to understand why society and culture are intensively dealing with a certain topic at exactly this point in time. What is the point of turning to CXM and Purpose more strongly right now? What is the point of the new hype about the purpose?"
+            ]
+        },
+        "prPage": {
+            "heading1": "PR STUDIES &",
+            "heading2": "COMMUNICATION CONSULTING",
+            "p1": "In order to bring your concerns to the public, in-depth psychological-representative studies are a good option. This unique approach was used in our ",
+            "a1": "youth studies for the IKW",
+            "p2": " or our ",
+            "a2": "Podcast study",
+            "p3": "implemented together with Hubert Burda Media. Based on these exciting insights, we develop a story. A story that is suitable for the public and the media.",
+            "p4": "Your company can present itself to the public with such thematic priorities chosen by you."
+        },
+        "digitalPage": {
+            "modal1": "Surfing behavior is unconscious. Fragments remain from the quantity and variety of what is seen – 19 pages of chocolate are completely suppressed. With rheingold salon IP tracking, we track the surfing, searching, and dwelling behavior of users over a defined period of time. The “soul in the net” thus becomes visible, previously unattainable dimensions accessible. Software specially developed for this purpose documents and reproduces topic-relevant data from computers & smartphones. The rheingold salon IP tracking is the basis for in-depth interviews, which put the recorded data into a meaningful context.",
+            "modal2": "rheingold salon Diaries are online diaries that are particularly suitable for a first insight into the topic and the everyday life of the participants. As a pre-task, the online diaries provide initial insights that can be explored in depth in subsequent rheingold salon Interviews and rheingold salon Groups. The digital journals can be programmed individually, also playfully, and can be adapted to any question.",
+            "modal3": "Images/advertising or sounds are checked via mobile devices and psychologically checked: Creative tool for developing advertising and the right approach to customers.",
+            "modal4": "DeepQuant is the intelligent combination of rheingold salon depth psychology and statistics. The unconscious can only be captured in numbers if the necessary and consequently correct questions are asked. We are happy to find out which ones these are for you – preferably with Quali-First studies, the findings of which become pinpoint items and illustrative tables. But we can also do it differently! If your statistics and your current market reality do not match, we will be happy to find out for you what is actually working."
+        },
+        "operativePage": {
+            "hexagonPoints": [
+                {
+                    "label": "Brand Image & Positioning",
+                    "content": "Is your brand also traditional, innovative, likeable, modern, and quality-oriented? Welcome to the club! These are the most frequently used terms for brand positioning. However, brands are like personalities. And these can usually be described uniquely. They have edges and corners. Or curves. They also have 'dark' sides, at least sides that are not likeable to everyone. They don't have to be.  Anyone who pleases everyone does not set a mark. Even mainstream brands and market leaders need differentiating, psychologically precise positioning. Image surveys with the help of depth psychology are an excellent basis for the alignment, relaunch, and stretch of brands."
+                },
+                {
+                    "label": "Constitutional Marketing",
+                    "content": "If there used to be smokers & non-smokers, today you are a 'party smoker'. Or a flexitarian. Even complex segmentations thus reach their limits. People do not always behave the same way, not even within a 'target group'. Chocolate eaters, for example. Most of them love to suck on them. In front of the TV. Almost everyone loves to bite chocolate. On the go. For the energy kick. If you divide into biters and suckers, you jump too short. Because sucking & biting is equally attractive depending on the constitution. Constitutional marketing determines optimal product and communication offers – for the respective mental state. Brands, products & media are constitutional magnets if they optimally address the moods and ideally make them even more attractive"
+                },
+                {
+                    "label": "Trend & Cultural Research",
+                    "content": "Our actions are determined by unconscious, sometimes irrational motives. And overdetermined by cultural and social changes. As rheingold salon, we examine how major events and crises (9/11, financial and refugee crises, Corona) change our values, our behavior, and our experience. In this way, we create a basis on which companies & brands can respond appropriately with their offerings. Do you want to know how you as a company can meaningfully and coherently integrate sustainability and diversity – two megatrends of the 2020s? You will find answers to this together with rheingold salon"
+                },
+                {
+                    "label": "Shopper & Retail Research",
+                    "content": "How do shoppers behave in grocery stores, in stationary retail, on the shelf? What do decision-making processes look like in concrete terms? What exactly happens during the customer journey? How does digitalization influence shopper behavior? What is the significance of e-commerce in the different industries? How does the online and offline shopping situation differ? What does a UX, CX, and brand experience look like? rheingold salon examines the complete journey of a purchase, the product experience, the customer experience online and offline. And all this via our in-depth psychological surveys."
+                },
+                {
+                    "label": "Target Group Research",
+                    "content": "What separates Gen Z from the Boomers? What can be said in general about gender differences? Are women really different? And what are the key differences? Our youth, women, and men studies show what is changing from generation to generation. We also develop psychograms and personas for the age or subgroups relevant to you. For concrete communication, we give your customers a face. And create mutual understanding – across age groups, target groups, and genders."
+                },
+                {
+                    "label": "Motive Research",
+                    "content": "Why do people drink wine? Or rather beer? Why does chocolate sometimes fit better than chips? What are the psychological motives behind it? Fear, striving for power, or self-realization are not sufficient explanations in morphological psychology. Smoking, for example, is determined by conflicting motives. Oral pleasure gain through an 'adult pacifier' with the simultaneous desire to wean oneself off the cigarette. Whether classic or digital – we decipher the secret, tense motives of the market in order to optimally position products, brands, and companies"
+                }
+            ],
+            "cards": [
+                {
+                    "header": "rheingold salon Pre-Find",
+                    "text": "Pre-Find instead of Re-Search. Re-Search examines the past – and in the best case the 'just now'. Pre-Find, on the other hand, is directed towards the future and develops purpose and future strategies based on in-depth psychological research!"
+                },
+                {
+                    "header": "rheingold salon Skilling",
+                    "text": "Innovation needs determination and implementation know-how! Instead of acting, however, proven things are often preserved for too long! Stagnation seems more tempting than innovation – because innovation (de)stroy the existing. We need more research on (de)struction skills against the inertia resistance – with rheingold salon Skilling."
+                },
+                {
+                    "header": "rheingold salon Irrational Indx®",
+                    "text": "There are certainly contradictions between wanting and doing in your business as well. Yes, the mind-behavior gap is a familiar phenomenon! With rheingold salon Irrational IndX®, you can succeed in recognizing, understanding, and resolving the contradictions in your industry. What is the Irrational IndX of your company? How do you resolve it? Thanks to depth psychology and pinpoint quantifications, you will find the right strategy."
+                },
+                {
+                    "header": "rheingold salon QualBus®",
+                    "text": "Fast and deep results – with the rheingold salon QualBus®. At the beginning of each month, five men and five women get on board and answer your questions. Whether you book at short notice, regularly, or once: we generate the insights for you 'Deep & Dirty'. A translation of the results into Quant items can be booked additionally."
+                }
+            ]
+        }
     },
     "foundersTeamPage": {
         "team": "TEAM",
-        "founders": "FOUNDER"
+        "founders": "FOUNDERS",
+        "about": "What colleagues say"
+    },
+    "salonRheingoldPage": {
+        "foundingMythText": "Every company needs a founding myth - here is ours for market research in Cologne:",
+        "togetherText": "\"Since we met, we have wanted to work together. Since 1994 we have been doing that. We appreciate and use the exchange of our couple relationship to bring our modern agency for market research in Cologne forward in an unconventional, modern, and fruitful way. Living together, having a family and – full-time – working is not only possible, but also a model of the future for us.\"",
+        "heading1": "TOGETHER &",
+        "heading2": "WORKING",
+        "inesText": "Ines Imdahl, as founder & owner of rheingold salon, pursues her life question. The question of why. Because philosophy could not explain to her why people smoke, although they are fully informed about the consequences, she studied psychology. Today, her clients want to know how human behavior and experience can be explained in order to develop strategic orientations for brands, markets, and communication together with rheingold salon. She also regularly discusses the human element in her own WDR TV show \"5 Traps 2 Experts\". In addition to women's and cultural research, she successfully focuses on advertising impact research: approx. 100 columns in the Handelsblatt and her book \"Advertising on the Couch\" bear witness to this.",
+        "jensText": "Jens Lönneker, rheingold founder, wanted to prove in 1986 that it was possible to earn money with psychological market research – a daring undertaking at the time.  The company initially had only one telephone, where a friendly lawyer's secretary answered with the company name. The first investigation material was even returned with the note \"Delivery undeliverable\". Nevertheless, psychological market research was quickly able to convince. The concepts of morphological psychology are continuously being developed and need creative space; and this can be found today in the rheingold salon concept directly at Cologne Cathedral.",
+        "aboutList": [
+            {
+                "heading": "Year of foundation",
+                "text": "1986 | since 2011 rheingold salon"
+            },
+            {
+                "heading": "Positioning",
+                "text": "Qualitative, in-depth psychological, morphological market research and strategy consulting, based on the scientific theory of Prof. Dr. Wilhelm Salber, University of Cologne."
+            },
+            {
+                "heading": "Location",
+                "text": "In the heart of Cologne – directly at the cathedral. Cologne is particularly suitable as a location for market research because it is located in one of the most populous and densely populated regions in the world: the Rhine-Ruhr area with more than 20 million inhabitants."
+            },
+            {
+                "heading": "Experience",
+                "text": "More than 25 years of experience in all industries for national and international clients. (We can't think of any industry in which we haven't done research yet)"
+            },
+            {
+                "heading": "What we can do",
+                "text": "We can make sense. And we create meaning for our customers. Cultural contexts influence brand and advertising perception. We continuously monitor these. On the other hand, we decode the unconscious motives that control people's behavior and experience. Always. Our goal is to decipher the complex structures of the human psyche and make them usable for companies, brands, and markets. Both via in-depth psychological market research and with strategic process support."
+            },
+            {
+                "heading": "What it's like with us",
+                "text": "We are many things in one: one of the most ambitious German research agencies, a think tank, a meeting place. In the permanent endeavor to pursue the meaning of human experience and behavior. For this purpose, the rheingold salon of Ines Imdahl and Jens Lönneker draws on a successful avant-garde idea. Exciting, clever people and their thoughts have always needed and loved spaces for exchange, analysis, and deepening. Whether in Paris, in Weimar or today at the rheingold salon in Cologne: Salons create the atmosphere for productive, innovative further developments – to the advantage of media and market research. This includes many inspiring encounters: Countless interviews, analysis sessions, events, seminars, television recordings and, very importantly: eating and drinking together. Meaning needs depth, skill, exchange, and a salon."
+            },
+            {
+                "heading": "The concepts developed here are used in a variety of ways",
+                "text": "In cultural and basic research, the development of narratives, in-depth psychological impact analyses around media, products, brands, advertising, and even our own podcasts."
+            },
+            {
+                "heading": "This also includes",
+                "text": "Morphological Psychology, Message Tuner, Constitutional Marketing, Narrative Psychology."
+            }
+        ],
+        "jobs": [
+            "One person alone cannot move much. That is why we love the creative and analytical exchange in the team.",
+            "If you are sure that we should get to know each other, then please send us an application for...",
+            "...a permanent job to:",
+            "...an internship to:"
+        ],
+        "whyus": "WHY US",
+        "cards": [
+            {
+                "header": "in-depth psychological",
+                "text": "We research, even if we research quickly, always in depth. This is reflected in the length of the survey. And in the questioning technique. Graduate psychologists & moderators specially trained according to morphological theory are in action for us – worldwide."
+            },
+            {
+                "header": "independent & neutral",
+                "text": "We do not belong to any of the major agency networks. That is precisely why we are always neutral & independent. And our results are \"relentlessly creative\"."
+            },
+            {
+                "header": "theory-guided",
+                "text": "Nothing is better than a good theory. You will not find evaluations based on \"gut feeling\" or merely on the basis of \"experience\" with us.  Research and analysis are based on the scientific theories of Morphological Psychology, developed by Prof. Wilhelm Salber at the University of Cologne."
+            },
+            {
+                "header": "concrete & detailed",
+                "text": "Our results are concrete, detailed, and directly suitable for implementation. rheingold salon also supports in-house implementation and concretization processes based on in-depth psychological research."
+            },
+            {
+                "header": "owner-managed",
+                "text": "With us, the chief physician operates. And he has plenty of practice. Each project is supervised by the managing directors & owners."
+            }
+        ]
+    },
+    "datesEventsPage": {
+        "eventsNavigation": [
+            "Events",
+            "Lectures",
+            "Podcasts",
+            "TV"
+        ],
+        "months": [
+            "JAN.",
+            "FEB.",
+            "MAR.",
+            "APR.",
+            "MAY.",
+            "JUN.",
+            "JUL.",
+            "AUG.",
+            "SEP.",
+            "OCT.",
+            "NOV.",
+            "DEC."
+        ],
+        "alreadyOver": "UNFORTUNATELY ALREADY OVER"
+    },
+    "newsPublicationsPage": {
+        "relatedText": "related to this"
+    },
+    "referencesCasesPage": {
+        "customers": "customers",
+        "references": "references"
     }
 }

@@ -1,7 +1,14 @@
+"use server"
+
+import { getDictionary } from '@/dictionaries';
 import Link from 'next/link';
 import { FaLinkedinIn, FaInstagram } from 'react-icons/fa'
 
-export function Footer() {
+export async function Footer({ params }: { params: Promise<{ lang: "de" | "en" }> }) {
+    const lang = (await params).lang
+    const dict = (await getDictionary(lang)).footer
+
+
     return (
         <div className='w-screen'>
             <div className='bg-zinc-700 py-28 text-white flex flex-col justify-center items-center gap-4'>
@@ -15,9 +22,9 @@ export function Footer() {
                     </Link>
                 </div>
                 <p>
-                    <Link className='font-bold text-lg' href="/datenschutz">Datenschutz</Link> -
-                    <Link className='font-bold text-lg' href="/impressum"> Impressum</Link> -
-                    <Link className='font-bold text-lg' href="/kontakt"> Kontakt</Link></p>
+                    <Link className='font-bold text-lg' href="/datenschutz">{dict.data}</Link> -
+                    <Link className='font-bold text-lg' href="/impressum"> {dict.impressum}</Link> -
+                    <Link className='font-bold text-lg' href="/kontakt"> {dict.contact}</Link></p>
             </div>
         </div>
     );

@@ -6,7 +6,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 type Publication = {
     id: number,
     title: string,
-    publishedAt: Date,
+    publishedAt: string,
     author: string,
     content: string,
     imagePath: string,

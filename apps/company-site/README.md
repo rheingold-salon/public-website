@@ -9,7 +9,6 @@ Link zur Website: [rheingold-salon.de](https://rheingold-salon.de)
 * intl news & publikationen
 * datenschutz imporessum cookies
 * sliderText sliderImage in db and HomeSlider
-* en dict
 
 ### Bonus TODOS
 

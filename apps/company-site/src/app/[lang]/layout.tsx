@@ -47,7 +47,7 @@ export default async function RootLayout({
                 <main className="">
                     {children}
                 </main>
-                <Footer />
+                <Footer params={params} />
             </body>
         </html>
     );
