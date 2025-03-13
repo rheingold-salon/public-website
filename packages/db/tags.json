@@ -1,18 +1,60 @@
 {
     "tags": [
-        "verfassungsmarketing & zielgruppen",
-        "veröffentlichungen",
-        "podcast",
-        "werbung & kommunikation",
-        "wissenschaft & theorie",
-        "kultur & gesellschaft",
-        "shopper & retail",
-        "medienpräsenz",
-        "unternehmen & wirtschaft",
-        "kinder & jugend",
-        "frauen & männer",
-        "vorträge",
-        "digitalisierung & medien",
-        "beauty & fashion"
+        {
+            "nameDe": "verfassungsmarketing & zielgruppen",
+            "nameEn": "constitutional marketing & target groups"
+        },
+        {
+            "nameDe": "veröffentlichungen",
+            "nameEn": "publications"
+        },
+        {
+            "nameDe": "podcast",
+            "nameEn": "podcast"
+        },
+        {
+            "nameDe": "werbung & kommunikation",
+            "nameEn": "advertising & communication"
+        },
+        {
+            "nameDe": "wissenschaft & theorie",
+            "nameEn": "science & theory"
+        },
+        {
+            "nameDe": "kultur & gesellschaft",
+            "nameEn": "culture & society"
+        },
+        {
+            "nameDe": "shopper & retail",
+            "nameEn": "shopper & retail"
+        },
+        {
+            "nameDe": "medienpräsenz",
+            "nameEn": "media presence"
+        },
+        {
+            "nameDe": "unternehmen & wirtschaft",
+            "nameEn": "business & economy"
+        },
+        {
+            "nameDe": "kinder & jugend",
+            "nameEn": "children & youth"
+        },
+        {
+            "nameDe": "frauen & männer",
+            "nameEn": "women & men"
+        },
+        {
+            "nameDe": "vorträge",
+            "nameEn": "lectures"
+        },
+        {
+            "nameDe": "digitalisierung & medien",
+            "nameEn": "digitalization & media"
+        },
+        {
+            "nameDe": "beauty & fashion",
+            "nameEn": "beauty & fashion"
+        }
     ]
 }

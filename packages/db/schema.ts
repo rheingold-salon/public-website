@@ -66,19 +66,23 @@ export const casesTable = pgTable("cases", {
 // news & publications
 export const publicationsTable = pgTable("publications", {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
-    title: text().notNull(),
+    titleDe: text().notNull(),
+    titleEn: text(),
     publishedAt: date().notNull(),
     author: text().notNull(),
-    content: text().notNull(),
+    contentDe: text().notNull(),
+    contentEn: text(),
     imagePath: text().notNull(),
     homePageSlider: boolean().default(false),
     sliderImagePath: text(),
-    sliderText: text()
+    sliderTextDe: text(),
+    sliderTextEn: text()
 })
 
 export const tagsTable = pgTable("tags", {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
-    name: text().notNull().unique()
+    nameDe: text().notNull().unique(),
+    nameEn: text().notNull().unique()
 })
 
 export const publicationtagsTable = pgTable("publication_tags", {

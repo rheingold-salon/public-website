@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 type Publication = {
     id: number,
     title: string,
-    publishedAt: Date,
+    publishedAt: string,
     author: string,
     content: string,
     imagePath: string,
