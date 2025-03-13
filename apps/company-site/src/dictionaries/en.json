@@ -11,6 +11,17 @@
         "data": "Data Protection",
         "contact": "Contact"
     },
+    "cookieConsent": {
+        "description": "We use necessary cookies & optionally google analytics in order to improve this website.",
+        "accept": "accept",
+        "reject": "reject",
+        "settings": "settings",
+        "necessary": "necessary",
+        "necessaryExplanation": "Required for the website to function",
+        "analytics": "analytics",
+        "analyticsExplanation": "Helps us understand how visitors use our website",
+        "save": "save"
+    },
     "homePage": {
         "landingImageText": "We decipher the secret logic of the market. We dig where others don't even look!",
         "couchHeader": "IF YOU REALLY WANT TO KNOW WHY",

@@ -6,7 +6,6 @@ Link zur Website: [rheingold-salon.de](https://rheingold-salon.de)
 
 * make marktforschung-services responsive
 * intl news & publikationen
-* cookies & google analytics
 * sliderText sliderImage in db and HomeSlider
 
 ### Bonus TODOS

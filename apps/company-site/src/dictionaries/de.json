@@ -11,6 +11,17 @@
         "data": "Datenschutz",
         "contact": "Kontakt"
     },
+    "cookieConsent": {
+        "description": "Wir verwenden notwendige Cookies & optional Google Analytics um diese Website zu verbessern.",
+        "accept": "akzeptieren",
+        "reject": "ablehnen",
+        "settings": "einstellungen",
+        "necessary": "notwendig",
+        "necessaryExplanation": "Für das Funktionieren der Website erforderlich",
+        "analytics": "analytics",
+        "analyticsExplanation": "Hilft uns zu verstehen, wie Besucher unsere Website nutzen",
+        "save": "speichern"
+    },
     "homePage": {
         "landingImageText": "Wir entschlüsseln die geheime Logik des Marktes. Wir graben, wo andere gar nicht suchen!",
         "couchHeader": "WENN SIE WIRKLICH WISSEN WOLLEN WARUM",

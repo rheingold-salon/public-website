@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto, Roboto_Slab } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Navbar, Footer } from "@/components";
+import { CookieConsent } from "@/components/CookieConsent";  // Import the cookie consent component
 import "./globals.css";
 import { getDictionary } from "@/dictionaries";
 
@@ -29,6 +31,7 @@ export default async function RootLayout({
 }>) {
     const lang = (await params).lang;
     const dict = (await getDictionary(lang));
+
     return (
         <html lang={lang}>
             <head>
@@ -37,7 +40,8 @@ export default async function RootLayout({
             <body
                 className={`${roboto.variable} ${robotoSlab.variable} antialiased`}
             >
-                <Navbar lang={lang}
+                <Navbar
+                    lang={lang}
                     marketResearchHeader={dict.navbar.marketResearchHeader}
                     foundersTeamHeader={dict.navbar.foundersTeamHeader}
                     publicationsHeader={dict.navbar.publicationsHeader}
@@ -48,7 +52,19 @@ export default async function RootLayout({
                     {children}
                 </main>
                 <Footer params={params} />
+
+                {/* Cookie Consent - client component */}
+                <CookieConsent translations={dict.cookieConsent} />
             </body>
+
+            {/* 
+              Conditionally render Google Analytics based on cookie consent.
+              This will be managed by the client component via cookies.
+              Initial server render will not include Google Analytics.
+            */}
+            {process.env.GOOGLE_ANALYTICS_ID && (
+                <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID} />
+            )}
         </html>
     );
 }
