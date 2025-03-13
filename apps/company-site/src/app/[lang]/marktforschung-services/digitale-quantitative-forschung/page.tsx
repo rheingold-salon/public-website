@@ -10,7 +10,7 @@ export default async function DigitalPage({
 
     return (
         <div className="flex justify-center">
-            <div className="my-24 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="my-24 grid grid-cols-2 lg:grid-cols-4 gap-8">
                 <QuantBox boxtext="rheingold salon IP-Tracking®" modaltext={dict.modal1} />
                 <QuantBox boxtext="rheingold salon Online Diary" modaltext={dict.modal2} />
                 <QuantBox boxtext="rheingold salon Digital Imaging®" modaltext={dict.modal3} />

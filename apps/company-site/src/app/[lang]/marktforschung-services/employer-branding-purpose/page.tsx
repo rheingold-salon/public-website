@@ -12,15 +12,17 @@ export default async function PurposePage({
     return (
         <>
             <GrayBox heading1={dict.heading1} heading2={dict.heading2} image={purpose1Image}>
-                <p className="font-bold">{dict.subheading}</p>
-                {dict.paragraphs.map((text, index) => {
-                    return (
-                        <p key={index} className="mt-4">{text}</p>
-                    );
-                })}
+                <div className="text-xs md:text-base">
+                    <p className="font-bold">{dict.subheading}</p>
+                    {dict.paragraphs.map((text, index) => {
+                        return (
+                            <p key={index} className="mt-4">{text}</p>
+                        );
+                    })}
+                </div>
             </GrayBox>
-            <div className="flex items-stretch mb-16">
-                <div className="w-2/3 mx-16">
+            <div className="flex items-center mb-16">
+                <div className="text-xs md:text-base w-2/3 mx-16">
                     <p className="font-bold">{dict.subheading2}</p>
                     {dict.paragraphs2.map((text, index) => {
                         return (
@@ -30,10 +32,13 @@ export default async function PurposePage({
                 </div>
                 <Image
                     src={purpose2Image}
-                    alt="Purpose Bild (Auge Blatt)"
-                    className="w-1/4 rounded-tl-[100px]"
+                    alt="Deep Dive Grundlagen Bild"
+                    className="w-1/4 min-h-96 max-h-96 rounded-tl-[100px]"
+                    style={{
+                        objectPosition: "center",
+                        objectFit: "cover"
+                    }}
                 />
-
             </div>
         </>
 

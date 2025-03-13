@@ -36,7 +36,7 @@ export default async function OperativePage({
             <div className="flex justify-center my-24">
                 <Hexagon points={hexagonPoints} />
             </div>
-            <div className="m-24">
+            <div className="my-24 md:mx-24">
                 <PaginatedCards cards={cards} />
             </div>
         </>

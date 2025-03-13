@@ -12,7 +12,7 @@ export default async function PrPage({
     return (
         <>
             <GrayBox heading1={dict.heading1} heading2={dict.heading2} image={prImage}>
-                <p>{dict.p1}
+                <p className="text-xs md:text-base">{dict.p1}
                     <Link className="underline font-bold" href="https://www.ikw-jugendstudie.org/" target="_blank">{dict.a1}</Link> {dict.p2}
                     <Link className="underline font-bold" href="https://www.rheingold-salon.de/gehoerte-freiheit-podcast-krise/" target="_blank">{dict.a2}</Link> {dict.p3}
                 </p>

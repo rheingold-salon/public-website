@@ -19,9 +19,9 @@ export function ServiceFooter({ routes, nextButtonText, backButtonText }: { rout
 
     return (
         <div className="flex justify-center gap-x-4 md:gap-x-8 mb-24">
-            {prevIndex >= 0 && <Link href={routes[prevIndex].path} className="flex p-4 text-lg rounded-tr-xl rounded-bl-xl font-bold gap-x-2 items-center bg-salongreen text-white"><FaArrowLeft />{backButtonText}</Link>}
-            <Link href="#servicesNavigation" className="flex p-4 text-lg rounded-tr-xl rounded-bl-xl font-bold gap-x-2 items-center bg-salongreen text-white"><FaArrowUp />navigation</Link>
-            {nextIndex < routes.length && <Link href={routes[nextIndex].path} className="flex p-4 text-lg rounded-tr-xl rounded-bl-xl font-bold gap-x-2 items-center bg-salongreen text-white"><FaArrowRight />{nextButtonText}</Link>}
+            {prevIndex >= 0 && <Link href={routes[prevIndex].path} className="flex p-4 text-base md:text-lg rounded-tr-xl rounded-bl-xl font-bold gap-x-2 items-center bg-salongreen text-white"><FaArrowLeft />{backButtonText}</Link>}
+            <Link href="#servicesNavigation" className="flex p-4 text-base md:text-lg rounded-tr-xl rounded-bl-xl font-bold gap-x-2 items-center bg-salongreen text-white"><FaArrowUp />navigation</Link>
+            {nextIndex < routes.length && <Link href={routes[nextIndex].path} className="flex p-4 text-base md:text-lg rounded-tr-xl rounded-bl-xl font-bold gap-x-2 items-center bg-salongreen text-white"><FaArrowRight />{nextButtonText}</Link>}
         </div>
 
     );

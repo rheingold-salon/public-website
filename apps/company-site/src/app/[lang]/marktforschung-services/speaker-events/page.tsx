@@ -14,7 +14,7 @@ export default async function SpeakerPage({
             <GrayBox heading1={dict.heading1} heading2={dict.heading2}>
                 {dict.paragraphs.map((text, index) => {
                     return (
-                        <p key={index} className="mt-4">{text}</p>
+                        <p key={index} className="mt-4 text-xs md:text-base">{text}</p>
                     );
                 })}
                 <Image

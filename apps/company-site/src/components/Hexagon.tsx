@@ -22,7 +22,7 @@ type HexagonProps = {
 };
 
 export const Hexagon: React.FC<HexagonProps> = ({
-    size = 150,
+    size = 100,
     fillColor = '#ffffff',
     strokeColor = '#c0dc04',
     strokeWidth = 4,
@@ -59,7 +59,7 @@ export const Hexagon: React.FC<HexagonProps> = ({
     const hexPath = hexPoints.join(' ');
 
     // Calculate positions for text (slightly outside the hexagon)
-    const textRadius = radius * 1.6;
+    const textRadius = radius * 1.8;
     const textPositions = [];
     for (let i = 0; i < 6; i++) {
         const angle = (Math.PI / 3) * i - Math.PI / 2;
@@ -90,7 +90,7 @@ export const Hexagon: React.FC<HexagonProps> = ({
                     <div
                         key={index}
                         className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer 
-                      font-bold hover:scale-105 transition-all duration-200 text-center ease-in-out"
+                      text-sm md:text-base font-bold hover:scale-105 transition-all duration-200 text-center ease-in-out"
                         style={{
                             left: position.x,
                             top: position.y,

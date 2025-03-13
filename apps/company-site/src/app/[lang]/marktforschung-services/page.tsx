@@ -12,22 +12,24 @@ export default async function MarketResearchPage({
     return (
         <>
             <GrayBox heading1={dict.heading1} heading2={dict.heading2} image={salberImage}>
-                <p>{dict.grundlagen1}</p>
-                <p className="font-bold mt-6">{dict.grundlagen2}</p>
-                <p className="font-bold">{dict.list1Header}</p>
-                {dict.list1.map((text, index) => {
-                    return (
-                        <p key={index} className="mt-4 ml-4">{text}</p>
-                    );
-                })}
-                <p className="font-bold mt-6">{dict.list2Header}</p>
-                {dict.list2.map((text, index) => {
-                    return (
-                        <p key={index} className="mt-4 ml-4">{text}</p>
-                    );
-                })}
+                <div className="text-xs md:text-base">
+                    <p>{dict.grundlagen1}</p>
+                    <p className="font-bold mt-6">{dict.grundlagen2}</p>
+                    <p className="font-bold">{dict.list1Header}</p>
+                    {dict.list1.map((text, index) => {
+                        return (
+                            <p key={index} className="mt-4 ml-4">{text}</p>
+                        );
+                    })}
+                    <p className="font-bold mt-6">{dict.list2Header}</p>
+                    {dict.list2.map((text, index) => {
+                        return (
+                            <p key={index} className="mt-4 ml-4">{text}</p>
+                        );
+                    })}
+                </div>
             </GrayBox>
-            <div className="flex items-stretch mb-16">
+            <div className="flex items-center mb-16">
                 <div className="w-2/3 mx-16">
                     <p className="font-bold">{dict.subheader}</p>
                     {dict.paragraphs.map((text, index) => {
@@ -39,7 +41,11 @@ export default async function MarketResearchPage({
                 <Image
                     src={grundlagenImage}
                     alt="Deep Dive Grundlagen Bild"
-                    className="w-1/4 rounded-tl-[100px]"
+                    className="w-1/4 min-h-96 max-h-96 rounded-tl-[100px]"
+                    style={{
+                        objectPosition: "center",
+                        objectFit: "cover"
+                    }}
                 />
 
             </div>

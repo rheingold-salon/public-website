@@ -13,7 +13,7 @@ export default async function GdPage({
             <GrayBox heading1={dict.heading1} heading2={dict.heading2} image={gdsImage}>
                 {dict.paragraphs.map((text, index) => {
                     return (
-                        <p key={index} className="mt-4">{text}</p>
+                        <p key={index} className="text-xs md:text-base mt-4">{text}</p>
                     );
                 })}
             </GrayBox>
