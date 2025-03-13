@@ -6,9 +6,9 @@ Link zur Website: [rheingold-salon.de](https://rheingold-salon.de)
 
 * translate publications + reseed
 * slider transition add slider text and slider images to db
+* events highlight like aktuelles + highlight
 
 ### less important TODOS
 
-* events highlight like aktuelles
 * search publications
 * better recommendations publications

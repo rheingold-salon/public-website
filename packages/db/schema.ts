@@ -15,6 +15,7 @@ export const eventsTable = pgTable("events", {
     type: eventTypeEnum().notNull(),
     imagePath: text().notNull(),
     externalLink: text().notNull(),
+    highlight: boolean().default(false).notNull()
 });
 
 

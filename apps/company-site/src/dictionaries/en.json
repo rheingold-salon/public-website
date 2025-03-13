@@ -122,8 +122,8 @@
             "heading2": "EVENTS",
             "paragraphs": [
                 "Jens Lönneker & Ines Imdahl present relevant psychological topics at your congress, your event, your – also digital – event.",
-                "And you can choose from a variety of exciting topics for lectures: Sustainability, Diversity, Women & Men, Purpose & CX, Narrative & Depth Psychology, Video Research, (digital) Advertising Impact, Storytelling, Target Group Research & Constitutional Marketing, Youth Culture and much more.",
-                "Do you have a combination in mind? Simply have your lecture put together individually. We look forward to it!"
+                "And you can choose from a variety of exciting topics for talks: Sustainability, Diversity, Women & Men, Purpose & CX, Narrative & Depth Psychology, Video Research, (digital) Advertising Impact, Storytelling, Target Group Research & Constitutional Marketing, Youth Culture and much more.",
+                "Do you have a combination in mind? Simply have your talk put together individually. We look forward to it!"
             ]
         },
         "purposePage": {
@@ -284,7 +284,7 @@
     "datesEventsPage": {
         "eventsNavigation": [
             "Events",
-            "Lectures",
+            "Talks",
             "Podcasts",
             "TV"
         ],

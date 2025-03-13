@@ -12,6 +12,7 @@ type Event = {
     location: string,
     imagePath: string,
     externalLink: string,
+    highlight: boolean
 }
 
 export const EventsComposer = ({ alreadyOverText, months, pastEvents, futureEvents }: { alreadyOverText: string, months: string[], pastEvents: Event[], futureEvents: Event[] }) => {
@@ -20,8 +21,8 @@ export const EventsComposer = ({ alreadyOverText, months, pastEvents, futureEven
     const currentMonth = months[today.getMonth()];
     const [selectedMonth, setSelectedMonth] = useState(currentMonth);
 
-    // Get the next upcoming event (if any)
-    const nextupEvent = futureEvents.length > 0 ? futureEvents[0] : null;
+    // Get highlight event (if any) else use the next up event
+    const highlightEvent = futureEvents.find((futureEvent) => futureEvent.highlight) ?? futureEvents[0];
 
     // Filter past events for the selected month
     const filteredPastEvents = pastEvents.filter(
@@ -37,11 +38,11 @@ export const EventsComposer = ({ alreadyOverText, months, pastEvents, futureEven
         <>
             <div className="m-8 md:ml-0 className flex flex-col md:flex-row gap-4 items-center">
                 <div className="px-8 bg-zinc-200 h-[250px] md:h-[550px] w-screen md:w-96 flex flex-col items-end justify-center">
-                    <p className="font-serif text-5xl font-semibold mr-8">next</p>
-                    <p className="font-serif text-5xl font-semibold mt-2 mr-8">& up</p>
+                    <p className="font-serif text-5xl font-semibold mr-8">high</p>
+                    <p className="font-serif text-5xl font-semibold mt-2 mr-8">& light</p>
                 </div>
-                {nextupEvent && <EventCard event={nextupEvent}
-                    month={months[parseInt(nextupEvent.date.split("-")[1]) - 1]}
+                {highlightEvent && <EventCard event={highlightEvent}
+                    month={months[parseInt(highlightEvent.date.split("-")[1]) - 1]}
                 />}
             </div>
             {/* Month selector */}

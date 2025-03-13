@@ -17,6 +17,7 @@ export const getPastEvents = async (lang: 'de' | 'en', eventType: typeof eventTy
         time: eventsTable.time,
         imagePath: eventsTable.imagePath,
         externalLink: eventsTable.externalLink,
+        highlight: eventsTable.highlight,
     }).from(eventsTable).where(
         and(
             eq(eventsTable.type, eventType),
@@ -39,6 +40,7 @@ export const getFutureEvents = async (lang: 'de' | 'en', eventType: typeof event
         time: eventsTable.time,
         imagePath: eventsTable.imagePath,
         externalLink: eventsTable.externalLink,
+        highlight: eventsTable.highlight,
     }).from(eventsTable).where(
         and(
             eq(eventsTable.type, eventType),
@@ -52,21 +54,22 @@ export const getPublicationById = async (pubId: number) => {
     return await db.select().from(publicationsTable).where(eq(publicationsTable.id, pubId))
 }
 
-export const getTagsByPublicationId = async (pubId: number) => {
+export const getTagsByPublicationId = async (lang: "de" | "en", pubId: number) => {
     return await db.select({
         id: tagsTable.id,
-        name: tagsTable.name
+        name: lang === "de" ? tagsTable.nameDe : tagsTable.nameEn,
+
     })
         .from(tagsTable)
         .innerJoin(publicationtagsTable, eq(tagsTable.id, publicationtagsTable.tagId))
         .where(eq(publicationtagsTable.publicationId, pubId))
 }
 
-export const getSimilarPublications = async (tagIds: number[], pubId: number) => {
+export const getSimilarPublications = async (lang: "de" | "en", tagIds: number[], pubId: number) => {
     return await db.select({
         id: publicationsTable.id,
-        title: publicationsTable.title,
-        content: publicationsTable.content,
+        title: lang === "de" ? publicationsTable.titleDe : publicationsTable.titleEn,
+        content: lang === "en" ? publicationsTable.contentDe : publicationsTable.titleEn,
         imagePath: publicationsTable.imagePath,
     })
         .from(publicationsTable)

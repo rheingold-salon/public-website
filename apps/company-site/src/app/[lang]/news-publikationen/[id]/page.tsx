@@ -9,10 +9,10 @@ export default async function NewsPublikationenPage({ params }: { params: Promis
     const lang = (await params).lang;
     const dict = (await getDictionary(lang)).newsPublicationsPage;
     const [publication] = await getPublicationById(pubId);
-    const tags = await getTagsByPublicationId(pubId);
+    const tags = await getTagsByPublicationId(lang, pubId);
     const tagNames = tags.map((tag) => tag.name).join(", ");
     const tagIds = tags.map((tag) => tag.id);
-    const relatedPublications = await getSimilarPublications(tagIds, pubId);
+    const relatedPublications = await getSimilarPublications(lang, tagIds, pubId);
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -22,7 +22,7 @@ export default async function NewsPublikationenPage({ params }: { params: Promis
                     <div className="relative aspect-[4/3] w-full">
                         <Image
                             src={`/static/images/publications/${publication.imagePath}`}
-                            alt={publication.title}
+                            alt={lang === "de" ? publication.titleDe : publication.titleEn}
                             quality={100}
                             fill
                             style={{
@@ -38,7 +38,7 @@ export default async function NewsPublikationenPage({ params }: { params: Promis
                 {/* Scrollable content */}
                 <div className="w-full md:w-1/2">
                     <h1 className="font-bold font-serif text-left text-black text-2xl md:text-6xl mb-6">
-                        {publication.title}
+                        {lang === "de" ? publication.titleDe : publication.titleEn}
                     </h1>
                     <p className="text-lg mb-6 text-zinc-500">{publication.author}</p>
                     <div className="prose max-w-none">
@@ -49,7 +49,7 @@ export default async function NewsPublikationenPage({ params }: { params: Promis
                                     return <p style={{ marginBottom: '16px' }} {...rest} ></p>
                                 }
                             }}
-                        >{publication.content}</Markdown>
+                        >{lang === "de" ? publication.contentDe : publication.contentEn}</Markdown>
                     </div>
                 </div>
             </div>
