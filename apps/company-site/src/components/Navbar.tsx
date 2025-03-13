@@ -69,7 +69,7 @@ export const Navbar = (
                                     return (
                                         <div key={link.href} className="grid grid-cols-2 gap-4">
                                             <Link
-                                                href="/de"
+                                                href={`/de/${pathname.split("/").slice(2).join("/")}`}
                                                 className="relative font-bold text-white group"
                                             >
                                                 <span className="relative">
@@ -80,7 +80,7 @@ export const Navbar = (
                                                 </span>
                                             </Link>
                                             <Link
-                                                href="/en"
+                                                href={`/en/${pathname.split("/").slice(2).join("/")}`}
                                                 className="relative font-bold text-white group"
                                             >
                                                 <span className="relative">

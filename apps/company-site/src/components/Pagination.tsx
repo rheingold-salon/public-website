@@ -50,7 +50,7 @@ export const Pagination: React.FC<PaginationProps> = ({
             <button
                 onClick={() => handlePageChange(currentPage - 1)}
                 disabled={currentPage === 1}
-                className={`p-2 rounded-full ${currentPage === 1 ? 'text-gray-400 cursor-not-allowed' : 'text-salongreen hover:bg-gray-100'
+                className={`p-2 rounded-full ${currentPage === 1 ? 'text-gray-400 cursor-not-allowed' : 'text-salongreen'
                     }`}
                 aria-label="Previous page"
             >
@@ -75,7 +75,7 @@ export const Pagination: React.FC<PaginationProps> = ({
             <button
                 onClick={() => handlePageChange(currentPage + 1)}
                 disabled={currentPage === totalPages}
-                className={`p-2 rounded-full ${currentPage === totalPages ? 'text-gray-400 cursor-not-allowed' : 'text-salongreen hover:bg-gray-100'
+                className={`p-2 rounded-full ${currentPage === totalPages ? 'text-gray-400 cursor-not-allowed' : 'text-salongreen'
                     }`}
                 aria-label="Next page"
             >

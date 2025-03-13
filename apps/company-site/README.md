@@ -4,14 +4,11 @@ Link zur Website: [rheingold-salon.de](https://rheingold-salon.de)
 
 ## TODOS
 
-* make marktforschung-services responsive
 * intl news & publikationen
-* sliderText sliderImage in db and HomeSlider
+* slider transition add slider text and slider images to db
 
-### Bonus TODOS
+### less important TODOS
 
-* events like aktuelles
+* events highlight like aktuelles
 * search publications
 * better recommendations publications
-* publications card with rounded corners
-* slider transition
