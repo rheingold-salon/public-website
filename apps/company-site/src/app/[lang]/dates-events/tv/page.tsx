@@ -1,4 +1,5 @@
-import { eventTypeEnum, getPastEvents, getFutureEvents } from "@rgs/db";
+import { eventTypeEnum } from "@rgs/db";
+import { getPastEvents, getFutureEvents } from "@/app/actions"
 import { EventsComposer } from "@/components"
 import { getDictionary } from "@/dictionaries";
 
@@ -11,6 +12,7 @@ export default async function DatesEventsPage({ params }: { params: Promise<{ la
 
     return (
         <EventsComposer
+            noUpcomingText={datesEventsPageDict.noUpcomingText}
             alreadyOverText={datesEventsPageDict.alreadyOver}
             months={datesEventsPageDict.months}
             pastEvents={pastEvents}

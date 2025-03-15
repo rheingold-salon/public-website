@@ -4,7 +4,7 @@ import { homeLandingImage, couchImage } from '@/assets';
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-import { getPublications, getSliderPublications } from '@rgs/db';
+import { getPublications, getSliderPublications } from '@/app/actions';
 
 export default async function HomePage({
     params,

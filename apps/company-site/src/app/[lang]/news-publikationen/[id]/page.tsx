@@ -1,4 +1,4 @@
-import { getPublicationById, getTagsByPublicationId, getSimilarPublications } from "@rgs/db";
+import { getPublicationById, getTagsByPublicationId, getSimilarPublications } from "@/app/actions";
 import Image from "next/image";
 import Markdown from "react-markdown";
 import { PaginatedPublications } from "@/components";

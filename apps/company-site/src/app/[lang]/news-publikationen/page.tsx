@@ -1,4 +1,5 @@
-import { db, getPublications, publicationtagsTable, tagsTable } from "@rgs/db";
+import { db, tagsTable, publicationtagsTable } from "@rgs/db"
+import { getPublications } from "@/app/actions";
 import { PublicationsComposer } from "@/components";
 
 export default async function NewsPublikationenPage({ params }: { params: Promise<{ lang: 'de' | 'en' }> }) {

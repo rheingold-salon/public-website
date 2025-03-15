@@ -1,4 +1,5 @@
-import { eventTypeEnum, getFutureEvents, getPastEvents } from "@rgs/db";
+import { eventTypeEnum } from "@rgs/db";
+import { getPastEvents, getFutureEvents } from "@/app/actions";
 import { EventsComposer } from "@/components"
 import { getDictionary } from "@/dictionaries";
 

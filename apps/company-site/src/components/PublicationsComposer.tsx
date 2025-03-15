@@ -159,7 +159,7 @@ export function PublicationsComposer({
                         onClick={() => handleTagClick(0)}
                     >
                         <span className="relative">
-                            alle
+                            {lang === "de" ? "alle" : "all"}
                             <span className={`absolute left-0 top-[40%] h-2 z-[-1] bg-salongreen transition-all duration-300 ease-out
                         ${selectedTag === 0 ? 'w-full' : 'w-0 group-hover:w-full'}`}
                             />

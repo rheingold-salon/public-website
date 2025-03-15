@@ -1,8 +1,7 @@
 'use server'
 
 import { and, ne, eq, sql, lt, gte, desc, inArray } from "drizzle-orm"
-import { db } from ".";
-import { publicationsTable, eventsTable, eventTypeEnum, tagsTable, publicationtagsTable } from "./schema";
+import { db, publicationsTable, eventsTable, eventTypeEnum, tagsTable, publicationtagsTable } from "@rgs/db";
 
 export const getPastEvents = async (lang: 'de' | 'en', eventType: typeof eventTypeEnum.enumValues[number]) => {
     const currentYear = new Date().getFullYear();
