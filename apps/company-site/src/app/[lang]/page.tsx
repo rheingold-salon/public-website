@@ -18,8 +18,15 @@ export default async function HomePage({
     const blackHeader = dict.couchHeader.substring(0, lastSpace);
     const greenHeader = dict.couchHeader.substring(lastSpace);
 
-    const sliderPublications = await getSliderPublications()
-    const recentPublications = (await getPublications()).splice(0, 5)
+    const sliderPublications = await getSliderPublications(lang)
+    const recentPublications = (await getPublications()).slice(0, 5).map((publication) => ({
+        id: publication.id,
+        publishedAt: publication.publishedAt,
+        author: publication.author,
+        title: lang === "de" ? publication.titleDe : publication.titleEn,
+        content: lang === "en" ? publication.contentDe : publication.titleEn,
+        imagePath: publication.imagePath,
+    }))
 
 
     return (

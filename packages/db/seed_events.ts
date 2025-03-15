@@ -55,18 +55,6 @@ const main = async () => {
         },
         // podcast type
         {
-            titleDe: "KI im Alltag - Zukunft oder Hype?",
-            titleEn: "AI in Everyday Life - Future or Hype?",
-            contentDe: "Podcast über die tatsächlichen Auswirkungen von KI auf den Alltag.",
-            contentEn: "Podcast on the real impact of AI on everyday life.",
-            location: "Online",
-            date: "2025-04-05",
-            time: "08:00:00",
-            type: eventTypeEnum.enumValues[2],
-            imagePath: "ai_everyday.webp",
-            externalLink: "https://example.com/ai-everyday-podcast"
-        },
-        {
             titleDe: "Die besten Marketing-Podcasts 2024",
             titleEn: "Best Marketing Podcasts 2024",
             contentDe: "Zusammenfassung und Bewertung der besten Marketing-Podcasts.",

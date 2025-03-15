@@ -15,14 +15,15 @@ type Event = {
     highlight: boolean
 }
 
-export const EventsComposer = ({ alreadyOverText, months, pastEvents, futureEvents }: { alreadyOverText: string, months: string[], pastEvents: Event[], futureEvents: Event[] }) => {
+export const EventsComposer = ({ noUpcomingText, alreadyOverText, months, pastEvents, futureEvents }: { noUpcomingText: string, alreadyOverText: string, months: string[], pastEvents: Event[], futureEvents: Event[] }) => {
     const today = new Date();
     today.setHours(0, 0, 0, 0)
     const currentMonth = months[today.getMonth()];
     const [selectedMonth, setSelectedMonth] = useState(currentMonth);
 
     // Get highlight event (if any) else use the next up event
-    const highlightEvent = futureEvents.find((futureEvent) => futureEvent.highlight) ?? futureEvents[0];
+    const nextUpEvent = futureEvents.length > 0 ? futureEvents[0] : undefined
+    const highlightEvent = futureEvents.find((futureEvent) => futureEvent.highlight) ?? nextUpEvent;
 
     // Filter past events for the selected month
     const filteredPastEvents = pastEvents.filter(
@@ -41,9 +42,11 @@ export const EventsComposer = ({ alreadyOverText, months, pastEvents, futureEven
                     <p className="font-serif text-5xl font-semibold mr-8">high</p>
                     <p className="font-serif text-5xl font-semibold mt-2 mr-8">& light</p>
                 </div>
-                {highlightEvent && <EventCard event={highlightEvent}
+                {highlightEvent ? (<EventCard event={highlightEvent}
                     month={months[parseInt(highlightEvent.date.split("-")[1]) - 1]}
-                />}
+                />) : (
+                    <p className="w-full font-bold text-xl text-center">{noUpcomingText} Events.</p>
+                )}
             </div>
             {/* Month selector */}
             <div className="my-8 flex justify-center flex-wrap gap-4 md:gap-8">

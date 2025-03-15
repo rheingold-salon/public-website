@@ -9,7 +9,9 @@ type Publication = {
     id: number,
     title: string,
     imagePath: string,
-    content: string
+    content: string,
+    sliderImagePath: string | null,
+    sliderText: string | null
 }
 
 export function HomeSlider({ landingText, landingImage, sliderPublications, lang }: { lang: "de" | "en", landingText: string, landingImage: StaticImageData, sliderPublications: Publication[] }) {
@@ -21,8 +23,8 @@ export function HomeSlider({ landingText, landingImage, sliderPublications, lang
                 (<ImageWithTextBox staticImage={landingImage} text={landingText} />)
                 :
                 (<ImageWithTextBox
-                    staticImage={`/static/images/publications/${sliderPublications[sliderIdx - 2].imagePath}`}
-                    text={sliderPublications[sliderIdx - 2].title}
+                    staticImage={`/static/images/publications/${sliderPublications[sliderIdx - 2].sliderImagePath ?? sliderPublications[sliderIdx - 2].imagePath}`}
+                    text={sliderPublications[sliderIdx - 2].sliderText ?? sliderPublications[sliderIdx - 2].title}
                     link={`/${lang}/news-publikationen/${sliderPublications[sliderIdx - 2].id}`}
                 />)
             }

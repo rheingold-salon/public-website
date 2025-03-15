@@ -302,6 +302,7 @@
             "NOV.",
             "DEC."
         ],
+        "noUpcomingText": "No upcoming",
         "alreadyOver": "UNFORTUNATELY ALREADY OVER"
     },
     "newsPublicationsPage": {

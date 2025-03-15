@@ -11,6 +11,7 @@ export default async function DatesEventsPage({ params }: { params: Promise<{ la
 
     return (
         <EventsComposer
+            noUpcomingText={datesEventsPageDict.noUpcomingText}
             alreadyOverText={datesEventsPageDict.alreadyOver}
             months={datesEventsPageDict.months}
             pastEvents={pastEvents}

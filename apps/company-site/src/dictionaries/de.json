@@ -302,6 +302,7 @@
             "NOV.",
             "DEZ."
         ],
+        "noUpcomingText": "Keine anstehenden",
         "alreadyOver": "LEIDER SCHON VORBEI"
     },
     "newsPublicationsPage": {

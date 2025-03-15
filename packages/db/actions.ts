@@ -89,7 +89,14 @@ export const getPublications = async () => {
     return await db.select().from(publicationsTable).orderBy(desc(publicationsTable.publishedAt))
 }
 
-export const getSliderPublications = async () => {
-    return await db.select().from(publicationsTable).where(eq(publicationsTable.homePageSlider, true))
+export const getSliderPublications = async (lang: 'de' | 'en') => {
+    return await db.select({
+        id: publicationsTable.id,
+        title: lang === "de" ? publicationsTable.titleDe : publicationsTable.titleEn,
+        content: lang === "en" ? publicationsTable.contentDe : publicationsTable.titleEn,
+        imagePath: publicationsTable.imagePath,
+        sliderText: lang === "de" ? publicationsTable.sliderTextDe : publicationsTable.sliderTextEn,
+        sliderImagePath: publicationsTable.sliderImagePath
+    }).from(publicationsTable).where(eq(publicationsTable.homePageSlider, true)).orderBy(publicationsTable.publishedAt)
 }
 
