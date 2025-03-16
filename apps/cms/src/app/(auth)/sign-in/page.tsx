@@ -1,21 +1,72 @@
-import { redirect } from "next/navigation";
-import { signIn } from "@/server/auth";
-import { AuthError } from "next-auth";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import Image from "next/image";
-import logoImage from "public/Logo_Text_Black.png";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+'use client'
+
 import ErrorDisplay from "@/components/error-display";
 
-export default async function SignInPage({
-    searchParams,
-}: {
-    searchParams: { error?: string; callbackUrl?: string };
-}) {
-    const callbackUrl = searchParams.callbackUrl ?? "/";
-    const error = searchParams.error;
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import Image from "next/image";
+import {
+    useSearchParams,
+} from "next/navigation";
+import { signIn } from "next-auth/react";
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle
+} from "@/components/ui/card";
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+} from "@/components/ui/form"
+
+import { signInSchema } from "@/lib/zod";
+
+import logoImage from "public/Logo_Text_Black.png";
+import type { z } from "zod";
+
+// Type for form data based on the schema
+type SignInFormData = z.infer<typeof signInSchema>;
+
+export default function SignInPage() {
+    const searchParams = useSearchParams();
+    const errorFromUrl = searchParams.get("error");
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [serverError, setServerError] = useState(errorFromUrl ?? "");
+
+    const form = useForm<SignInFormData>({
+        resolver: zodResolver(signInSchema),
+        defaultValues: {
+            email: "",
+            password: "",
+        },
+    });
+
+    const onSubmit = async (data: SignInFormData) => {
+        setIsSubmitting(true);
+        setServerError("");
+
+        const result = await signIn("credentials", {
+            email: data.email,
+            password: data.password,
+            redirectTo: "/"
+        });
+
+        if (result?.error) {
+            setServerError(result.error);
+            setIsSubmitting(false);
+        }
+    };
 
     return (
         <div className="flex items-center justify-center w-screen h-screen bg-gray-50">
@@ -44,60 +95,57 @@ export default async function SignInPage({
 
                         <CardContent className="px-0 pt-6">
                             {/* Show error message if present */}
-                            {error && <ErrorDisplay error={error} />}
+                            {serverError && <ErrorDisplay error={serverError} />}
 
-                            <form
-                                className="space-y-4"
-                                action={async (formData) => {
-                                    "use server";
-
-                                    const email = formData.get("email") as string;
-                                    const password = formData.get("password") as string;
-
-                                    try {
-                                        await signIn("credentials", {
-                                            email,
-                                            password,
-                                            redirectTo: callbackUrl,
-                                        });
-                                    } catch (error) {
-                                        if (error instanceof AuthError) {
-                                            // Redirect to same page but with error parameter
-                                            redirect(`/sign-in?error=${error.type}&callbackUrl=${encodeURIComponent(callbackUrl)}`);
-                                        }
-                                        throw error;
-                                    }
-                                }}
-                            >
-                                <div className="space-y-2">
-                                    <Label htmlFor="email">Email</Label>
-                                    <Input
-                                        id="email"
+                            <Form {...form}>
+                                <form
+                                    className="space-y-4"
+                                    onSubmit={form.handleSubmit(onSubmit)}>
+                                    <FormField
+                                        control={form.control}
                                         name="email"
-                                        type="email"
-                                        placeholder="example@rheingold.intern"
-                                        required
-                                    />
-                                </div>
-
-                                <div className="space-y-2">
-                                    <Label htmlFor="password">Password</Label>
-                                    <Input
-                                        id="password"
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel htmlFor="email">Email</FormLabel>
+                                                <FormControl>
+                                                    <Input
+                                                        id="email"
+                                                        type="email"
+                                                        placeholder="example@rheingold.intern"
+                                                        required
+                                                        {...field}
+                                                    />
+                                                </FormControl>
+                                                <FormMessage />
+                                            </FormItem>
+                                        )} />
+                                    <FormField
+                                        control={form.control}
                                         name="password"
-                                        type="password"
-                                        required
-                                    />
-                                </div>
-
-                                <Button className="w-full mt-2" type="submit">
-                                    Sign In
-                                </Button>
-                            </form>
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel htmlFor="password">Password</FormLabel>
+                                                <FormControl>
+                                                    <Input
+                                                        id="password"
+                                                        type="password"
+                                                        placeholder="*******"
+                                                        required
+                                                        {...field}
+                                                    />
+                                                </FormControl>
+                                                <FormMessage />
+                                            </FormItem>
+                                        )} />
+                                    <Button className="w-full mt-2" type="submit">
+                                        {isSubmitting ? "signing in..." : "sign in"}
+                                    </Button>
+                                </form>
+                            </Form>
                         </CardContent>
                     </div>
                 </div>
-            </Card>
-        </div>
+            </Card >
+        </div >
     );
 }

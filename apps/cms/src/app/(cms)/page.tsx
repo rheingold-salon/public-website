@@ -36,7 +36,7 @@ export default async function HomePage() {
 
     return (
         <div className="flex-col justify-center items-center m-10">
-            <h1 className="text-center font-bold text-2xl mb-10">Welcome to the Rheingold Salon Website Content Managment System</h1>
+            <h1 className="text-center font-bold text-2xl mb-10">Welcome {session.user.name}!</h1>
             <div className="grid grid-cols-2 gap-8">
                 {pages.map((page) => (
                     <Link key={page.name} href={page.route}>
