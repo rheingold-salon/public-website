@@ -12,15 +12,10 @@ import { SignOut } from "./signout-button";
 import logoImage from "public/Logo_Text_Black.png";
 import Image from "next/image";
 import Link from "next/link";
-import { Home, Calendar, Newspaper, BookMarked, Users } from "lucide-react"
+import { Calendar, Newspaper, BookMarked, Users } from "lucide-react"
 
 export function AppSidebar() {
     const pages = [
-        {
-            name: "home page",
-            route: "/",
-            icon: Home
-        },
         {
             name: "dates & events",
             route: "/dates-events",
@@ -46,7 +41,9 @@ export function AppSidebar() {
     return (
         <Sidebar>
             <SidebarHeader className="p-8">
-                <Image src={logoImage} alt="RGS Logo" />
+                <Link href="/">
+                    <Image src={logoImage} alt="RGS Logo" />
+                </Link>
             </SidebarHeader>
             <SidebarContent className="p-8">
                 <SidebarMenu>

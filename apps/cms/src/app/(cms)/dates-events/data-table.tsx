@@ -3,7 +3,9 @@
 import {
     type ColumnDef,
     type ColumnFiltersState,
-    getFilteredRowModel
+    type SortingState,
+    getFilteredRowModel,
+    getSortedRowModel,
 } from "@tanstack/react-table"
 
 import {
@@ -31,6 +33,7 @@ import {
 
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { DataForm } from "./data-form"
 
 interface DataTableProps<TData, TValue> {
     columns: ColumnDef<TData, TValue>[]
@@ -41,6 +44,7 @@ export function DataTable<TData, TValue>({
     columns,
     data,
 }: DataTableProps<TData, TValue>) {
+    const [sorting, setSorting] = useState<SortingState>([])
     const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([])
 
     const table = useReactTable({
@@ -49,8 +53,11 @@ export function DataTable<TData, TValue>({
         getCoreRowModel: getCoreRowModel(),
         onColumnFiltersChange: setColumnFilters,
         getFilteredRowModel: getFilteredRowModel(),
+        onSortingChange: setSorting,
+        getSortedRowModel: getSortedRowModel(),
         state: {
             columnFilters,
+            sorting,
         },
     })
 
@@ -64,20 +71,22 @@ export function DataTable<TData, TValue>({
                     onChange={(event) =>
                         table.getColumn("titleDe")?.setFilterValue(event.target.value)
                     }
-                    className="max-w-sm"
                 />
-                <Select>
+                <Select onValueChange={(value) =>
+                    table.getColumn("type")?.setFilterValue(value === "all" ? undefined : value)
+                }>
                     <SelectTrigger >
                         <SelectValue placeholder="Filter by Type..."></SelectValue>
                     </SelectTrigger>
                     <SelectContent>
+                        <SelectItem value="all">all</SelectItem>
                         <SelectItem value="event">event</SelectItem>
                         <SelectItem value="vortrag">vortrag</SelectItem>
                         <SelectItem value="podcast">podcast</SelectItem>
                         <SelectItem value="tv">tv</SelectItem>
                     </SelectContent>
-
                 </Select>
+                <DataForm />
             </div>
             <div className="rounded-md border">
                 <Table>
