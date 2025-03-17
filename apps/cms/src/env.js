@@ -14,6 +14,9 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
+    DATABASE_URL: z.string().min(3),
+    INTERNAL_DOMAIN: z.string().min(3),
+    LDAPS_CERT_FILE: z.string(),
   },
 
   /**
@@ -32,6 +35,9 @@ export const env = createEnv({
   runtimeEnv: {
     AUTH_SECRET: process.env.AUTH_SECRET,
     NODE_ENV: process.env.NODE_ENV,
+    DATABASE_URL: process.env.DATABASE_URL,
+    INTERNAL_DOMAIN: process.env.INTERNAL_DOMAIN,
+    LDAPS_CERT_FILE: process.env.LDAPS_CERT_FILE,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**

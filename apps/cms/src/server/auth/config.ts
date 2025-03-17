@@ -2,6 +2,8 @@ import { type DefaultSession, type NextAuthConfig } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import { Client } from "ldapts";
 import { signInSchema } from "@/lib/zod";
+import { env } from "@/env"
+//import fs from 'fs';
 
 /**
  * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`
@@ -45,18 +47,23 @@ export const authConfig = {
 
                     // Configure LDAP client
                     const client = new Client({
-                        url: 'ldap://rheingold.intern',
+                        url: `ldaps://${env.INTERNAL_DOMAIN}`,
                         timeout: 5000, // 5 seconds
+                        tlsOptions: {
+                            rejectUnauthorized: false,
+                            //ca: [fs.readFileSync(env.LDAPS_CERT_FILE)],
+                        }
                     });
 
                     try {
                         // Attempt to bind with the provided credentials
                         // For Active Directory, bind using the userPrincipalName or sAMAccountName@domain
-                        await client.bind(`${username}@rheingold.intern`, password);
+                        await client.bind(`${username}@${env.INTERNAL_DOMAIN}`, password);
 
                         // If bind succeeds, search for user details
+                        const [dom1, dom2] = env.INTERNAL_DOMAIN.split(".");
                         const { searchEntries } = await client.search(
-                            'dc=rheingold,dc=intern',
+                            `dc=${dom1},dc=${dom2}`,
                             {
                                 filter: `(sAMAccountName=${username})`,
                                 attributes: ['cn', 'mail', 'sAMAccountName', 'objectSid', 'displayName'],

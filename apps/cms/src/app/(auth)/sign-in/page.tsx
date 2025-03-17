@@ -1,6 +1,6 @@
 'use client'
 
-import ErrorDisplay from "@/components/error-display";
+import ErrorDisplay from "@/app/(auth)/sign-in/error-display";
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
