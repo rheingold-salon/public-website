@@ -1,4 +1,4 @@
-import { getPublicationById, getTagsByPublicationId, getSimilarPublications } from "@/app/actions";
+import { getPublicationById, getTagsByPublicationId, getSimilarPublications } from "@/server/db/read-actions";
 import Image from "next/image";
 import Markdown from "react-markdown";
 import { PaginatedPublications } from "@/components";

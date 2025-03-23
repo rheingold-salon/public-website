@@ -1,6 +1,7 @@
 import { CustomerGroupCell, PaginatedCards } from "@/components";
 import { getDictionary } from "@/dictionaries";
-import { db, customergroupsTable, referencesTable, casesTable } from "@rgs/db";
+import { db } from "@/server/db";
+import { customergroupsTable, referencesTable, casesTable } from "@rgs/db";
 import Markdown from "react-markdown";
 
 export default async function ReferenzenCasesPage({ params }: { params: Promise<{ lang: 'de' | 'en' }> }) {

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { teamImage, comingSoonImage } from '@/assets'
-import { db, peopleTable } from '@rgs/db'
+import { db } from "@/server/db";
+import { peopleTable } from '@rgs/db'
 import { getDictionary } from '@/dictionaries';
 
 type Person = {

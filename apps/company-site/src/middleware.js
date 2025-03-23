@@ -40,7 +40,6 @@ export const config = {
     "/dates-events/tv",
     "/dates-events/vortraege",
     "/news-publikationen",
-    "/news-publikationen/*",
     "/referenzen-cases",
     "/kontakt",
     "/impressum",
