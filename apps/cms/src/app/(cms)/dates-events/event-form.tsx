@@ -40,7 +40,7 @@ import { createEventSchema, updateEventSchema, type Event } from "@/lib/zod";
 import MDEditior from "@uiw/react-md-editor"
 import { createEvent, updateEvent } from "@/server/db/events-crud";
 import { uploadImage } from "@/server/images";
-import { type ReactNode, useState, useRef } from "react";
+import { type ReactNode, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 

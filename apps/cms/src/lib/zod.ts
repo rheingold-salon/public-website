@@ -18,7 +18,7 @@ export const eventTypeEnum = z.enum(["event", "vortrag", "podcast", "tv"]);
 
 // Events schema
 export const eventsSchema = object({
-    id: number().optional(),
+    id: number(),//.optional(),
     titleDe: string({ required_error: "German title is required" }).min(1, "German title is required"),
     titleEn: string({ required_error: "English title is required" }).min(1, "English title is required"),
     contentDe: string({ required_error: "German content is required" }).min(1, "German content is required"),

@@ -18,7 +18,6 @@ export const eventsTable = pgTable("events", {
     highlight: boolean().default(false).notNull()
 });
 
-
 // founder & team
 export const peopleTable = pgTable("people", {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),

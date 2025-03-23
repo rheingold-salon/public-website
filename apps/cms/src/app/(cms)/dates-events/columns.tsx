@@ -5,23 +5,7 @@ import { Button } from "@/components/ui/button"
 import { DeleteDialog } from "@/components/delete-dialog"
 import { ArrowUpDown } from "lucide-react"
 import { DataForm } from "./event-form"
-
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
-export type Event = {
-    id: number,
-    titleDe: string,
-    titleEn: string,
-    contentDe: string,
-    contentEn: string,
-    location: string,
-    date: string,
-    time: string,
-    type: "event" | "vortrag" | "podcast" | "tv"
-    imagePath: string,
-    externalLink: string,
-    highlight: boolean,
-}
+import { type Event } from "@/lib/zod"
 
 export const columns: ColumnDef<Event>[] = [
     {
