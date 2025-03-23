@@ -7,25 +7,23 @@ import { Toaster } from "@/components/ui/toaster";
 import { AppSidebar } from "@/components/app-sidebar";
 
 export const metadata: Metadata = {
-    title: "RGS - Website Content Managment System",
-    description: "The content managment system for the RGS public website",
-    icons: [{ rel: "icon", url: "/favicon.ico" }],
+  title: "RGS - Website Content Managment System",
+  description: "The content managment system for the RGS public website",
+  icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{ children: React.ReactNode }>) {
-    return (
-        <html lang="en" className={`${GeistSans.variable}`}>
-            <body>
-                <SidebarProvider>
-                    <AppSidebar />
-                    <main className="min-h-screen w-full">
-                        {children}
-                    </main>
-                    <Toaster />
-                </SidebarProvider>
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en" className={`${GeistSans.variable}`}>
+      <body>
+        <SidebarProvider>
+          <AppSidebar />
+          <main className="min-h-screen w-full">{children}</main>
+          <Toaster />
+        </SidebarProvider>
+      </body>
+    </html>
+  );
 }

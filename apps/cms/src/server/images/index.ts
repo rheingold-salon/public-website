@@ -1,5 +1,3 @@
-"use server"
+"use server";
 
-export const uploadImage = async (file: File) => {
-
-}
+export const uploadImage = async (file: File) => {};

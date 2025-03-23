@@ -2,22 +2,19 @@
 
 import { revalidatePath } from "next/cache";
 import { eq } from "drizzle-orm";
-import {
-    db,
-    eventsTable,
-    type eventTypeEnum,
-} from "@rgs/db";
-import {
-    createEventSchema,
-    updateEventSchema,
-} from "@/lib/zod"; // Adjust import path as needed
+import { db } from ".";
+import { eventsTable, type eventTypeEnum } from "@rgs/db";
+import { createEventSchema, updateEventSchema } from "@/lib/zod"; // Adjust import path as needed
 
 /**
  * Get all events
  */
 export async function getEvents() {
     try {
-        const events = await db.select().from(eventsTable).orderBy(eventsTable.date);
+        const events = await db
+            .select()
+            .from(eventsTable)
+            .orderBy(eventsTable.date);
         return { success: true, data: events };
     } catch (error) {
         console.error("Failed to fetch events:", error);
@@ -30,7 +27,10 @@ export async function getEvents() {
  */
 export async function getEventById(id: number) {
     try {
-        const [event] = await db.select().from(eventsTable).where(eq(eventsTable.id, id));
+        const [event] = await db
+            .select()
+            .from(eventsTable)
+            .where(eq(eventsTable.id, id));
 
         if (!event) {
             return { success: false, error: "Event not found" };
@@ -51,7 +51,8 @@ export async function createEvent(formData: FormData) {
     const rawData = Object.fromEntries(formData.entries());
 
     // Handle boolean values (checkboxes)
-    const highlight = formData.get("highlight") === "on" || formData.get("highlight") === "true";
+    const highlight =
+        formData.get("highlight") === "on" || formData.get("highlight") === "true";
 
     // Create an object for validation
     const eventData = {
@@ -62,10 +63,10 @@ export async function createEvent(formData: FormData) {
         location: rawData.location as string,
         date: rawData.date as string,
         time: rawData.time as string,
-        type: rawData.type as typeof eventTypeEnum.enumValues[number],
+        type: rawData.type as (typeof eventTypeEnum.enumValues)[number],
         imagePath: rawData.imagePath as string,
         externalLink: rawData.externalLink as string,
-        highlight
+        highlight,
     };
 
     // Validate the data
@@ -73,12 +74,19 @@ export async function createEvent(formData: FormData) {
 
     if (!validationResult.success) {
         console.error("Validation error:", validationResult.error.format());
-        return { success: false, error: "Validation failed", validationErrors: validationResult.error.format() };
+        return {
+            success: false,
+            error: "Validation failed",
+            validationErrors: validationResult.error.format(),
+        };
     }
 
     try {
         // Insert the event into the database
-        const [newEvent] = await db.insert(eventsTable).values(validationResult.data).returning();
+        const [newEvent] = await db
+            .insert(eventsTable)
+            .values(validationResult.data)
+            .returning();
 
         // Revalidate the events page
         revalidatePath("/dates-events");
@@ -98,7 +106,8 @@ export async function updateEvent(id: number, formData: FormData) {
     const rawData = Object.fromEntries(formData.entries());
 
     // Handle boolean values (checkboxes)
-    const highlight = formData.get("highlight") === "on" || formData.get("highlight") === "true";
+    const highlight =
+        formData.get("highlight") === "on" || formData.get("highlight") === "true";
 
     // Create an object for validation
     const eventData = {
@@ -109,10 +118,10 @@ export async function updateEvent(id: number, formData: FormData) {
         location: rawData.location as string,
         date: rawData.date as string,
         time: rawData.time as string,
-        type: rawData.type as typeof eventTypeEnum.enumValues[number],
+        type: rawData.type as (typeof eventTypeEnum.enumValues)[number],
         imagePath: rawData.imagePath as string,
         externalLink: rawData.externalLink as string,
-        highlight
+        highlight,
     };
 
     // Validate the data
@@ -120,7 +129,11 @@ export async function updateEvent(id: number, formData: FormData) {
 
     if (!validationResult.success) {
         console.error("Validation error:", validationResult.error.format());
-        return { success: false, error: "Validation failed", validationErrors: validationResult.error.format() };
+        return {
+            success: false,
+            error: "Validation failed",
+            validationErrors: validationResult.error.format(),
+        };
     }
 
     try {
