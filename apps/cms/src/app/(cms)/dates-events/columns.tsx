@@ -2,7 +2,9 @@
 
 import type { ColumnDef } from "@tanstack/react-table"
 import { Button } from "@/components/ui/button"
-import { ArrowUpDown, Pencil, Trash2 } from "lucide-react"
+import { DeleteDialog } from "@/components/delete-dialog"
+import { ArrowUpDown } from "lucide-react"
+import { DataForm } from "./event-form"
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
@@ -49,27 +51,18 @@ export const columns: ColumnDef<Event>[] = [
         },
     },
     {
+        accessorKey: "type",
+        header: "Type"
+    },
+    {
         id: "actions",
         cell: ({ row }) => {
             const event = row.original
 
             return (
                 <div className="flex items-center gap-2">
-                    <Button
-                        size="icon"
-                        className="h-8 w-8 p-0"
-                        aria-label="Edit"
-                    >
-                        <Pencil className="h-4 w-4" />
-                    </Button>
-                    <Button
-                        variant="destructive"
-                        size="icon"
-                        className="h-8 w-8 p-0" //text-red-500 hover:text-read-600
-                        aria-label="Delete"
-                    >
-                        <Trash2 className="h-4 w-4" />
-                    </Button>
+                    <DataForm mode="update" id={event.id} initialData={event} />
+                    <DeleteDialog itemId={event.id} />
                 </div>
             );
         }

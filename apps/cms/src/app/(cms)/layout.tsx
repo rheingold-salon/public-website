@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import { SidebarProvider } from "@/components/ui/sidebar";
+import { Toaster } from "@/components/ui/toaster";
 import { AppSidebar } from "@/components/app-sidebar";
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function RootLayout({
                     <main className="min-h-screen w-full">
                         {children}
                     </main>
+                    <Toaster />
                 </SidebarProvider>
             </body>
         </html>

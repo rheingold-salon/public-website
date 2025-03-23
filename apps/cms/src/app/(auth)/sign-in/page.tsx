@@ -112,7 +112,6 @@ export default function SignInPage() {
                                                         id="email"
                                                         type="email"
                                                         placeholder="example@rheingold.intern"
-                                                        required
                                                         {...field}
                                                     />
                                                 </FormControl>
@@ -130,7 +129,6 @@ export default function SignInPage() {
                                                         id="password"
                                                         type="password"
                                                         placeholder="*******"
-                                                        required
                                                         {...field}
                                                     />
                                                 </FormControl>

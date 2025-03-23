@@ -33,7 +33,7 @@ import {
 
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import { DataForm } from "./data-form"
+import { DataForm } from "./event-form"
 
 interface DataTableProps<TData, TValue> {
     columns: ColumnDef<TData, TValue>[]
@@ -86,7 +86,7 @@ export function DataTable<TData, TValue>({
                         <SelectItem value="tv">tv</SelectItem>
                     </SelectContent>
                 </Select>
-                <DataForm />
+                <DataForm mode="create" />
             </div>
             <div className="rounded-md border">
                 <Table>

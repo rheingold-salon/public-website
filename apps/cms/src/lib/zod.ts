@@ -24,11 +24,8 @@ export const eventsSchema = object({
     contentDe: string({ required_error: "German content is required" }).min(1, "German content is required"),
     contentEn: string({ required_error: "English content is required" }).min(1, "English content is required"),
     location: string({ required_error: "Location is required" }).min(1, "Location is required"),
-    date: z.string({ required_error: "Date is required" })
-        .regex(/^\d{4}-\d{2}-\d{2}$/, "Date must be in YYYY-MM-DD format")
-        .transform((date) => new Date(date)), // Transform to Date object on server
-    time: string({ required_error: "Time is required" })
-        .regex(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$/, "Time must be in HH:MM or HH:MM:SS format"),
+    date: z.string({ required_error: "Date is required" }).date("Date must be in YYYY-MM-DD format."),
+    time: string({ required_error: "Time is required" }).regex(/^([01]\d|2[0-3]):[0-5]\d(:[0-5]\d)?$/, "Time must be in HH:MM format"),
     type: eventTypeEnum,
     imagePath: string({ required_error: "Image path is required" }).min(1, "Image path is required"),
     externalLink: string({ required_error: "External link is required" }).min(1, "External link is required"),
@@ -84,9 +81,7 @@ export const publicationsSchema = object({
     id: number().optional(),
     titleDe: string({ required_error: "German title is required" }).min(1, "German title is required"),
     titleEn: string({ required_error: "English title is required" }).min(1, "English title is required"),
-    publishedAt: z.string({ required_error: "Published date is required" })
-        .regex(/^\d{4}-\d{2}-\d{2}$/, "Date must be in YYYY-MM-DD format")
-        .transform((date) => new Date(date)), // Transform to Date object on server
+    publishedAt: z.string({ required_error: "Published date is required" }).date("Date must be in YYYY-MM-DD format"),
     author: string({ required_error: "Author is required" }).min(1, "Author is required"),
     contentDe: string({ required_error: "German content is required" }).min(1, "German content is required"),
     contentEn: string({ required_error: "English content is required" }).min(1, "English content is required"),
@@ -112,9 +107,7 @@ export const publicationtagsSchema = object({
 
 // Schemas for form validation and frontend use
 export const createEventSchema = eventsSchema.omit({ id: true });
-export const updateEventSchema = eventsSchema.partial().extend({
-    id: number({ required_error: "ID is required for updates" })
-});
+export const updateEventSchema = eventsSchema.partial()
 
 export const createPersonSchema = peopleSchema.omit({ id: true });
 export const updatePersonSchema = peopleSchema.partial().extend({

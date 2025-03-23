@@ -7,4 +7,3 @@ export const db = drizzle({
         ssl: false,
     }, casing: 'snake_case'
 });
-export * from "./actions"
