@@ -2,6 +2,7 @@
 echo "Pulling latest changes..."
 git pull
 
+cd apps/company-site
 sudo docker-compose up --build -d
 
 # Check if Docker Compose started correctly
