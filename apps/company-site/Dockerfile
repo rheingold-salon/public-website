@@ -6,9 +6,9 @@ RUN npm install -g pnpm
 # Install dependencies (for the entire monorepo)
 FROM base AS deps
 WORKDIR /app
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-COPY apps/company-site/package.json ./apps/company-site/package.json
-COPY packages/db/package.json ./packages/db/package.json
+COPY ../../package.json ../../pnpm-lock.yaml ../../pnpm-workspace.yaml ./
+COPY package.json ./apps/company-site/package.json
+COPY ../../packages/db/package.json ./packages/db/package.json
 RUN pnpm install --frozen-lockfile
 
 # Production build
