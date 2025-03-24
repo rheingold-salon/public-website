@@ -6,7 +6,7 @@
         "dev": "pnpm run --parallel dev:1 dev:2",
         "dev:1": "pnpm --filter company-site dev",
         "dev:2": "pnpm --filter cms dev",
-        "build:1": "pnpm --filter website build",
+        "build:1": "pnpm --filter company-site build",
         "build:2": "pnpm --filter cms build",
         "docker:dev": "docker compose up",
         "docker:dev:website": "docker compose up website",

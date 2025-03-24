@@ -1,21 +1,20 @@
 FROM node:20-alpine AS base
-
-# Install pnpm
 RUN npm install -g pnpm
 
-# Install dependencies (for the entire monorepo)
 FROM base AS deps
 WORKDIR /app
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-COPY apps/company-site/package.json ./apps/company-site/package.json
-COPY packages/db/package.json ./packages/db/package.json
-RUN pnpm install --frozen-lockfile
+COPY package.json pnpm-workspace.yaml ./
+COPY apps/company-site/package.json ./apps/company-site/
+COPY packages/db/package.json ./packages/db/
+RUN pnpm install
 
 # Production build
 FROM base AS builder
 WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/apps/company-site/node_modules ./apps/company-site/node_modules
+COPY --from=deps /app/packages/db/node_modules ./packages/db/node_modules
 RUN pnpm build:1
 
 # Production image
@@ -23,9 +22,9 @@ FROM base AS production
 WORKDIR /app
 ENV NODE_ENV=production
 ENV DATABASE_URL=${DATABASE_URL}
-COPY --from=builder /app/apps/company-site/public ./public
-COPY --from=builder /app/apps/company-site/.next/standalone ./
-COPY --from=builder /app/apps/company-site/.next/static ./.next/static
+COPY --from=builder /app/apps/company-site/public ./apps/company-site/public
+COPY --from=builder /app/apps/company-site/.next/standalone ./apps/company-site/
+COPY --from=builder /app/apps/company-site/.next/static ./apps/company-site/.next/static
 
 EXPOSE 3000
-CMD ["node", "server.js"]
+CMD ["node", "apps/company-site/server.js"]
