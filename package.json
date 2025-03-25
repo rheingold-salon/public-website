@@ -7,7 +7,9 @@
         "dev": "next dev --turbopack",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "type-check": "tsc --noEmit",
+        "check": "pnpm lint && pnpm type-check"
     },
     "dependencies": {
         "@formatjs/intl-localematcher": "^0.6.1",

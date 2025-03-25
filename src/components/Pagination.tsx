@@ -7,7 +7,7 @@ interface PaginationProps {
     totalPages: number;
     initialPage?: number;
     onPageChange?: (page: number) => void;
-    containerRef?: React.RefObject<HTMLElement>; // Reference to the container to scroll to
+    containerRef?: React.RefObject<HTMLElement | null>; // Reference to the container to scroll to
 }
 
 export const Pagination: React.FC<PaginationProps> = ({

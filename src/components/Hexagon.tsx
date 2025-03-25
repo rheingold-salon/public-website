@@ -42,7 +42,6 @@ export const Hexagon: React.FC<HexagonProps> = ({
         setModalContent(null);
     };
 
-
     // Calculate hexagon points
     const centerX = size;
     const centerY = size;
@@ -60,7 +59,7 @@ export const Hexagon: React.FC<HexagonProps> = ({
 
     // Calculate positions for text (slightly outside the hexagon)
     const textRadius = radius * 1.8;
-    const textPositions = [];
+    const textPositions: { x: number; y: number }[] = [];
     for (let i = 0; i < 6; i++) {
         const angle = (Math.PI / 3) * i - Math.PI / 2;
         const x = centerX + textRadius * Math.cos(angle);
