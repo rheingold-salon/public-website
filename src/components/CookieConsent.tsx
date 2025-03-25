@@ -34,7 +34,7 @@ export const CookieConsent = ({ translations }: CookieConsentProps) => {
             try {
                 const savedPreferences = JSON.parse(consentCookie as string);
                 setCookiePreferences(savedPreferences);
-            } catch (e) {
+            } catch {
                 setShowConsent(true);
             }
         }

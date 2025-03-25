@@ -22,7 +22,7 @@ export async function GET(request: NextRequest) {
         // Check if directory exists
         try {
             await fs.access(logosDir);
-        } catch (error) {
+        } catch {
             return NextResponse.json({ logos: [] }, { status: 200 });
         }
 

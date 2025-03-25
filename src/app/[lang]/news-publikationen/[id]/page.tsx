@@ -45,8 +45,7 @@ export default async function NewsPublikationenPage({ params }: { params: Promis
                         <Markdown
                             components={{
                                 p(props) {
-                                    const { node, ...rest } = props
-                                    return <p style={{ marginBottom: '16px' }} {...rest} ></p>
+                                    return <p style={{ marginBottom: '16px' }} {...props} ></p>
                                 }
                             }}
                         >{lang === "de" ? publication.contentDe : publication.contentEn}</Markdown>

@@ -50,8 +50,7 @@ export default async function ReferenzenCasesPage({ params }: { params: Promise<
                 <Markdown
                     components={{
                         p(props) {
-                            const { node, ...rest } = props
-                            return <p style={{ marginBottom: '16px' }} {...rest} ></p>
+                            return <p style={{ marginBottom: '16px' }} {...props} ></p>
                         }
                     }}
                 >{c.content}</Markdown>

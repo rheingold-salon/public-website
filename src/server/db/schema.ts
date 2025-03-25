@@ -1,4 +1,4 @@
-import { timestamp, date, integer, pgEnum, pgTable, primaryKey, text, time, boolean } from "drizzle-orm/pg-core";
+import { date, integer, pgEnum, pgTable, primaryKey, text, time, boolean } from "drizzle-orm/pg-core";
 
 // dates & events
 export const eventTypeEnum = pgEnum("event_type", ["event", "vortrag", "podcast", "tv"])
