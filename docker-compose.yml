@@ -1,10 +1,8 @@
 services:
   web:
-    build:
-      context: .
-      dockerfile: ./apps/company-site/Dockerfile
+    build: .
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-    env_file: ./apps/company-site/.env
+    env_file: .env
