@@ -68,8 +68,9 @@ export const getSimilarPublications = async (lang: "de" | "en", tagIds: number[]
     return await db.select({
         id: publicationsTable.id,
         title: lang === "de" ? publicationsTable.titleDe : publicationsTable.titleEn,
-        content: lang === "en" ? publicationsTable.contentDe : publicationsTable.titleEn,
+        content: lang === "de" ? publicationsTable.contentDe : publicationsTable.contentEn, // Fixed content language selection
         imagePath: publicationsTable.imagePath,
+        matchingTagCount: sql<number>`count(distinct ${publicationtagsTable.tagId})`.as('matching_tag_count')
     })
         .from(publicationsTable)
         .innerJoin(
@@ -78,10 +79,14 @@ export const getSimilarPublications = async (lang: "de" | "en", tagIds: number[]
         )
         .where(
             and(inArray(publicationtagsTable.tagId, tagIds),
-                ne(publicationtagsTable.publicationId, pubId))
+                ne(publicationtagsTable.publicationId, pubId)) // dont include the publication itself
         )
-        .groupBy(publicationsTable.id) // To avoid duplicates if a publication has multiple matching tags
-        .orderBy(desc(publicationsTable.publishedAt));
+        .groupBy(publicationsTable.id)
+        .having(sql`count(distinct ${publicationtagsTable.tagId}) >= 2`) // At least two matching tags
+        .orderBy(
+            sql`matching_tag_count desc`, // Sort by number of matching tags (descending)
+            desc(publicationsTable.publishedAt) // Then by publish date (descending)
+        );
 }
 
 export const getPublications = async () => {
