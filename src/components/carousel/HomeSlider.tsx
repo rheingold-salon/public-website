@@ -46,7 +46,7 @@ export function HomeSlider({ landingText, landingImage, sliderPublications, lang
 
     return (
         <div className="relative embla h-screen w-screen">
-            <div className="embla__viewport" ref={emblaRef}>
+            <div className="embla__viewport overflow-hidden" ref={emblaRef}>
                 <div className="embla__container flex">
                     <div className="embla__slide shrink-0 grow-0 basis-full">
                         <ImageWithTextBox staticImage={landingImage} text={landingText} />

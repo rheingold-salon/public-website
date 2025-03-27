@@ -12,6 +12,7 @@ export const ImageWithTextBox = ({ text, staticImage, link }: { text: string, st
                     alt="Landing Page Background"
                     quality={100}
                     fill
+                    sizes='100vw'
                     style={{
                         objectFit: 'cover',
                         objectPosition: 'center'

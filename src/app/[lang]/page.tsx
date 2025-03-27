@@ -38,6 +38,7 @@ export default async function HomePage({
                     src={couchImage}
                     alt="Landing Page Background"
                     quality={100}
+                    sizes="100vw"
                     fill
                     style={{
                         objectFit: 'cover',

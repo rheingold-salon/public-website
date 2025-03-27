@@ -99,7 +99,7 @@ export function Carousel({ cards }: { cards: CardItem[] }) {
 
     return (
         <div className="embla mx-auto mb-24 h-full">
-            <div className="embla__viewport" ref={emblaRef}>
+            <div className="embla__viewport overflow-hidden" ref={emblaRef}>
                 <div className="embla__container flex items-stretch">
                     {cards.map((card) => (
                         <div key={card.id} className="embla__slide shrink-0 grow-0 basis-full md:basis-2/3 mr-10">

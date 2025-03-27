@@ -31,6 +31,7 @@ export const EmbeddedVideo = ({ text }: { text: string }) => {
                         src={teamImage}
                         alt="Video thumbnail"
                         fill
+                        sizes='100vw'
                         style={{
                             objectFit: 'contain',
                             objectPosition: 'center'
