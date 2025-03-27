@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import { EventCard } from "@/components";
+import { EventCard } from "./EventCard";
 
 type Event = {
     id: number,

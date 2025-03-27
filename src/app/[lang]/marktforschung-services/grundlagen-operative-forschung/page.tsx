@@ -1,5 +1,6 @@
 import { getDictionary } from "@/dictionaries";
-import { Hexagon, PaginatedCards } from "@/components";
+import { Carousel } from "@/components";
+import { Hexagon } from "./Hexagon";
 import { robotImage, handImage, ropeImage, busImage } from "@/assets";
 
 export default async function OperativePage({
@@ -37,7 +38,7 @@ export default async function OperativePage({
                 <Hexagon points={hexagonPoints} />
             </div>
             <div className="my-24 md:mx-24">
-                <PaginatedCards cards={cards} />
+                <Carousel cards={cards} />
             </div>
         </>
     );

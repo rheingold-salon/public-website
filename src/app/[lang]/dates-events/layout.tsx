@@ -1,6 +1,6 @@
 import React from "react";
 
-import { EventsNavigation } from "@/components"
+import { EventsNavigation } from "./EventsNavigation";
 import { getDictionary } from "@/dictionaries";
 
 export default async function DatesEventsLayout({

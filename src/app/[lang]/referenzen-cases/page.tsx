@@ -1,4 +1,5 @@
-import { CustomerGroupCell, PaginatedCards } from "@/components";
+import { Carousel } from "@/components";
+import { CustomerGroupCell } from "./CustomerGroupCell";
 import { getDictionary } from "@/dictionaries";
 import { db, customergroupsTable, referencesTable, casesTable } from "@/server/db";
 import Markdown from "react-markdown";
@@ -23,9 +24,11 @@ export default async function ReferenzenCasesPage({ params }: { params: Promise<
         imageAlt: `Bild von ${reference.name}`,
         content: (
             <>
-                <h3 className="text-xl font-semibold mb-2 font-serif">{reference.name}</h3>
-                <p className="text-lg">{reference.content}</p>
-                <p className="text-zinc-500 mt-8">{reference.position}</p>
+                <h3 className="text-lg font-semibold mb-2 font-serif">{reference.name}</h3>
+                <p className="text-basis">{reference.content}</p>
+                {reference.position && (
+                    <p className="text-zinc-500 mt-8 text-sm">{reference.position}</p>
+                )}
             </>
         )
     }))
@@ -76,11 +79,13 @@ export default async function ReferenzenCasesPage({ params }: { params: Promise<
                 </div>
                 <div className="my-24">
                     <h1 className="font-serif font-bold text-4xl text-center mb-8">{dict.references}</h1>
-                    <PaginatedCards cards={referencesCards} />
+                    <Carousel
+                        cards={referencesCards}
+                    />
                 </div>
                 <div className="my-24">
                     <h1 className="font-serif font-bold text-4xl text-center mb-8">cases</h1>
-                    <PaginatedCards cards={casesCards} />
+                    <Carousel cards={casesCards} />
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import { EmbeddedVideo, ImageWithTextBox, GrayBox, PaginatedCards } from "@/components";
+import { EmbeddedVideo, ImageWithTextBox, GrayBox, Carousel } from "@/components";
 import { salonrheingoldLandingImage } from "@/assets";
 import { getDictionary } from "@/dictionaries";
 import Image from "next/image";
@@ -86,7 +86,7 @@ export default async function SalonRheingoldPage({ params }: { params: Promise<{
             <EmbeddedVideo text={dict.homePage.whoweare} />
             <div className="m-10">
                 <h1 className="text-center font-bold font-serif text-5xl mb-8"><span className='text-salongreen'>{why}</span> {us}?</h1>
-                <PaginatedCards cards={whyusCards} />
+                <Carousel cards={whyusCards} />
             </div>
             <div className="text-end m-10">
                 <h1 className="text-salongreen text-5xl font-bold font-serif">JOBS</h1>

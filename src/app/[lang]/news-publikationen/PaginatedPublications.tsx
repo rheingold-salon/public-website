@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Pagination } from './Pagination';
+import { Pagination } from '../../../components/Pagination';
 import { PublicationCard } from './PublicationCard';
 
 interface CardItem {

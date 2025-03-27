@@ -58,7 +58,6 @@ export const Pagination: React.FC<PaginationProps> = ({
             </button>
 
             <div className="relative w-full mx-4 h-[0.1rem] bg-salongreen">
-                {/* Progress indicator - a thin line that gets thicker at the completion point */}
                 <div
                     ref={progressBarRef}
                     className="absolute inset-0 -top-[0.1rem] h-[0.3rem] bg-salongreen"

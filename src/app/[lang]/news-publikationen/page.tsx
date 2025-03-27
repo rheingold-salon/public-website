@@ -1,6 +1,6 @@
 import { db, tagsTable, publicationtagsTable } from "@/server/db";
 import { getPublications } from "@/server/db/read-actions";
-import { PublicationsComposer } from "@/components";
+import { PublicationsComposer } from "./PublicationsComposer";
 
 export default async function NewsPublikationenPage({ params }: { params: Promise<{ lang: 'de' | 'en' }> }) {
     const lang = (await params).lang

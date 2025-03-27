@@ -1,7 +1,7 @@
 import { getPublicationById, getTagsByPublicationId, getSimilarPublications } from "@/server/db/read-actions";
 import Image from "next/image";
 import Markdown from "react-markdown";
-import { PaginatedPublications } from "@/components";
+import { PaginatedPublications } from "../PaginatedPublications";
 import { getDictionary } from "@/dictionaries";
 
 export default async function NewsPublikationenPage({ params }: { params: Promise<{ lang: 'de' | 'en', id: number }> }) {

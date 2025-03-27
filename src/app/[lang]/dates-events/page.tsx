@@ -1,6 +1,6 @@
 import { eventTypeEnum } from "@/server/db";
 import { getPastEvents, getFutureEvents } from "@/server/db/read-actions";
-import { EventsComposer } from "@/components"
+import { EventsComposer } from "./EventsComposer";
 import { getDictionary } from "@/dictionaries";
 
 export default async function DatesEventsPage({ params }: { params: Promise<{ lang: 'de' | 'en' }> }) {

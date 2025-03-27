@@ -38,7 +38,7 @@ export default async function RootLayout({
                 <link rel="icon" href="/favicon.ico" sizes="any" />
             </head>
             <body
-                className={`${roboto.variable} ${robotoSlab.variable} antialiased`}
+                className={`${roboto.variable} ${robotoSlab.variable} antialiased overflow-x-hidden`}
             >
                 <Navbar
                     lang={lang}

@@ -1,5 +1,5 @@
 import { getDictionary } from "@/dictionaries";
-import { QuantBox } from "@/components";
+import { QuantBox } from "./QuantBox";
 
 export default async function DigitalPage({
     params,

@@ -1,5 +1,6 @@
 'use client'
-import { PublicationCard } from "./PublicationCard"
+
+import { PublicationCard } from "../app/[lang]/news-publikationen/PublicationCard"
 import { useState } from "react"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 

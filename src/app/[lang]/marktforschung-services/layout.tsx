@@ -1,4 +1,6 @@
-import { ImageWithTextBox, ServicesNavigation, ServiceFooter } from "@/components";
+import { ImageWithTextBox } from "@/components";
+import { ServicesNavigation } from "./ServicesNavigation";
+import { ServiceFooter } from "./ServiceFooter";
 import { strategyLandingImage } from "@/assets";
 import { getDictionary } from "@/dictionaries";
 
