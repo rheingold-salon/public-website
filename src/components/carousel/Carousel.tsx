@@ -3,7 +3,6 @@
 import { StaticImageData } from 'next/image';
 import React, { ReactNode, useState, useCallback, useEffect, useRef } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import AutoPlay from 'embla-carousel-autoplay';
 import { Card } from "@/components/carousel/Card"
 import { EmblaCarouselType, EmblaEventType } from "embla-carousel";
 import {
@@ -26,7 +25,7 @@ const numberWithinRange = (number: number, min: number, max: number) =>
     Math.min(Math.max(number, min), max)
 
 export function Carousel({ cards }: { cards: CardItem[] }) {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [AutoPlay()]);
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
     const [scrollProgress, setScrollProgress] = useState(0);
     const tweenFactor = useRef(0)
 

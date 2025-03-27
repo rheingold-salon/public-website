@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Pagination } from '../../../components/Pagination';
 import { PublicationCard } from './PublicationCard';
 
@@ -25,7 +25,6 @@ export const PaginatedPublications: React.FC<PaginatedCardsProps> = ({
     const [currentPage, setCurrentPage] = useState(1);
     const [isTransitioning, setIsTransitioning] = useState(false);
     const [visibleCards, setVisibleCards] = useState<CardItem[]>([]);
-    const containerRef = useRef<HTMLDivElement>(null);
 
     // Calculate total pages
     const totalPages = Math.ceil(cards.length / cardsPerPage);
@@ -59,7 +58,7 @@ export const PaginatedPublications: React.FC<PaginatedCardsProps> = ({
     }, [cards, cardsPerPage, currentPage]);
 
     return (
-        <div ref={containerRef}>
+        <div >
             <div
                 className={`grid grid-cols-1 md:grid-cols-3 gap-6 transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'
                     }`}
@@ -74,7 +73,6 @@ export const PaginatedPublications: React.FC<PaginatedCardsProps> = ({
                 totalPages={totalPages}
                 initialPage={1}
                 onPageChange={handlePageChange}
-                containerRef={containerRef}
             />
         </div>
     );

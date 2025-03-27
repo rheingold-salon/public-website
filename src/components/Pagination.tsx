@@ -14,7 +14,6 @@ export const Pagination: React.FC<PaginationProps> = ({
     totalPages,
     initialPage = 1,
     onPageChange,
-    containerRef,
 }) => {
     const [currentPage, setCurrentPage] = useState(initialPage);
     const progressBarRef = useRef<HTMLDivElement>(null);
@@ -23,14 +22,6 @@ export const Pagination: React.FC<PaginationProps> = ({
         if (newPage >= 1 && newPage <= totalPages) {
             setCurrentPage(newPage);
             onPageChange?.(newPage);
-
-            // Smooth scroll to the top of the container when page changes
-            if (containerRef && containerRef.current) {
-                containerRef.current.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
         }
     };
 
