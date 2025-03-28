@@ -1,20 +1,18 @@
-// File: app/api/customer-logos/route.ts
-import { NextRequest, NextResponse } from 'next/server';
+'use server';
+
 import fs from 'fs/promises';
 import path from 'path';
 
-export async function GET(request: NextRequest) {
+export async function getCustomerLogos(folder: string) {
     try {
-        const searchParams = request.nextUrl.searchParams;
-        const folder = searchParams.get('folder');
-
+        // Input validation
         if (!folder) {
-            return NextResponse.json({ error: 'Folder parameter is required' }, { status: 400 });
+            throw new Error('Folder parameter is required');
         }
 
         // Security check to prevent directory traversal
         if (folder.includes('..') || folder.includes('/')) {
-            return NextResponse.json({ error: 'Invalid folder name' }, { status: 400 });
+            throw new Error('Invalid folder name');
         }
 
         const logosDir = path.join(process.cwd(), 'public', 'static', 'images', 'customers', folder, 'logos');
@@ -23,7 +21,7 @@ export async function GET(request: NextRequest) {
         try {
             await fs.access(logosDir);
         } catch {
-            return NextResponse.json({ logos: [] }, { status: 200 });
+            return { logos: [] };
         }
 
         // Get all files in the logos directory
@@ -34,10 +32,9 @@ export async function GET(request: NextRequest) {
             /\.(jpg|jpeg|png|svg|webp|gif)$/i.test(file)
         );
 
-        return NextResponse.json({ logos: logoFiles }, { status: 200 });
-
+        return { logos: logoFiles };
     } catch (error) {
         console.error('Error fetching logos:', error);
-        return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+        throw new Error(error instanceof Error ? error.message : 'Internal server error');
     }
 }

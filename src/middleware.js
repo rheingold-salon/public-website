@@ -41,7 +41,6 @@ export const config = {
     "/dates-events/vortraege",
     "/news-publikationen",
     "/referenzen-cases",
-    "/kontakt",
     "/impressum",
     "/datenschutz",
   ],

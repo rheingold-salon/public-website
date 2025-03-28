@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Modal } from "@/components";
+import { getCustomerLogos } from '@/server/images/actions';
 
 // CustomerGroupType
 type CustomerGroup = {
@@ -18,10 +19,7 @@ export function CustomerGroupCell({ customerGroup }: { customerGroup: CustomerGr
         // Only fetch logos when modal is opened to save resources
         if (isModalOpen) {
             setIsLoading(true);
-
-            // Fetch logos through an API endpoint when the modal opens
-            fetch(`/api/customer-logos?folder=${customerGroup.imagesFolder}`)
-                .then(response => response.json())
+            getCustomerLogos(customerGroup.imagesFolder)
                 .then(data => {
                     setLogos(data.logos || []);
                     setIsLoading(false);
