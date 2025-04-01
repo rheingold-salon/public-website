@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+import { env } from "@/env"
 
 
 type Publication = {
@@ -16,7 +17,7 @@ export function PublicationCard({ publication, lang }: { publication: Publicatio
             className="relative group h-96 overflow-hidden shadow-lg cursor-pointer"
         >
             <Image
-                src={`/static/images/publications/${publication.imagePath}`}
+                src={`${env.NEXT_PUBLIC_IMAGE_SERVER_URL}/static/images/publications/${publication.imagePath}`}
                 alt={publication.title}
                 quality={100}
                 fill

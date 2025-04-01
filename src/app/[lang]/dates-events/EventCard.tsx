@@ -1,6 +1,7 @@
 'use client'
 import { FaClock, FaLocationPin, FaLink } from 'react-icons/fa6';
 import Link from 'next/link';
+import { env } from '@/env';
 
 type EventCardProps = {
     event: {
@@ -27,7 +28,7 @@ export const EventCard = ({ event, month }: EventCardProps) => {
             <div
                 className='absolute inset-0 z-[-1] w-full h-full transition-transform duration-500'
                 style={{
-                    backgroundImage: `url(/static/images/events/${event.imagePath})`,
+                    backgroundImage: `url(${env.NEXT_PUBLIC_IMAGE_SERVER_URL}/static/images/events/${event.imagePath})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}

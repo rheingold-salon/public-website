@@ -11,6 +11,13 @@ const nextConfig: NextConfig = {
                 port: '',
                 search: '',
             },
+            {
+                protocol: 'https',
+                hostname: 'neuewebsite.rheingold-salon.de',
+                pathname: '/static/images/**',
+                port: '',
+                search: '',
+            }
         ],
     },
 };

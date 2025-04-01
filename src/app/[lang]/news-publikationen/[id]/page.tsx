@@ -3,6 +3,7 @@ import Image from "next/image";
 import Markdown from "react-markdown";
 import { PaginatedPublications } from "../PaginatedPublications";
 import { getDictionary } from "@/dictionaries";
+import { env } from "@/env";
 
 export default async function NewsPublikationenPage({ params }: { params: Promise<{ lang: 'de' | 'en', id: number }> }) {
     const pubId = (await params).id;
@@ -21,7 +22,7 @@ export default async function NewsPublikationenPage({ params }: { params: Promis
                 <div className="w-full md:w-1/2 md:sticky md:top-36 md:self-start h-fit">
                     <div className="relative aspect-[4/3] w-full">
                         <Image
-                            src={`/static/images/publications/${publication.imagePath}`}
+                            src={`${env.NEXT_PUBLIC_IMAGE_SERVER_URL}/static/images/publications/${publication.imagePath}`}
                             alt={lang === "de" ? publication.titleDe : publication.titleEn}
                             quality={100}
                             fill

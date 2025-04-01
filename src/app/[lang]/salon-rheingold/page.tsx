@@ -4,6 +4,7 @@ import { getDictionary } from "@/dictionaries";
 import Image from "next/image";
 import Link from "next/link";
 import { waterImage, jumpImage, salberImage, hammerImage, inhaberImage } from "@/assets";
+import { env } from "@/env";
 
 export default async function SalonRheingoldPage({ params }: { params: Promise<{ lang: 'de' | 'en' }> }) {
     const lang = (await params).lang
@@ -43,7 +44,7 @@ export default async function SalonRheingoldPage({ params }: { params: Promise<{
                     </div>
                     <div className="w-64 h-[40rem] relative order-1 md:order-2">
                         <Image
-                            src="/static/images/people/Ines-2.jpg"
+                            src={`${env.NEXT_PUBLIC_IMAGE_SERVER_URL}/static/images/people/ines-imdahl.jpg`}
                             alt="Ines Imdahl"
                             fill={true}
                             sizes="100vw"
@@ -56,7 +57,7 @@ export default async function SalonRheingoldPage({ params }: { params: Promise<{
                 <div className="flex flex-col md:flex-row items-center md:items-start justify-center py-4">
                     <div className="w-64 h-[40rem] relative">
                         <Image
-                            src="/static/images/people/Jens-2.jpg"
+                            src={`${env.NEXT_PUBLIC_IMAGE_SERVER_URL}/static/images/people/Jens-2.jpg`}
                             alt="Jens Lönneker"
                             fill={true}
                             sizes="100vw"

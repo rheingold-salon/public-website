@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Modal } from "@/components";
 import { getCustomerLogos } from '@/server/images/actions';
+import { env } from "@/env";
 
 // CustomerGroupType
 type CustomerGroup = {
@@ -39,7 +40,7 @@ export function CustomerGroupCell({ customerGroup }: { customerGroup: CustomerGr
                 onClick={() => setIsModalOpen(true)}
             >
                 <Image
-                    src={`/static/images/customers/${customerGroup.imagesFolder}/kategorien_${customerGroup.imagesFolder}.jpg`}
+                    src={`${env.NEXT_PUBLIC_IMAGE_SERVER_URL}/static/images/customers/${customerGroup.imagesFolder}/kategorien_${customerGroup.imagesFolder}.jpg`}
                     alt={customerGroup.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -69,7 +70,7 @@ export function CustomerGroupCell({ customerGroup }: { customerGroup: CustomerGr
                                     <div key={index} className="p-2 bg-white rounded shadow flex items-center justify-center h-16 sm:h-20 md:h-24">
                                         <div className="relative w-full h-full">
                                             <Image
-                                                src={`/static/images/customers/${customerGroup.imagesFolder}/logos/${logo}`}
+                                                src={`${env.NEXT_PUBLIC_IMAGE_SERVER_URL}/static/images/customers/${customerGroup.imagesFolder}/logos/${logo}`}
                                                 alt={`${customerGroup.name} customer logo`}
                                                 fill
                                                 sizes="(max-width: 640px) 50px, (max-width: 768px) 70px, 100px"

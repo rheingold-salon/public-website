@@ -7,6 +7,7 @@ import React, { useState, useCallback, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import AutoPlay from 'embla-carousel-autoplay';
 import { EmblaCarouselType } from "embla-carousel";
+import { env } from "@/env";
 
 type Publication = {
     id: number,
@@ -55,7 +56,7 @@ export function HomeSlider({ landingText, landingImage, sliderPublications, lang
                     {sliderPublications.map((publication, idx) => (
                         <div className="embla__slide shrink-0 grow-0 basis-full" key={idx}>
                             <ImageWithTextBox
-                                staticImage={`/static/images/publications/${publication.sliderImagePath ?? publication.imagePath}`}
+                                staticImage={`${env.NEXT_PUBLIC_IMAGE_SERVER_URL}/static/images/publications/${publication.sliderImagePath ?? publication.imagePath}`}
                                 text={publication.sliderText ?? publication.title}
                                 link={`/${lang}/news-publikationen/${publication.id}`}
                             />

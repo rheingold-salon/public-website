@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { teamImage, comingSoonImage } from '@/assets'
 import { db, peopleTable } from "@/server/db";
 import { getDictionary } from '@/dictionaries';
+import { env } from "@/env";
 
 type Person = {
     id: number;
@@ -72,7 +73,7 @@ const PeopleGrid = ({ title, people }: { title: string, people: Person[] }) => {
                 {people?.map((person, index) => {
                     const [firstName, lastName] = person.name.split(" ");
                     const isFirstColumn = index % 2 === 0;
-                    const imageUrl = person.imagePath ? "/static/images/people/" + person.imagePath : comingSoonImage;
+                    const imageUrl = person.imagePath ? env.NEXT_PUBLIC_IMAGE_SERVER_URL + "/static/images/people/" + person.imagePath : comingSoonImage;
                     return (
                         <div key={person.id} className='flex flex-row items-start py-4'>
                             {isFirstColumn ? (

@@ -3,6 +3,7 @@ import { CustomerGroupCell } from "./CustomerGroupCell";
 import { getDictionary } from "@/dictionaries";
 import { db, customergroupsTable, referencesTable, casesTable } from "@/server/db";
 import Markdown from "react-markdown";
+import { env } from "@/env";
 
 export default async function ReferenzenCasesPage({ params }: { params: Promise<{ lang: 'de' | 'en' }> }) {
     const lang = (await params).lang
@@ -20,7 +21,7 @@ export default async function ReferenzenCasesPage({ params }: { params: Promise<
 
     const referencesCards = references.map((reference) => ({
         id: reference.id,
-        imageSrc: `/static/images/references/${reference.imagePath}`,
+        imageSrc: `${env.NEXT_PUBLIC_IMAGE_SERVER_URL}/static/images/references/${reference.imagePath}`,
         imageAlt: `Bild von ${reference.name}`,
         content: (
             <>
@@ -44,7 +45,7 @@ export default async function ReferenzenCasesPage({ params }: { params: Promise<
 
     const casesCards = cases.map((c) => ({
         id: c.id,
-        imageSrc: `/static/images/cases/${c.imagePath}`,
+        imageSrc: `${env.NEXT_PUBLIC_IMAGE_SERVER_URL}/static/images/cases/${c.imagePath}`,
         imageAlt: `Bild von ${c.title}`,
         content: (
             <>
