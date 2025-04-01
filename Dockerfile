@@ -18,7 +18,7 @@ FROM base AS production
 WORKDIR /app
 ENV NODE_ENV=production
 ENV DATABASE_URL=${DATABASE_URL}
-COPY --from=builder /app/public ./public
+# COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
